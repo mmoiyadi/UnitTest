@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+UnitTests
+</name>
+</assembly>
+<members>
+<member name="T:UnitTests.SubtaskTest">
+<summary>
+This is a test class for SubtaskTest and is intended
+to contain all SubtaskTest Unit Tests
+</summary>
+</member>
+<member name="P:UnitTests.SubtaskTest.TestContext">
+<summary>
+Gets or sets the test context which provides
+information about and functionality for the current test run.
+</summary>
+</member>
+<member name="M:UnitTests.SubtaskTest.TestSubtaskCollectionWithNextCount1">
+<summary>
+A test for PopulateSubtaskPriorityInput
+</summary>
+</member>
+</members>
+</doc>

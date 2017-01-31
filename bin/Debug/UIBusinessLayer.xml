@@ -1,0 +1,407 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+UIBusinessLayer
+</name>
+</assembly>
+<members>
+<member name="M:UIBusinessLayer.ThroughputCycleTimeBucketDataCollection.GetThroughputData(UIBusinessLayer.PipelineControlFilterParam,System.Collections.Generic.List{UIBusinessLayer.ThroughputPCBucketData}@)">
+	<summary>
+ This Function Returns List of Throughput Bucket Data Collection
+ </summary>
+	<param name="filterData"></param>
+	<param name="throughputBucketData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.Rule3ExecutionDetailsComp.TMNonPriorityCompliance">
+	<summary>
+ This class represnts non priority comp data and 
+ used for populating UI. 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.Rule3ExecutionDetailsComp.TMNonPriorityComplianceDetail">
+	<summary>
+ Class represents task mgr detail data for Non priority compliance and
+ used for populating UI.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.Rule3ExecutionDetailsComp.TMCurentCompliance">
+	<summary>
+ Base class for TMCurrentUpdateCompliance and TMWIPCompliance.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.Rule3ExecutionDetailsComp.TMCurrentUpdComplianceDetail">
+	<summary>
+ This class is resposible for holding TM update compliant data and contains the
+ list of TM update compliant detail data.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.Rule3ExecutionDetailsComp.TMCurrentUpdateComplianceDetail">
+	<summary>
+ This class corresponds to TM update compliant detail data.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.Rule3ExecutionDetailsComp.TMCurrentOpenWIPCompliance">
+	<summary>
+ This class is resposible for holding TM current wip compliant data and contains the
+ list of TM current wip compliant detail data.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.Rule3ExecutionDetailsComp.TMCurrentOpenWIPComplianceDetail">
+	<summary>
+ This class corresponds to TM current wip compliant detail data.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.DueDateDetails">
+	<summary>
+ This class is an aggreagate of Task Details, Project Details and Due Date Data
+ </summary>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.Rule3EscalTagets.GetRule3EscalTargetDataOnly">
+	<summary>
+ This function returns only the target data per division for Rule 3.
+ This function was made on basis of "GetRule3TargetData" difference being it doesnot populate filter data
+ as done in "GetRule3TargetData"
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:UIBusinessLayer.S2MLOCALSRVCSLibProxy.m_ResAdmin">
+	<summary>
+ the purpose of having proxy object is to protect client implementation on change of service
+ behavior (methods' signature)
+ </summary>
+</member><member name="F:UIBusinessLayer.S2MWebSrvcsSLibProxy.m_PMASPSession">
+	<summary>
+ the purpose of having proxy object is to protect client implementation on change of service
+ behavior (methods' signature)
+ </summary>
+</member><member name="M:UIBusinessLayer.S2MWebSrvcsSLibProxy.GetInstance(S2MWEBSRVCSLib.IPMASPSession)">
+	<summary>
+ This is a overloaded method with the session Object passed. Use of session with system.web needs to be removed.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.Rule3TargetsPopulator.GetTargetDataOnly(UIBusinessLayer.BaseTargetData@)">
+	<summary>
+ This function returns only the target data per division for Rule 3
+ </summary>
+	<param name="oTargetData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.ReportDataAccessMgr.LoadProjectFromDBAndSave(System.Int32,ProjectPlanningViewModel.LoadProjectType,System.String,System.Boolean,ProjectPlanningViewModel.ProjectViewModel@,ProjectPlanningViewModel.Messages@,S2MWEBSRVCSLib.IPMASPSession,System.Boolean)">
+	<summary>
+ Loads Project form DB main tables rather than TBL_PLANNING_REPOSITORY.
+ Checks out if the Load type is CHECKOUT
+ Saves in TBL_PLANNING_REPOSITORY + TBL_PROJECT_REVISION except if the LOAD TYPE is VIEWPROJECT
+ </summary>
+	<param name="projectID"></param>
+	<param name="loadType"></param>
+	<param name="userID"></param>
+	<param name="isSaveRequired"></param>
+	<param name="outProjectDataVM"></param>
+	<param name="oOutMessages"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.PipelineControlEscalationDaysCollection.GetPipelineEscalationData(UIBusinessLayer.PipelineControlFilterParam,System.Collections.Generic.List{UIBusinessLayer.EscalationDaysPipelineControlData}@)">
+	<summary>
+ This Function Returns List of Escalation Days Data Collection
+ </summary>
+	<param name="filterData"></param>
+	<param name="escalationDaysData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.PipelineControlEscalationDaysCollection.GetPipelineEscalationDetailsData(UIBusinessLayer.EscalationDrilldownInputParam,System.String,UIBusinessLayer.PipelineEscalationDetailsData@)">
+	<summary>
+ This function returns Drill down task list data as well as (help needed,Unspecified) data
+ </summary>
+	<param name="oEscalationDrilldownInputParam"></param>
+	<param name="escalationDrilldownData"></param>
+	<returns></returns>
+	<remarks></remarks>
+	<Author>Vikram Tapikar</Author>
+</member><member name="T:UIBusinessLayer.ProjExclusionInfo">
+	<summary>
+ Contains information of projects to be passed to the backend for exclusion in RnR
+ </summary>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.ReportData.Clone">
+	<summary>
+ This function will return deep copy of object of this class
+ same as copy constructor 
+ </summary>
+	<returns>
+ it returns a generic object 
+ so need to be typecasted whenever used
+ </returns>
+	<remarks>
+ If this class encapsulates reference type in future, that object
+ needs to be instantiated and assigned separately
+ </remarks>
+</member><member name="M:UIBusinessLayer.Rule3FullKitTargetPopulator.GetTargetDataOnly(UIBusinessLayer.BaseTargetData)">
+	<summary>
+ This function returns only the target data per division for Rule 3
+ </summary>
+	<param name="oTargetData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.Rule3EscalTargetsPopulator.GetTargetDataOnly(UIBusinessLayer.BaseTargetData@)">
+	<summary>
+ This function returns only the target data per division for Rule 3 Escalation
+ </summary>
+	<param name="targetData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UIBusinessLayer.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:UIBusinessLayer.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:UIBusinessLayer.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:UIBusinessLayer.RulesAndResults.FKComplianceReportData">
+	<summary>
+ This class is only for Rule 3 Full kit Compliance report
+ </summary>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.ActualDelayBucketDataCollection.GetActualDelayData(UIBusinessLayer.ActualDelayFilterParam,System.Collections.Generic.List{UIBusinessLayer.ActualDelayBucketData}@)">
+	<summary>
+ This Function Returns List of Actual Delay Bucket Data Collection
+ </summary>
+	<param name="filterData"></param>
+	<param name="actualDelayBucketData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.FKMgrComplianceDetails">
+	<summary>
+ This class holds the details date for the full kit manager, 
+ the current fullkit details and the past compliance data
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.FKMgrDetails">
+	<summary>
+ This is a data class, which holds the detail data for the fullkit manager
+ </summary>
+	<remarks></remarks>
+</member><member name="P:UIBusinessLayer.RulesAndResults.FKMgrPastComplianceDataCollection.TotalCount">
+	<summary>
+ This count returns the actual count of the data received from backend.
+ As if no data is received we still adds a dummy row to it. So list will have count 1 but total count will be zero.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UIBusinessLayer.RulesAndResults.FKMgrDataCollection.TotalCount">
+	<summary>
+ This count returns the actual count of the data received from backend.
+ As if no data is received we still adds a dummy row to it. So list will have count 1 but total count will be zero.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.Rule3Targets.GetRule3TargetDataOnly">
+	<summary>
+ This function returns only the target data per division for Rule 3.
+ This function was made on basis of "GetRule3TargetData" difference being it doesnot populate filter data
+ as done in "GetRule3TargetData"
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:UIBusinessLayer.ConcertoLibProxy.m_RulesAndResults">
+	<summary>
+ the purpose of having proxy object is to protect client implementation on change of service
+ behavior (methods' signature)
+ </summary>
+</member><member name="T:UIBusinessLayer.MilestoneDataKey">
+	<summary>
+ This class serves as the key for drilldown data. drilldown data key was project id. but with milestone details in 
+ actual delay and OTD, the key has to be a combination of project id, milestone id.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.CustomDictComparer.GetHashCode2(UIBusinessLayer.MilestoneDataKey)">
+	<summary>
+ the hash code should also be unique for the object. so the method is overriden to create a custom unique hash code
+ </summary>
+	<param name="obj"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResultsFilterParam">
+	<summary>
+ This class is base class for all filter input params in 
+ Rules and Results.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.ProjectAttributesFilterParam">
+	<summary>
+ This class represent data structure for filter attribute.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.BucketDataFilterParam">
+	<summary>
+ Class represent Bucket data structure.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.ThroughPutFilterParam">
+	<summary>
+ This class represent Throughput data structure.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.CycleTimeFilterParam">
+	<summary>
+ This class represent CycleTime data structure.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.OTDFilterParam">
+	<summary>
+ This class represent OTD data structure.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.ActualDelayFilterParam">
+	<summary>
+ This class represent Actual Delay data structure.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.Rule2FilterParam">
+	<summary>
+ This class represent Rule2 data structure for input.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.Rule1FilterParam">
+	<summary>
+ This class represent Rule2 data structure for input.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.OTDADBucketDataCollection.GetActualDelayData(System.String,System.Collections.Generic.List{UIBusinessLayer.ActualDelayPCBucketData}@)">
+	<summary>
+ This Function Returns List of Actual Delay Bucket Data Collection
+ </summary>
+	<param name="division"></param>
+	<param name="actualDelayBucketData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.CycleTimeBucketDataCollection.GetCycletimeData(UIBusinessLayer.CycleTimeFilterParam,System.Collections.Generic.List{UIBusinessLayer.CycleTimeBucketData}@)">
+	<summary>
+ This Function Returns List of Cycle Time Bucket Data Collection
+ </summary>
+	<param name="filterData"></param>
+	<param name="cycleTimeBucketData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.FKDelayByTaskDetail">
+	<summary>
+ This is a data class, which holds the detail data for the fullkit manager
+ </summary>
+	<remarks></remarks>
+</member><member name="P:UIBusinessLayer.RulesAndResults.FKDelayByTaskDataCollection.TotalCount">
+	<summary>
+ This count returns the actual count of the data received from backend.
+ As if no data is received we still adds a dummy row to it. So list will have count 1 but total count will be zero.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.ColumnHeaderDataCollection.LoadHeaderDetails(System.Object[0:,0:])">
+	<summary>
+ This function loads the Column Header details
+ </summary>
+	<param name="vRptHeadData">The backend object containing the column header details</param>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.ColumnHeaderDataCollection.LoadReportHeaderDetails(S2MWEBSRVCSLib.IPMASPSession,System.Int32)">
+	<summary>
+ This function loads the Report Header details
+ </summary>
+	<remarks>DO NOT use this function if the column headers are to be used for other interface
+ other than IReportCache</remarks>
+</member><member name="M:UIBusinessLayer.ColumnHeaderDataCollection.GetHeaderDict">
+	<summary>
+ NOTE: Before calling this function you must call LoadHeaderDetails
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.ReportColumHeader">
+	<summary>
+ This class manages the visible header column collection
+ This should be used only Project reports (This uses IReportCache::GetReportColumnDetails )
+ </summary>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.RulesAndResults.Rule3ReportData">
+	<summary>
+ This class is only for Rule 3 Execution report
+ </summary>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.ThroughputBucketParamCollection.GetThroughputData(UIBusinessLayer.ThroughPutFilterParam,System.Collections.Generic.List{UIBusinessLayer.ThroughputBucketData}@)">
+	<summary>
+ This Function Returns List of Throughput Bucket Data Collection
+ </summary>
+	<param name="filterData"></param>
+	<param name="throughputBucketData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.stubData.GetConsolidatedTaskHistoryData">
+	<summary>
+ This is the stub data for Concolidated Task History Data.
+ 
+ </summary>
+	<author>Vikram Tapikar</author>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:UIBusinessLayer.ReportDatMgrFactory">
+	<summary>
+ This is a factory class to create Reportdatamanger. The object returned by the method
+ will be session level object
+ </summary>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.ReportDataMgrBase.LoadHeaders(S2MWEBSRVCSLib.IPMASPSession)">
+	<summary>
+ Must Override function since different backend interfaces are used for loading the headers
+ </summary>
+</member><member name="M:UIBusinessLayer.ReportDataMgrBase.IsIDColumnNeeded">
+	<summary>
+ Checks If the ID column is needed in the report
+ </summary>
+</member><member name="M:UIBusinessLayer.ReportDataMgrBase.IsPrivilegeColumnNeeded">
+	<summary>
+ Checks If the privilege column is needed in the report
+ </summary>
+</member><member name="M:UIBusinessLayer.ReportDataMgrBase.GetModifiedColumnHeaders(S2MWEBSRVCSLib.IPMASPSession,System.Collections.Generic.Dictionary{System.String,System.String}@)">
+	<summary>
+ 'This function assumes that dHiddenColumnList should not be Nothing
+ </summary>
+	<param name="dHiddenColumnList"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.ReportDataMgr.UpdateCachedDueDateData(UIBusinessLayer.UpdateDueDateDetails@)">
+	<summary>
+ This is to update the cache when user does sorting on any of the Edit Due Date columns.
+ the data will be sent back to cache the due data so that the modified data is retained.
+ </summary>
+	<param name="oUpdateDueDateDetails"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UIBusinessLayer.OTDBucketDataCollection.GetOTDData(UIBusinessLayer.OTDFilterParam,System.Collections.Generic.List{UIBusinessLayer.OTDBucketData}@)">
+	<summary>
+ This Function Returns List of OTD Bucket Data Collection
+ </summary>
+	<param name="filterData"></param>
+	<param name="otdBucketData"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:UIBusinessLayer.ReportCacheProxy.m_oReportCache">
+	<summary>
+ the purpose of having proxy object is to protect client implementation on change of service
+ behavior (methods' signature)
+ </summary>
+</member><member name="F:UIBusinessLayer.ConASPDataMaintenanceProxy.m_oConASPDataMaintenance">
+	<summary>
+ the purpose of having proxy object is to protect client implementation on change of service
+ behavior (methods' signature)
+ </summary>
+</member>
+</members>
+</doc>
