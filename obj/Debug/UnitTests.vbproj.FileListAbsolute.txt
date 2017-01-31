@@ -28,10 +28,10 @@ D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\bin\Debug\Jso
 D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\bin\Debug\Aspose.Tasks.xml
 D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\bin\Debug\MSProjectDataMapper.pdb
 D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\obj\Debug\UnitTests.vbprojResolveAssemblyReference.cache
-D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\bin\Debug\UnitTests.exe
 D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\bin\Debug\UnitTests.pdb
 D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\bin\Debug\UnitTests.xml
-D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\obj\Debug\UnitTests.exe
 D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\obj\Debug\UnitTests.xml
 D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\obj\Debug\UnitTests.pdb
+D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\bin\Debug\UnitTests.dll
+D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\obj\Debug\UnitTests.dll
 D:\Realization\2012_Concerto_Mainline\ResServer\SubtaskTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
