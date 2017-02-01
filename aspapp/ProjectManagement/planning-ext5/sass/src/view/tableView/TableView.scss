@@ -1,0 +1,276 @@
+.table-view .x-panel-body{
+    border-color: #cecece !important;
+}
+.table-view .x-docked-top{
+    border-bottom-width: 1px !important;
+    border-bottom-color:#cecece !important;
+}
+.table-view .x-grid-tree-node-expanded .x-tree-expander{
+    /*background-image: url("images/expanded-arrow-table.png") !important;*/
+    background-position: 0px !important;
+}
+.table-view .x-tree-expander-over .x-tree-expander{
+    background-position:0px !important;
+}
+.row-summary-task .x-grid-cell {
+    background: url("images/summary-row-table-bg.png") !important;
+}
+.row-summary-task .x-grid-tree-node-expanded .x-tree-icon-parent,
+.row-summary-task .x-tree-icon-parent,
+.row-summary-task .x-tree-icon-leaf 
+
+{
+    background-image: url(images/SummaryNode.png) !important;
+}
+
+.simpleProject .x-tree-elbow,
+.simpleProject .x-tree-elbow-end,
+.simpleProject .x-tree-icon.x-tree-icon-leaf  {
+    display:none !important;
+}
+
+.row-task .x-grid-cell {
+    background-color: #ffffff !important;
+}
+.table-view .x-grid-row .x-grid-cell {
+    font-size: 12px;
+    font-family:Arial;
+    color:#4c4b4b;
+    vertical-align:middle;
+    border-left: 1px solid #cecece;
+    border-bottom:1px solid #cecece;
+}
+.table-view .x-grid-row .x-grid-cell-taskId .x-grid-cell-inner,
+.table-view .x-grid-row .x-grid-cell-predecessors .x-grid-cell-inner,
+.table-view .x-grid-row .x-grid-cell-successors .x-grid-cell-inner {
+    text-align:right !important;
+}
+.table-view .highlight-phase-1,
+.table-view .highlight-resource-1,
+.table-view .highlight-task-manager-1 {
+    background-color: #1abc9c !important;
+    color:white !important;
+}
+.table-view .highlight-phase-2,
+.table-view .highlight-resource-2,
+.table-view .highlight-task-manager-2 {
+    background-color: #e67e22 !important;
+    color:white !important;
+}
+.table-view .highlight-phase-3,
+.table-view .highlight-resource-3,
+.table-view .highlight-task-manager-3 {
+    background-color: #9b59b6 !important;
+    color:white !important;
+}
+.table-view .highlight-phase-4,
+.table-view .highlight-resource-4,
+.table-view .highlight-task-manager-4 {
+    background-color: #3498db !important;
+    color:white !important;
+}
+.table-view .highlight-phase-5,
+.table-view .highlight-resource-5,
+.table-view .highlight-task-manager-5 {
+    background-color: #34495e !important;
+    color:white !important;
+}
+.table-view .highlight-phase-6,
+.table-view .highlight-resource-6,
+.table-view .highlight-task-manager-6 {
+    background-color: #95a5a6 !important;
+    color:white !important;
+}
+.table-view .highlight-phase-7,
+.table-view .highlight-resource-7,
+.table-view .highlight-task-manager-7 {
+    background-color: #ecf0f1 !important;
+    color:white !important;
+}
+.table-view .highlight-phase-8,
+.table-view .highlight-resource-8,
+.table-view .highlight-task-manager-8 {
+    background-color: #2EFE9A !important;
+    color:white !important;
+}
+.table-view .highlight-phase-9,
+.table-view .highlight-resource-9,
+.table-view .highlight-task-manager-9 {
+    background-color: #FF0080 !important;
+    color:white !important;
+}
+.table-view .highlight-phase-10,
+.table-view .highlight-resource-10,
+.table-view .highlight-task-manager-10 {
+    background-color: #01A9DB !important;
+    color:white !important;
+}
+.table-view .highlight-phase-11,
+.table-view .highlight-resource-11,
+.table-view .highlight-task-manager-11 {
+    background-color: #00FFFF !important;
+    color:white !important;
+}
+.table-view .highlight-phase-12,
+.table-view .highlight-resource-12,
+.table-view .highlight-task-manager-12 {
+    background-color: #F5DA81 !important;
+    color:white !important;
+}
+.table-view .highlight-phase-13,
+.table-view .highlight-resource-13,
+.table-view .highlight-task-manager-13 {
+    background-color: #C517A5;
+    color:white !important;
+}
+.table-view .highlight-phase-14,
+.table-view .highlight-resource-14,
+.table-view .highlight-task-manager-14 {
+    background-color: #5644AE;
+    color:white !important;
+}
+.table-view .highlight-phase-15,
+.table-view .highlight-resource-15,
+.table-view .highlight-task-manager-15 {
+    background-color: #254297;
+    color:white !important;
+}
+.table-view .highlight-phase-16,
+.table-view .highlight-resource-16,
+.table-view .highlight-task-manager-16 {
+    background-color: #90A8B9;
+    color:white !important;
+}
+.table-view .highlight-phase-17,
+.table-view .highlight-resource-17,
+.table-view .highlight-task-manager-17 {
+    background-color: #1BD1DE;
+    color:white !important;
+}
+.table-view .highlight-phase-18,
+.table-view .highlight-resource-18,
+.table-view .highlight-task-manager-18 {
+    background-color: #1BE65E;
+    color:white !important;
+}
+.table-view .highlight-phase-19,
+.table-view .highlight-resource-19,
+.table-view .highlight-task-manager-19 {
+    background-color: #9FB51D;
+    color:white !important;
+}
+.table-view .highlight-phase-20,
+.table-view .highlight-resource-20,
+.table-view .highlight-task-manager-20 {
+    background-color: #E2EED2;
+    color:white !important;
+}
+.table-view .x-column-header{
+	font-family:Arial;
+	font-size: 12px;
+	font-weight:bold;
+    color:#4c4b4b;
+    background: -webkit-linear-gradient(#fff, #dedede); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #dedede); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff, #dedede); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #dedede); /* Standard syntax */
+    border:1px solid #CECECE;
+}
+.table-view .x-grid-row {
+    background: transparent;
+    height:30px;
+    overflow: hidden;
+}
+.table-view .x-panel-default {
+    background: white;
+}
+.table-view .resCombobox{
+	background:url(images/green_plus_add.png);
+}
+.table-view .x-grid-cell:hover .resource-picker-edit-icon  {
+    visibility: visible;
+}
+.table-view .tableview-row-css .x-grid-cell{
+	background-color:rgb(216, 214, 214);
+	color:black;
+}
+.table-view .tableview-row-phase-separator .x-grid-cell{
+	border-top: 1px solid #CECECE;
+}
+.x-grid-tree-node-expanded .x-grid-cell {
+    background-color: #EDEDED;
+    border-top-color: #CECECE;
+    border-bottom-color: #CECECE;
+}
+.table-view .errorhighlightclass{
+    background-color: #FFFF19 !important;
+}
+.table-view .x-grid-row-selected .x-grid-td {
+    background: #f3f3f3;
+}
+
+.table-view .x-grid-row-over .x-grid-td {
+    background: auto;
+}
+
+.table-view td.grid-dragfill-highlight,
+.table-view .x-grid-row-selected .x-grid-td.grid-dragfill-highlight {
+    background: rgba(181,209,255,0.34);
+}
+#tableview .tool-bar {
+    top: -1px !important;
+}
+label#noRecordMsg {
+    position: absolute !important;
+    font-size: medium;
+    top: 10px !important;
+}
+.scopeColumn {
+    background:#EDEDED !important;
+}
+.subtask-alignment{
+    padding-left:30px;
+}
+.table-view .x-grid-row .x-grid-cell-text22 {
+  white-space: normal !important;
+  word-wrap: break-word;
+}
+.tableViewContextMenuCls .context-menu-test-add-task{
+ background-image: url("images/Task.png");
+
+}
+.tableViewContextMenuCls .context-menu-test-add-PE{
+ background-image: url("images/PE.png");
+
+}
+.tableViewContextMenuCls .context-menu-test-add-CMS{
+ background-image: url("images/CMS.png");
+
+}
+.tableViewContextMenuCls .context-menu-test-add-FK{
+ background-image: url("images/FK.png");
+
+}
+.tableViewContextMenuCls .context-menu-test-add-IMS{
+ background-image: url("images/IMS.png");
+
+}
+.tableViewContextMenuCls .context-menu-test-add-SubTask{
+ background-image: url("images/subtask.png");
+
+}
+.tableViewContextMenuCls .context-menu-test-remove{
+ background-image: url("images/delete.png");
+
+}
+.expandAllCls{
+   background-image: url("images/expand.png") ; 
+}
+
+.collapseAllCls{
+   background-image: url("images/collapse.png") ; 
+}
+
+.exportExcelCls {
+    background-image: url("images/exportexcel.png") ; 
+}

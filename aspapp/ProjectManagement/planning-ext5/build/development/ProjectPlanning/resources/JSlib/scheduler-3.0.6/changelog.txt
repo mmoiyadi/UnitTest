@@ -1,0 +1,1464 @@
+Release history for Ext Scheduler:
+
+3.0.6     2015-07-01
+    
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.1.0
+    - 5.1.1
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Scheduler Cmd package created (#1953)
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #2047: Zones in Export are not aligned correctly with buffered rendering
+    - Fixed #2053: Scheduler Event example doesn't show event arguments
+    - Fixed #2077: Exception: Resource can't be assigned twice to the same task
+    - Fixed #2094: Scheduler: Sch.locale.Locale throws Exception when using Ext.define(null, ...)
+
+3.0.5     2015-05-22
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.1.0
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Added `onBeforeSave`, `onAfterSave` template methods to the `Sch.plugin.EventEditor` class.
+    - New config added to CrudManager: `writeAllFields`. Works like similar config on `Ext.data.writer.Writer`. Can be applied both to all the registered stores and to individual stores (Fixed #1989).
+
+    [API CHANGES]
+    - CrudManager `getStore` method was renamed to `getStoreDescriptor`. Also new `getStore` method was added. It returns a "real" store (`Ext.data.AbstractStore` instance). 
+
+    [BUG FIXES]
+    - Fixed #1922: Touch Monitor issues
+    - Fixed #1932: schedulergrid in calendar mode fails with scheduler lines plugin
+    - Fixed #1960: Export plugin works incorrectly with infiniteScroll mode
+    - Fixed #2017: Scroll jumps to the top
+
+3.0.4     2015-04-28
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.1.0
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Added ASP.NET backend example (Fixed #1803)
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1907: Task hover tip is partially hidden
+    - Fixed #1931: Gantt-Scheduler sample jumping when zooming
+    - Fixed #1955: time stamp header problem
+    - Fixed #1970: CrudManager doesn't support "critical" fields
+    - Fixed #1973: Resizing Events That Have Validation Message Breaks Resizing 
+    - Fixed #1524: Fit columns not working properly in vertical mode (re-fix, new test coverage added)
+    - Fixed #1991: Drag Creator proxy el style not reset after creating an event
+
+3.0.3     2015-04-02
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.1.0
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Add start/end hour config to calendar view (Fixed #1755)
+    - Hover tip can be customized now. Lookup config 'hoverTip' (Fixed #1899)
+    - CrudManager can register stores by its Ids (Fixed #1924)
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1859: Export header too small to fit pagewidth
+    - Fixed #1820: Add support of footer functionality in Export dialog UI
+    - Fixed #1873: Rows not rendered for empty event store
+    - Fixed #1891: Gantt with histogram horizontal scroll is jittery in Chrome
+    - Fixed #1895: Hardware Touch Screen interferes with infinite scroll on Ext Scheduler
+    - Fixed #1873: Rows not rendered for empty event store
+    - Fixed #1897: Assignment field stays dirty after persisting changes w/ CrudManager
+    - Fixed #1904: Grouping feature won't update header if event is moved to another group
+    - Fixed #1913: Export header too small to fit pagewidth
+    - Fixed #1914: Scrolling diagonal up left/right causes flickered scrolling in advanced example
+    - Fixed #1915: Fix Customer header demo. Header text not correctly shown
+    - Fixed #1923: CrudManager: add ability to set a store rows container name
+
+3.0.2     2015-03-03
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.1.0
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1837: Gantt and histogram locked grid don't sync collapse state
+    - Fixed #1897: Assignment field stays dirty after persisting changes w/ CrudManager
+
+3.0.1     2015-02-10
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.1.0
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - 'tooltipTpl' config now accepts a string value as well as an Ext.Template instance.
+    - You can now pass a message in your createValidatorFn/resizeValidatorFn/dndValidatorFn methods, which will be shown in the tooltip.
+    - New Architect extension version 2.1.0 is available. Classes names and aliases changed, to avoid possible collisions. Otherwise extension is
+    intact
+    - The Sch.mixin.TimelineView#getDataForTooltipTpl method now receives a new parameter containing the HTML element which triggered the tooltip to be shown.
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1501: Calendar View internalIds
+    - Fixed #1504: German translation of Export settings dialog
+    - Fixed #1517: Calendar View after drag selection visibility is removed
+    - Fixed #1552: Error While importing Scheduler extension in Sencha Architect 3
+    - Fixed #1613: Update Architect AUX file to work with latest architect and Ext JS 5
+    - Fixed #1760: Add support for a customer header template to the export result
+    - Fixed #1761: getCurrentZoomLevelIndex return incorrect results
+    - Fixed #1779: SimpleEditor sometimes misplaced
+    - Fixed #1809: Weekview example should allow to create events with no resource assigned
+    - Fixed #1811: Exporter tpl config should be converted into XTemplate
+    - Fixed #1816: Export add footerHeight and showFooter properties
+    - Fixed #1829: Multi-page export with many locked columns shows wrong columns
+    - Fixed #1836: Implement keyevents for scheduler
+    - Fixed #1840: Arrow key navigation broken in cellediting plugin
+    - Fixed #1842: Make AJAX request configurable
+    - Fixed #1846: Export dialog "Paper format" combobox has hardcoded formats list
+    - Fixed #1848: Time axis is incorrectly rendered under certain conditions
+    - Fixed #1862: timeAxis.ceilDate won't ceil week start day
+
+3.0.0     2015-01-07
+
+    We're excited to announce the public GA release of Ext Scheduler 3.0. The code base has been upgraded to
+    run on Ext JS 5.1.0, which adds interesting new features like touch support, responsive capabilities and grid widgets to the Scheduler component.
+    The main feature of the release is the new "calendar view". This shows events in a calendar-like interface with days running horizontally
+    and hours running vertically. Additionally, we have added a new CRUD manager, which makes it a lot easier to handle loading and saving data in the scheduler component. You can of course read
+    all about the CRUD manager in our guide section of our documentation site. There is of course much more to explore in 3.0, so please check out our 3.0 blog post. http://www.bryntum.com/blog/ext-gantt-ext-scheduler-3-0-ga-available
+    We would be very happy to hear your feedback and please report any bugs in our forums: http://bryntum.com/forum/viewforum.php?f=33
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.1.0
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Ext JS 5 support
+    - Export plugin is now supported with Ext JS 5. Buffered grids are supported which gives the ability to export large amounts of data.
+    - The Export plugin performance has been improved which means smaller html fragments and less stress for the browser.
+    - You can now write your own custom exporters since the updated Export plugin is extensible. A new type of exporter has been implemented: Multi page (vertical). It fits the data horizontally and iterates over pages vertically.
+    - Introduced a new config 'mode' and methods getMode/setMode. In further releases 'orientation' is marked as deprecated in favor of 'mode'
+    - Added a 'crisp' theme CSS file (see 'theming' sample)
+    - Improved support for touch devices. You can resize, drag drop events as usual. Creating new events is done by first doing tap-and-hold for 1000ms (configurable) and then drag.
+
+    [API CHANGES]
+    - Sch.column.timeAxis.Horizontal made public
+    - Sch.column.timeAxis.Vertical made public
+    - Added a new 'trackerConfig' config object to the Sch.feature.DragCreator class
+    - Signature of Sch.model.view.TimeAxis#getPositionFromDate method is enhanced: new optional argument isEnd is added. Required only for calendar view
+    - Added a new event 'eventrepaint' to the SchedulerView class which fires after an event has been repainted.
+    - Added new "setViewPreset" / "getViewPreset" methods to the Sch.mixin.TimelinePanel class.
+    - Added a new "setRowHeight" method to the Sch.mixin.SchedulerPanel class.
+    - BREAKING: 'select', 'deselect', 'selectionchange' events fired for Event selection have been renamed to "eventXXX".
+    - BREAKING: 'defaultConfig' config property changed to 'exportConfig' since Ext 5 uses 'defaultConfig' internally.
+    - BREAKING: 'getXYFromDate' removed from TimelineView, use 'getCoordinateFromDate' instead
+    - BREAKING: 'getDurationInBusinessDays' removed from Sch.util.Date.
+    - The load mask is no longer bound to the event store by default, it's now bound to the store Ext JS uses for the rows. You can
+      always choose which store to use with the loadmask by using the 'loadmask' config view property.
+
+    [BUG FIXES]
+    - Fixed #1549: Scheduler CalendarView resize autoresponsive
+    - Fixed #1771: Weekview sample broken
+    - Fixed #1778: Scheduler looses scroll position in IE when timeline is clicked
+    - Fixed #1782: Rows are out of sync in vertical scheduler after fitColumns call
+    - Fixed #1794: Should highlight special column lines
+    - Fixed #1795: Click on event in week view scrolls to top of the view
+
+3.0.0-RC  2014-12-17
+
+    We're pleased to announce the 3.0 Release Candidate. THe examples and source code have been updated to be based on Ext JS 5.1.0.
+    The main focus of this release has been stability and test fixes. We have also upgraded our export feature to work with
+    the Ext JS buffered rendering of large data sets.
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.1.0
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Export plugin is now supported with Ext JS 5. Buffered grids are supported which gives the ability to export large amounts of data.
+    - The Export plugin performance has been improved which means smaller html fragments and less stress for the browser.
+    - You can now write your own custom exporters since the updated Export plugin is extensible. A new type of exporter has been implemented: Multi page (vertical). It fits the data horizontally and iterates over pages vertically.
+
+    [API CHANGES]
+    - BREAKING: 'select', 'deselect', 'selectionchange' events fired for Event selection have been renamed to "eventXXX".
+
+    [BUG FIXES]
+    - Fixed #1469: Scheduler timeline doesn't occupy scheduler view entirely on big resolutions
+    - Fixed #1572: Export plugin needs to work with buffering
+    - Fixed #1573: Multi-page export with two rows of pages shows scrollbar and displaced dependencies
+    - Fixed #1672: Export date range gives reconfigure error.
+    - Fixed #1691: Crash during event resize
+    - Fixed #1703: DropDrop causes events to be duplicated visually
+    - Fixed #1724: Build Sencha Cmd tests for scheduler 3.0
+    - Fixed #1739: Scheduler always saves a state
+    - Fixed #1763: Add timeout property for export plugin
+    - Fixed #1773: Events do not load in Tree Scheduler
+    - Fixed #1775: Crud manager has to fire loadfail event of AJAX failure
+
+3.0.0-beta-2 2014-11-10
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.0.1
+
+    [KNOWN ISSUES]
+    - Weekview doesn't yet support creating/resizing multi-day events.
+    - Export feature is not yet adapted to handle buffered rendering (which is on by default in Ext JS 5)
+    - Documentation of the weekview mode is still in progress.
+    - Touch support not fully tested
+
+    [FEATURES / ENHANCEMENTS]
+    - Ext JS 5 support
+    - Introduced a new config 'mode' and methods getMode/setMode. In further releases 'orientation' is marked as deprecated
+    in favor of 'mode'
+    - Added a 'crisp' theme CSS file (see 'theming' sample)
+    - Improved support for touch devices. You can resize, drag drop events as usual. Creating new events is done by first doing tap-and-hold for 1000ms (configurable) and then drag.
+
+    [API CHANGES]
+    - Sch.column.timeAxis.Horizontal made public
+    - Sch.column.timeAxis.Vertical made public
+    - Added a new 'trackerConfig' config object to the Sch.feature.DragCreator class
+    - Signature of Sch.model.view.TimeAxis#getPositionFromDate method is enhanced: new optional argument isEnd is added.
+    Required only for calendar view
+    - Added a new event 'eventrepaint' to the SchedulerView class which fires after an event has been repainted.
+    - Added new "setViewPreset" / "getViewPreset" methods to the Sch.mixin.TimelinePanel class.
+    - Added a new "setRowHeight" method to the Sch.mixin.SchedulerPanel class.
+
+    [BUG FIXES]
+    - Fixed #1558: Normal grid changes time span on splitter move when infinite scroll enabled
+    - Fixed #1594: ResourceId=0 breaks drag create, drag drop
+    - Fixed #1606: Model.set override breaks Ext JS API
+    - Fixed #1607: Display problem in the beta of the Scheduler component
+    - Fixed #1571: Print plugin does not work correctly when inside a viewport.
+    - Fixed #1577: Scheduler / Ext 4.2.3.1477: Event resize in TimeLine not working correct
+    - Fixed #1588: [TOUCH] Infinite scroll is broken
+    - Fixed #1589: [TOUCH] Zooming move time span to earlier dates
+    - Fixed #1606: Model.set override breaks Ext JS API
+    - Fixed #1619: IE Patch TreeViewDragDrop error on enableDrag = false
+    - Fixed #1624: Tick width isn't reduced when scheduler width is
+    - Fixed #1638: Crash when not specifying start date / end date
+    - Fixed #1642: DST issue in Brazilian timezone
+    - Fixed #1648: EventEditor should be repositioned after event update
+    - Fixed #1657: Problems with responsive orientation on iPad
+    - Fixed #1661: Mixed use of line endings, potential source of headaches
+    - Fixed #1666: Event tooltip cannot be anchored
+
+3.0.0-beta-1 2014-09-25
+
+    We're excited to announce the first public beta release of Ext Scheduler 3.0. The code base has been upgraded to
+    run on Ext JS 5.0.1, which adds some great new features like touch support to the Scheduler component. The main feature
+    of this Scheduler release is the new "calendar view". This shows events in a calendar-like interface with days running horizontally
+    and hours running vertically. There is a new sample called "weekview", which we encourage you to try out. Additionally, we have added
+    a new CRUD manager, which makes it a lot easier to handle loading and saving data in the scheduler component. You can of course read
+    all about the CRUD manager in our guide section of our documentation site. The PHP sample has been modified to use the new capabilities of this class.
+
+    Starting from this release, we no longer support IE7 since Ext JS 5 has dropped support for it.
+
+    This is a beta release, so expect some rough edges here and there. We would be very happy to hear your feedback and
+    please report any bugs in our new Ext Scheduler 3.x forums: http://bryntum.com/forum/viewforum.php?f=33
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 5.0.1
+
+    [KNOWN ISSUES]
+    - Weekview doesn't yet support creating/resizing multi-day events.
+    - Export feature is not yet adapted to handle buffered rendering (which is on by default in Ext JS 5)
+    - Documentation of the weekview mode is still in progress.
+    - Touch support not fully tested
+
+    [FEATURES / ENHANCEMENTS]
+    - Ext JS 5 support
+    - Introduced a new config 'mode' and methods getMode/setMode. In further releases 'orientation' is marked as deprecated
+    in favor of 'mode'
+
+    [API CHANGES]
+    - BREAKING: 'defaultConfig' config property changed to 'exportConfig' since Ext 5 uses 'defaultConfig' internally.
+    - BREAKING: 'getXYFromDate' removed from TimelineView, use 'getCoordinateFromDate' instead
+    - BREAKING: 'getDurationInBusinessDays' removed from Sch.util.Date.
+    - The load mask is no longer bound to the event store by default, it's now bound to the store Ext JS uses for the rows. You can
+      always choose which store to use with the loadmask by using the 'loadmask' config view property.
+
+    [BUG FIXES]
+
+2.2.25    2014-09-10
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1496: Circular reference in requirements chain - Localizable.js
+    - Fixed #1521: zoomToSpan works incorrect for Quarter resolution
+    - Fixed #1535: Event rendering bug with grouping feature
+    - Fixed #1537: Export plugin cuts the row
+    - Fixed #1539: Export example doesn't support output path change
+    - Fixed #1544: Gantt+Scheduler combo produces JS error upon Dynamicaly Assigned task effort second time updating
+    - Fixed #1550: Filter on EventStore should update event cache
+    - Fixed #1555: Drag&drop of multiple events works incorrectly at second time
+    - Fixed #1556: Multipage export performance and hidden columns
+
+2.2.24    2014-08-01
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1492: ResourceZones performance improvements
+    - FIXED #1496: Circular reference in requirements chain - Localizable.js
+    - Fixed #1500: Missing requirements
+    - Fixed #1515: Multi-page export shows displaced today-line
+    - Fixed #1524: Fit columns not working properly in vertical mode
+    - Fixed #1506: Export plugin doesn't support provided dateRangeFormat
+    - Fixed #1530: Milestone events overlap in scheduler
+    - FIXED #1539: Export example doesn't support output path change
+
+2.2.23    2014-06-26
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1478: Circular reference in Sch.locale.En
+
+2.2.22    2014-05-30
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    - Fixed #1374: Add tooltipConfig for dd, create and resize events
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1433: Drag create and resize tooltips get cut off
+    - Fixed #1346: Make trackOver configurable
+    - Fixed #1390: Buffered rows not synchronized in some cases
+    - Fixed #1396: enableCopy gives error(s) while dragging with ctrl key down
+    - Fixed #1430: Row height not syncronized after adding an assignment in gantt+scheduler sample
+    - Fixed #1432: ResourceZones interfer with 'scheduleclick' event firing
+    - Fixed #1478: Circular reference in Sch.locale.En
+    - Fixed #1549: Scheduler CalendarView resize autoresponsive
+
+
+2.2.21    2014-05-05
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Tree store now supports collapse/expand action, while filtered with the `filterTreeBy` method (see the new
+      config `allowExpandCollapseWhileFiltered` in the Sch.data.mixin.FilterableTreeStore). Also, current filter will be re-applied
+      to the newly loaded data
+    - Added a plugin for Architect 3
+    - New config options for the schedulerview `horizontalEventSorterFn` and `verticalEventSorterFn`.
+      Allowing you to order the overlapping events in the view. (Fixed #1339)
+    - The header row 'renderer' method now receives a new argument containing the EventStore of the panel containing the header.
+      See updated 'timeaxis.js' sample for reference.
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed a bug, that could lead to nodes, hidden with the `hideNodesBy` method, to appear in the tree panel
+      after collapse/expand actions
+    - Fixed #1317: Changing column width at horizontal orientation
+    - Fixed #1328: Translate locales into Dutch
+    - Fixed #1350: Advanced sample undesired scrolling after editing
+    - Fixed #1360: Crash after switching orientation and refreshing view
+    - Fixed #1375: Excel export example raises InvalidCharacterError for non latin1 characters exporting
+    - Fixed #1384: Drag proxy misplaced with "snapToIncrement" set to true
+
+2.2.20    2014-04-11
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Various minor code cleanups and fixes to prepare support for Ext JS 5
+    - Fixed a bug which meant the tooltip was not updated while view is being scrolled during a drag drop.
+    - Fixed #1285: Scheduling view with infinite scroll doesn't scroll to correct start date
+    - Fixed #1290: Exception when rejecting store changes in vertical mode
+    - Fixed #1292: hourAndDay preset displays hour in the wrong format
+    - Fixed #1294: Add a new plugin enabling a new renderer for the Grouping view header
+    - Fixed #1298: Task is misplaced when resize is started
+    - Fixed #1301: 'Resize' plugin works incorrect when there are more than one event in a row
+    - Fixed #1303: Too many refreshes when switching orientation
+    - Fixed #1305: Drag Creator, resize & drag drop should only scroll in one direction.
+    - Fixed #1309: Rows not repainted correctly during scrolling and drag drop
+    - Fixed #1319: ScrollManager tries to scroll too far when there is no space to scroll to
+    - Fixed #1323: Drag drop not working in RTL mode
+    - Fixed #1324: Resize Tooltip not shown in RTL
+    - Fixed #1331: A combination of weekStartDay and gantt's startDate causes javascript error
+    - Fixed #1334: After Gantt export, no tasks are seen in gantt panel of gantt export example
+    - Fixed #1335: Multiple drag drop doesn't move tasks correctly
+    - Fixed #1345: IE8 Array.prototype.slice: 'this' is not a JavaScript object in Sch.view.Vertical.resolveResource
+
+2.2.19    2014-03-24
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1171: [Feature request] timeResolution unit starting point
+    - Fixed #1193: Improve Docs to include links to Ext JS online docs
+    - Fixed #1243: Scrolling while creating event / Missing scrolling when dragging
+    - Fixed #1248: Column lines not rendered correctly when using a cellGenerator
+    - Fixed #1260: Scheduler - Incorrect header in vertical mode
+    - Fixed #1272: Date shown at cursor is incorrect with filtered time axis
+    - Fixed #1273: Ext.messageBox.Alert and Drag events
+    - Fixed #1275: Crash when deleting an event in vertical mode
+
+2.2.18    2014-02-28
+
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Exposed a new 'timeheadercontextmenu' event fired by the top level SchedulerPanel class when right clicking on a horizontal time header element.
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1218: Event remove bug when event belongs to multiple stores
+    - Fixed #1219: Zooming with infinite scroll produces incorrect ticks
+    - Fixed #1223: Resize handles disappear on event click
+    - Fixed #1229: Bug in TimeAxis sample
+    - Fixed #1234: HeaderZoom plugin throws exception when added to panel with vertical orientation
+    - Fixed #1235: Zoom to fit
+    - Fixed #1247: Sch.feature.DragCreator.js requires singleton Sch.util.ScrollManager
+
+2.2.17    2014-02-14
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Added ability to specify which header row (top/middle/bottom) in a viewPreset that should have column lines (Fixed #1170)
+    - Added new method scrollToDateCentered which put the passed date to the center of the view (Fixed #1166)
+    - Added HeaderZoom plugin which allows user to zoom to the date range, selected with drag and drop in the timeline header (Fixed #1101)
+
+    [API CHANGES]
+    - Sch.mixin.Zoomable#zoomToSpan doesn't have `config` anymore. To specify scrolling range use Sch.mixin.Zoomable#visibleZoomFactor property.
+    - Fixed #1167: eventLayout classes should be configurable
+    - Renamed "Sch.plugin.SummaryColumn" to "Sch.column.Summary". This type of column doesn't need to be included in the grid plugins collection anymore.
+    - The `getDurationInDays` method now tries to take the DST change into account. (Fixed #728)
+    - The private method `floorDate` of `Sch.data.TimeAxis` class, when called with `relativeToStart : false` and `increment` > 1 will now
+      adjust the passed date according to the nearest snapping point (for example `floor` for the date 2014/01/18 with unit DAY and increment 4
+      will return 17, as the beginning of the following 4 days interval). If you rely on this method (you shouldn't generally)
+      and this change affects your code, explicitly pass `increment = 1`
+
+    [BUG FIXES]
+    - Fixed a bug when timeAxis.ceilDate wouldn't correctly handle first month of quarter on the year
+    - Fixed a bug with drawing column lines after switching view preset
+    - Fixed a bug, that could cause a column lines misplacement when "autoAdjustTimeAxis" option is disabled
+    - Fixed #1178: Zooming demo breaks after zooming out
+    - Fixed #1186: Timeaxis sample broken
+    - Fixed #1189: scrollEventIntoView should leave some space before/after event
+    - Fixed #1192: bindAutoTimeSpanListeners leaks listeners to Store
+    - Fixed #1199: drag and drop problem with scroll bar
+    - Fixed #1210: Drag Creator tooltip misplaced when creating 2nd event
+    - Fixed #1213: Zooming bug after event's canceled "drag&drop"
+
+2.2.16    2014-01-17
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Clicking rows/events in horizontal orientation now selects the locked grid row
+    - Initial progress on "horizontal buffering", introduced as `infiniteScroll` option. When enabled, it will automatically
+      adjust timespan during horizontal scrolling (Fixed #1019).
+    - Added a 'refresh' method to the Sch.column.timeAxis.Horizontal class, to be able to easily redraw the time axis header rows
+    - Fixed #1089: Performance tweak for 'getTickFromDate' method
+
+    [API CHANGES]
+    - The `Sch.data.TimeAxis` class no longer "knows" anything about the current preset, header config etc, such information has been moved to
+      `Sch.view.model.TimeAxis` class
+    - The `forEachInterval/forEachMainInterval` methods of the `Sch.data.TimeAxis` class has been moved to the `Sch.view.model.TimeAxis`
+    - The interface of the protected method `forEachAuxInterval` of the `Sch.data.TimeAxis` class has changed
+    - Changed the default behavior for `startDate` and `endDate` configs of the Scheduler panel.
+      If they are not specified it will read them from the provided `eventStore` data (Fixed #525).
+    - The `viewchange` event is no longer fired if view has not been rendered
+
+    [BUG FIXES]
+    - Fixed #962:  DragSelector isn't scrolling view
+    - Fixed #1085: Dragging or resizing events should change timespan
+    - Fixed #1100: scrollEventIntoView not working in buffered SchedulerTree
+    - Fixed #1109: autoAdjustTimeAxis causes lines and zones misplacement
+    - Fixed #1110: Exception during collapse/expand after hiding nodes in the tree store
+    - Fixed #1126: Drag Creator not working in IE11
+    - Fixed #1128: "scheduleclick" event fired after prevented drag create
+    - Fixed #1123: Infinite scroll demo: Chrome doesn't show any events in Event Editor demo
+    - Fixed #1134: vertical view example is missing resource column
+    - Fixed #1150: Scrollbar missing after 3 zoom in
+    - Fixed #1163: Resize not finalized if mouse isn't moved
+
+2.2.15    2013-12-11
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1102: Zooming levels not affecting view
+
+2.2.14    2013-12-10
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - SimpleEditor and EventEditor classes now respect the readOnly state of the Scheduler
+    - Events drag and drop can now work with tasks that starts and/or ends outside of the currently visible timespan
+    - new `zoomKeepsOriginalTimespan` config option added to configure the zooming behavior
+    - Zooming example now shows a header zooming feature, clicking and dragging activates the zoom.
+
+    [API CHANGES]
+    - Private class Sch.feature.PointDragZone has been merged into Sch.feature.SchedulerDragZone
+    - The Sch.feature.DropZone class, that was used only in the "externaldragdrop" example has been moved
+      from main sources tree to the example folder
+
+    [BUG FIXES]
+    - Fixed #1072: Event resize is triggered by right mouse click
+    - Fixed #1076: Events ending outside the current view cannot be moved
+    - Fixed #1081: Hiding the first child which is a parent task w/o children breaks collapse/expand
+    - Fixed #1088: When you double click on event on scheduler fires eventdblclick & scheduledblclick both
+    - Fixed #1091: Broken row height synchronization between locked and normal grid.
+    - Fixed a bug: the "isCopy" argument of the "eventdrop" event was always passed as `false`
+
+2.2.13    2013-11-20
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Added new config option for scheduler panel - "autoAdjustTimeAxis" allowing you to make the scheduler always start/end
+      on exactly the provided dates
+    - Added a new config `resourceZonesConfig` allowing you to configure the `Sch.plugin.ResourceZones` instance (Fixed #1014)
+
+    [API CHANGES]
+    - The `Sch.config.locale` option has been removed, as it was causing too many issues with Sencha Cmd. Scheduler now always "requires"
+      the English locale. Also, the English locale now does not overwrite the other active non-english locale
+
+    [BUG FIXES]
+    - Fixed #994: When resizing an event, scheduler view can scroll significantly
+    - Fixed #1043: displayDateFormat setting from viewPreset not applied properly after zooming
+    - Fixed #1047: Speed up rendering of lines & zones
+    - Fixed #1049: Scheduler not working in a Cmd app
+    - Fixed #1052: Resizing event should use same accessor methods as in gantt
+    - Fixed a bug, that scheduler tree panel was not including `Ext.grid.Panel` class in it's "requires" list
+
+2.2.12    2013-10-29
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #995: Screen flickers in IE when resizing event to 0 duration
+    - Fixed #1018: Copying multiple events puts them on wrong resource row
+    - Fixed #1023: Column resizing does not work in locked grid of the tree scheduler
+    - Fixed #1028: Lock/unlock options should not be visible with grouping view
+    - Fixed #1036: Daylight Savings Time - Scheduler 2.2.7
+    - Fixed a bug that could cause extra "update" event fired on the event store when moving several events at once
+    - Fixed a bug that could prevent the drag selector indicator from being shown after scheduler refresh
+    - Fixed a regression bug, that was preventing from setting "Cls" field name to "cls" in the models used for
+      lines and zones plugins
+    - Fixed a bug, that would cause the events misplacement during drag and drop when changing between the view presets
+      with different "timeColumnWidth" setting
+
+2.2.11    2013-10-16
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.1
+    - 4.2.2
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #1011: Drag and drop stops working after column move in vertical view
+
+2.2.10    2013-10-07
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.0
+    - 4.2.1
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - Added new view presets "secondAndMinute" and "manyYears"
+    - Added support for Lines and Zones to show indicators in the header (config "showHeaderElements")
+    - Added support for Pan plugin to disable panning by pressing and holding modifier keys (see "disableOnKey" config).
+      Fixed #934
+    - Added ability to copy events by holding one of the modifier keys when dragging.
+      See "enableCopy", "enableCopyKey" configs of Sch.feature.SchedulerDragZone. (Fixed #941)
+
+    [API CHANGES]
+    - Removed unused config "dropConfig" from Sch.mixin.SchedulerPanel
+    - Removed unused configs "showTooltip", "enableCopy" from Sch.feature.DragDrop.
+      Instead documented them in Sch.feature.SchedulerDragZone
+
+    [BUG FIXES]
+    - Fixed #968: If resizing an event, with "snapToIncrement" enabled, its not possible to resize an event to the left edge of the view
+    - Fixed a bug that was allowing to trigger the task creation process with right mouse button ("drag creation")
+    - Fixed #975: Normal grid fails to show when destroy/insert scheduler grid
+    - Fixed #986: Missing translation in locale De
+    - Fixed #989: Correct Polish translation
+    - Fixed #992: Height of event is changing if shift-key is hold
+
+2.2.9     2013-09-04
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.0
+    - 4.2.1
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - The `zoomToSpan` (and `zoomToLevel` with provided `span` argument) method now centers the view after zooming
+
+    [API CHANGES]
+    - Removed 'preserveSpan' parameter of 'zoomToSpan' method of 'Sch.mixin.Zoomable' class.
+      Instead added the 'span' parameter allowing to set time axis timespan to the supplied start and end dates.
+    - Added 3 more zoom levels to better display 10+ year time spans.
+
+    [BUG FIXES]
+    - Fixed #918: DragCreator misplaced after store reload
+    - Fixed #927: Tooltip incorrect if end date is on midnight
+    - Fixed #942: Selection border is disappearing after moving events
+    - Fixed #957: TimeAxis headers get shifted after zoomToSpan call
+    - Fixed #961: TreeCellEditor plugin loses its position
+    - Fixed a few missing Polish export dialog translations
+
+2.2.8     2013-08-20
+
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.0
+    - 4.2.1
+
+    [KNOWN ISSUES]
+
+    [FEATURES / ENHANCEMENTS]
+    - scrollToDate now automatically changes the visible timespan if the passed date isn't currently rendered.
+
+    [API CHANGES]
+    - Removed 'getClosestSuccessor' method in Sch.data.EventStore which was never implemented and shouldn't be part of the public API.
+    - The Lines and Zones plugins now support passing a string as the 'store' config
+
+    [BUG FIXES]
+    - Fixed #911: SchedulerTree row height issue
+    - Fixed #925: Orientation change breaks scheduler view
+    - Fixed #928: Error while unlocking new column
+    - Fixed #931: CurrentTimeLine doesn't work for vertical oriented scheduler
+    - Fixed #937: Event re-sizing failure when vertical view is used
+
+2.2.7     2013-07-26
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.0
+    - 4.2.1
+
+    [KNOWN ISSUES]
+    - A few bugs exist in the Ext 4.2.1 grouping view which might affect your application.
+      More information here: http://www.sencha.com/forum/showthread.php?265078-Broken-contracts-of-getAt-indexOf-methods-of-the-Ext.grid.feature.Grouping
+
+    [FEATURES / ENHANCEMENTS]
+    - Sch.plugin.Export has received two new template methods called "beforeExport" and "afterExport".
+      These methods can be used to perform some custom action before export and restore it after to the original state.
+
+    [API CHANGES]
+    - Slight correction of the 'ceilDate' method of Sch.data.TimeAxis which may affect the displayed end date in your time axis.
+
+    [BUG FIXES]
+    - Fixed #647: Localisation of the Export widgets
+    - Fixed #797: Resizing of event bars with same ID affect wrong bar
+    - Fixed #867: Wrong dependencies position in "Current view" export mode
+    - Fixed #883: Histogram doesn't get new zoom level on partner zoomToFit
+    - Fixed #887: Sch.mixin.SchedulerPanel missing @cfg
+    - Fixed #897: zoomToFit performance issue
+    - Fixed a bug where clicking an event with the event editor would not keep the editor window open.
+
+2.2.6     2013-07-16
+    [SUPPORTED EXT JS VERSIONS]
+    - 4.2.0
+    - 4.2.1 (partial support)
+
+    [KNOWN ISSUES]
+    - Ext JS 4.2.1 is still not fully supported, buffering support is missing and there are a few other failing test assertions.
+      These should be resolved in the next release.
+    - A few bugs exist in the Ext 4.2.0 grouping view which might affect your application.
+      More information here: http://www.sencha.com/forum/showthread.php?265078-Broken-contracts-of-getAt-indexOf-methods-of-the-Ext.grid.feature.Grouping
+
+    [FEATURES / ENHANCEMENTS]
+    - New 'forEachScheduledEvent' iteration method available on the event store.
+
+    [API CHANGES]
+    - Removed parameter 'adjustStart' of 'zoomToSpan' method of 'Sch.mixin.Zoomable' class.
+      Instead added 'config' parameter allowing to adjust both start and end dates.
+    - Implemented new approach for localization. It should be backward-compatible in general, though minor incompatibilities may exists.
+      To access localized strings, one need to use the "localize()" method now. Please refer to the
+      "Localizing Scheduler and Gantt" guide for more details.
+
+    [BUG FIXES]
+    - Fixed a bug which caused a 'layout run failed' error message when using ext-all-dev.js
+    - Fixed #829: Global style rules and missing images
+    - Fixed #833: Replace '.x-' with Ext global CSS prefix
+    - Fixed #870: Sch.mixin.Lockable issues
+    - Fixed #873: Add support for 'ptype' config options for plugins
+
+2.2.5     2013-06-11
+    Supported Ext JS version(s): 4.2.0, partial support for 4.2.1.
+
+    [KNOWN ISSUES]
+    - Ext JS 4.2.1 is still not fully supported, buffering support is missing and there are a few other failing test assertions. These should be resolved in the next release.
+    - A few bugs exist in the Ext 4.2.0 grouping view which might affect your application. More information here: http://www.sencha.com/forum/showthread.php?265078-Broken-contracts-of-getAt-indexOf-methods-of-the-Ext.grid.feature.Grouping
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #775 - Scheduler/Gantt timelines out of sync sometimes when zooming
+
+2.2.4     2013-05-21
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #558: 'Zoom to fit' should switch to a reasonable viewPreset
+    - Fixed #780: PHP Demo has strange datetime bug
+    - Fixed #787: Printing issue in Firefox
+
+2.2.3     2013-05-09
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+    - Added a config flag 'expandAllBeforeExport' to the export plugin to do a full tree expand before the export. Defaults to false.
+
+    [BUG FIXES]
+    - Fixed #763: some of css in SchedulerGrid are not applied well in IE8
+    - Fixed #769: I can't successfully export pdf in IE8 when I set export range as current view
+
+2.2.2     2013-04-24
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed an issue where scrollEventIntoView would not work when using a TaskStore as EventStore
+    - Fixed #711: Gantt-Scheduler sample bug if using EventEditor
+    - Fixed #715: Not possible to move events in vertical view using minuteAndHours preset
+    - Fixed #731: Not possible to use drag creator if EventStore is a TreeStore
+
+2.2.1     2013-04-09
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #692: Crash if locked grid columns consume all horizontal space
+    - Fixed #693: Print plugin crash if hidden columns used
+    - Fixed #701: Sch.data.mixin.FilterableTreeStore: Variable index implicitly declared (at line 138)
+    - Fixed column lines bug in Safari (1px offset)
+
+2.2.0     2013-03-29
+    This is the first official release supporting Ext JS 4.2. This is a quite major release with plenty of new features and refactorings.
+    As of this release, we now support IE 10. We have added support for the new Neptune theme, as well as RTL support (see new samples).
+    For an in-depth review of the changes in this release, please see our blog.
+
+    We have increased our test coverage too, if you find any bugs please report them in our Assembla bug tracker.
+
+
+    [FEATURES / ENHANCEMENTS]
+    - IE 10 support added
+    - The default row height synchronization mechanism in Ext JS was replaced with a much faster implementation, which does
+      not require access to the DOM. As a result, very small row height values are now supported too.
+
+    [API CHANGES]
+    - Default value for "lockedGridDependsOnSchedule" config option is changed to true. This option was also made private,
+      it is deprecated and subject for removal in any following release, please do not use it.
+    - The "scheduleclick/scheduledblclick/schedulecontextmenu" events now include the resource model instance in the signature
+      (for both in horizontal and vertical modes). The event object goes after it (Fixed #223).
+
+    [BUG FIXES]
+    - Fixed #626: Tooltip for event - wrong placement
+    - Fixed #667: Investigate Sch.util.Patch usage with CMD
+    - Fixed #686:  EventEditor not compatible with Task model
+    - Fixed #687: "scrollEventIntoView" should work in scheduler, when using tree store for resources
+
+2.2.0-beta-2 2013-02-22
+
+    [KNOWN ISSUES]
+    - Buffering is not yet supported
+
+    [FEATURES / ENHANCEMENTS]
+    - Fixed #604: Neptune theme support
+    - Added a no-theme CSS file without styling
+
+    [API CHANGES]
+    - BREAKING: timeCellRenderer and timeCellRendererScope removed. Use 'resourceZones' to add styling blocks to individual resources.
+
+    [BUG FIXES]
+    - Fixed #589: [Export] Support for 4.2
+    - Fixed #605: EventEditor collapses on click comboBox list item
+    - Fixed #437:  Add support for improved hooks during drag drop. (See updated 'validation' example for demonstration)
+
+2.2.0-beta-1    2013-02-08
+
+   This is the first 2.2 beta release compatible with Ext JS 4.2 beta. A few tests are failing when running on 4.2.0.265
+   but most of these tests pass (except buffering related ones) if you run against the latest Ext nightlies. You can read
+   more about the details of the upgrade process on our blog: http://www.bryntum.com/blog/road-to-ext-scheduler-2-2-upgrade-guide .
+   The blog post will be posted shortly. There are a few API changes that might be breaking depending on how you're using the component.
+
+    [KNOWN ISSUES]
+    - Buffering is not yet supported
+    - Improper width of columns when exporting
+
+    [FEATURES / ENHANCEMENTS]
+    - New German locale file (thanks marco.jahn!)
+    - Basic RTL support, still in experimental stage (see new 'rtl' example)
+    - forceFit option is now supported in vertical orientation too.
+    - New hooks for drag drop, resize and create flows. This makes it a lot easier to show a confirmation popup before
+      finalizing the operation. See the 'validation' sample for a demonstration.
+    - New 'eventdrag' event fired while dragging an event
+
+    [API CHANGES]
+    - BREAKING: forceFit now defined on Panel, it was previously on the View. Compatibility patch installed.
+    - BREAKING: Removed Sch.util.HeaderRenderers class (should no longer be required).
+    - BREAKING: Removed Sch.view.Locking class.
+    - BREAKING: Inner panel is no longer an instance of our Sch.panel.SchedulerXXX classes, it is whatever Ext JS decides
+     (normally a regular Ext.grid.Panel)
+    - 'aftereventdrop' now includes the dragged records as a new argument
+    - Removed 'useDragProxy' option of Sch.feature.DragDrop
+    - Removed 'Sch.feature.DragZone' class
+
+    [BUG FIXES]
+
+2.1.15    2013-02-05
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #580: Opera - Incorrect row height
+    - Fixed #557: custom defaultConfig properties not applied to export dialog form
+    - Fixed #491: PDF Export throws error in quirks mode
+    - Fixed #582: [Export] locked columns incorrectly displayed
+    - Fixed #583: [Export] Body padding on exported image
+
+
+2.1.14    2013-01-05
+
+    [FEATURES / ENHANCEMENTS]
+    - New SDK demo with Java backend
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed issue when instantiating a plain lockable grid before the scheduler causing a crash.
+    - Fixed #562: Row offset out of sync when scrolling to bottom
+    - Fixed #521: Create Java based samples for Scheduler/Gantt
+
+
+2.1.13    2012-12-13
+
+    [FEATURES / ENHANCEMENTS]
+    - New export option to export the chart as one big image.
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #475: Export - add support for generating one fullsize PNG of the contents
+    - Fixed #474: Interactive Gantt's print issue - VI
+    - Fixed #546: Google calendar demo not showing any data
+
+2.1.12    2012-12-03
+
+    [FEATURES / ENHANCEMENTS]
+    - 'Scheduler getting started guide' added to documentation
+
+    [API CHANGES]
+    - timeCellRenderer, timeCellRendererScope are now marked as deprecated for 3.0.0. Instead, use the resourceZones config in Ext Scheduler.
+
+    [BUG FIXES]
+    - Fixed #510: Export plugin restore bug
+
+2.1.11    2012-11-12
+
+    [FEATURES / ENHANCEMENTS]
+    - The Scheduler can now consume a Gnt.data.TaskStore instance as its `eventStore`
+    - "scrollEventIntoView" method is enhanced to support collapsed tasks and buffered tree store
+    - MVC example updated to be compatible with Sencha CMD
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #435: Pan outside Browser holding mouse click
+    - Fixed #473: New event proxy not deleted - Event Editor + scheduler 2.1.10
+    - Fixed #476: Printing don't respect locked grid width (minor typo...)
+    - Fixed #469: Scheduler buffered example does not work on Mac OSX
+    - Fixed IE Export bug
+    - Fixed #483: Export dialog broken when using date range
+    - Fixed #484: Export - rendering broken with column lines and dependencies
+
+
+2.1.10    2012-10-31
+    [FEATURES / ENHANCEMENTS]
+    - Resources CRUD in PHP Demo
+    - Zones and lines are now included in the output from the Sch.plugin.Printable plugin.
+    - Added additional options for `filterTreeBy` method, allowing you to filter by parent nodes
+    - Initial adaptions for Ext JS 4.1.3, full support will be available in the next release.
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #243: IE7: Alignment bug in vertical orientation
+    - Fixed #419: [2.1.9] Gantt freezes using weekStartDay : 0
+    - Fixed #447: Event Editor popup z-index problem with scheduler inside window (DD event)
+    - Fixed #449: Interactive Gantt's print issue - IV
+    - Fixed #468: New event proxy not deleted - Event Editor + scheduler inside window
+    - Fixed bug in IE7 Strict mode where z-index prevented events from being dragged in vertical orientation
+
+2.1.9     2012-10-10
+    [FEATURES / ENHANCEMENTS]
+    - allow animation for "scrollEventIntoView" method
+    - introduced filtering capabilities for Sch.data.ResourceTreeStore.
+      See documentation for Sch.data.mixin.FilterableTreeStore class
+    - added russian locale file
+
+    [API CHANGES]
+    - New 'eventmousedown', 'eventmouseup' events available.
+
+    [BUG FIXES]
+    - Fixed #395: [2.1.8] Column lines out of sync with header when crossing DST.
+    - Fixed #242: IE7: Bug when adding new resource in MVC example
+    - Fixed #394: Resource columns are not updated in vertical view after updating a name.
+    - Fixed #398: ViewPreset's timeResolution doesn't work properly after changing zoom level
+    - Fixed #401: Simple Editor - field stay in place when moving Event
+    - Fixed #199: Problem with language file (gnt-lang-en.js)
+
+2.1.8     2012-09-14
+
+    [FEATURES / ENHANCEMENTS]
+    - PHP Demo added, with basic events CRUD support and pagination of resources.
+    - Added a new example which shows how to drag and drop events between multiple schedulers.
+
+    [API CHANGES]
+    - Fixed a bug in getNext method that could affect event position on the time axis
+     (for example, if you start a 'day' timeAxis at 10 am, the next 'tick' will now be snapped to midnight)
+
+    [BUG FIXES]
+    - Fixed #362: Long events not rendered after shifting panel with noncontinuous time axis.
+    - Fixed #384: Sch.util.Date.getNext returns wrong for quarter
+
+2.1.7     2012-08-27
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #345: Zooming broken in timeresolution example
+    - Fixed #346: printableEventTpl defined but not used
+    - Fixed #356: Column headers not aligned properly in Safari Mac
+
+2.1.6     2012-08-09
+
+    [FEATURES / ENHANCEMENTS]
+    - The zooming implementation has landed in the master branch. See the new "zooming" example and documentation
+      of Sch.mixin.Zoomable mixin.
+    - The *.jsb3 build files are now included in the full package
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #333: Overlapping events don't work right
+    - Fixed a bug when updating Cls field on a Line model, which didn't remove the old CSS class name.
+    - Re-fix of ticket #313 which was not completely solved (tree view row height sync).
+
+2.1.5     2012-08-01
+
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+    - Zones can now be configured with an innerTpl to generate extra markup (see updated Lines and Zones sample)
+
+    [BUG FIXES]
+    - CSS: border-radius fix for events ending or starting outside view
+    - Fixed #294: IE9 [ExtJs-4.1.1rc2] Scheduler event drag tooltip blocked (was not properly fixed previously)
+    - Fixed #313: TreeView row height sync issue
+    - Fixed #317: Resize handler visibility when event has Resizable=false
+    - Fixed #323: [Scheduler 2.x] Crash when editing a single Line plugin record if store has multiple records
+
+2.1.4     2012-07-11
+
+    [FEATURES / ENHANCEMENTS]
+    - Support for Ext JS 4.1.1
+    - Scroll value of the resource axis is now maintained across time axis traversal
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #291: Task and schedule panel headers overlap when printing
+    - Fixed #290: Error loading Gantt with collapsed schedule panel
+    - Fixed #292: Gantt does not print correctly when scrolled
+    - Fixed #294: IE9 [ExtJs-4.1.1rc2] Scheduler event drag tooltip blocked
+    - Fixed #296: Strange onBeforeTooltipShow event/listener behaviour in SchedulerTree
+    - Fixed #268: [2.1] View not refreshed when dragging scroll cursor lockedGrid
+    - Fixed #299: emptyText displayed multiple times in scheduling view
+
+2.1.3     2012-06-29
+    [FEATURES / ENHANCEMENTS]
+    - New event tools menu plugin (Sch.plugin.EventTools), + new sample demonstrating this feature.
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed bug with disappearing drag-create tooltip
+    - Fixed #275: 2.1.2 lockedGrid was editable after setting readOnly state
+    - Fixed #279: 2.1.2 when preset used HorizontalSingle timeaxis after shifting header columns were resized to same width
+    - Fixed #283: [2.1] Column lines not appearing in print view
+
+2.1.2     2012-06-15
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+    - New 'shift' method on Range model class, for easy shifting of events in time.
+    - New scheduler events: 'eventmouseenter' and 'eventmouseleave'
+
+    [BUG FIXES]
+    - Fixed #264: 2.1.0 does not maintain grid state
+    - Fixed #240: [2.1.0] Sch.plugin.ResourceZones does not work with TreeStore
+    - Fixed #267: 2.1.1 DnD not possible in SchedulerTreePanel
+    - Fixed bug when removing an event in Scheduler tree view, causing a crash.
+    - Fixed bug with YEAR header row giving invisible cells
+
+2.1.1     2012-06-07
+
+    [FEATURES / ENHANCEMENTS]
+    - Added support for multi-event drag drop, see updated dragselector example for demonstration.
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed issue with assuming Ext.data.TreeStore exists (instanceof checks).
+    - Fixed #259: [2.1] monthView preset => broken headers if using snapToIncrement : true
+    - Fixed #264: 2.1.0 does not maintain grid state
+
+2.1.0     2012-05-29
+
+    [FEATURES / ENHANCEMENTS]
+    - Added a new 'disableOverrides' option, to disable all global Ext JS overrides. To activate this mode, add "Sch = { disableOverrides : true };" before including the Scheduler script file.
+
+    [API CHANGES]
+    - New trackHeaderOver config option (defaults to true) which tracks mouse movement in time-header cells.
+    - New Sch.model.Event fields "Draggable" and "Resizable" allowing you to easily specify the interaction allowed for each rendered event.
+
+    [BUG FIXES]
+    - Fixed bug with filtering resource store + resourceZones
+
+2.1.0-beta-2 2012-05-17
+
+    [FEATURES / ENHANCEMENTS]
+    - New method getResourceRegion returning the box for a resource.
+    - Support for resource specific zones, allowing you to easily color any part of the schedule for any resource. See updated "External drag drop" samples for guidance.
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed issue with empty schedule when rendering month view with snapToIncrement : true
+    - Fixing row sync issue after refresh of locked view only in horizontal mode.
+    - Fixed #214: Refresh with changing number of rows fails
+    - Fixed #216: Misalignment of resources and event rows when a horizontal scrollbar is used
+    - Fixed scroll sync issue after eventStore 'refresh' event
+    - Fixed cursor freeze issue in IE9 after drag drop and resize operations
+    - Fixed issue with child grids initially being in collapsed state
+    - Fixed issue header rows becoming out of sync with narrow bottom header cell widths
+    - Fixed issue with column lines shown when there are no rows
+    - Fixed row height sync issue with grouping view and startCollapsed : true
+
+2.1.0-beta-1 2012-05-03
+
+    This is a first beta release based on Ext JS 4.1-final. It will not work with any Ext 4.0.x version. The main feature of this release is performance,
+    which is greatly improved with a new optimization mode (see "lightWeight" option)
+
+    [FEATURES / ENHANCEMENTS]
+    - added a new configuration option "lightWeight" (enabled by default). With this option, the scheduler does not create a separate
+      table cell for each time interval in the bottom timeline row. Instead, it creates a single column, providing the most lightweight DOM footprint
+      possible and much better performance. The downside of this optimization is that its not possible to customize every cell in the scheduler view.
+      Because of that, this option is automatically disabled if a `timeCellRenderer` function is provided.
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed #176: TreeView not refreshed after eventStore load, loadData
+    - Fixed time header cell text overflow issue in IE
+
+
+2.1.0-alpha-4 2012-04-23
+    This is an alpha release based on Ext JS 4.1, tested against RC3. It will not work with any Ext 4.0.x version.
+
+    [KNOWN ISSUES]
+    - "stateful" is broken in Ext 4.1 RC3 (temp patch applied)
+    - Loading XML into a Scheduler tree view should be avoided since it's not supported by Ext JS.
+    - Buffered Scheduler/Gantt view is not yet supported
+
+    [API CHANGES]
+
+    [FEATURES / ENHANCEMENTS]
+    - New SchedulerPanel "orientationchange" event
+    - New SchedulerPanel getOrientation method
+    - Added new method getVisibleDateRange(), it returns currently visible date range.
+    - scrollToDate() method is now supported vertical orientation
+    - `timeheaderdblclick` event added for vertical orientation
+
+
+    [BUG FIXES]
+    - Fixed #207: Can't use a subclass of Sch.view.SchedulerGridView
+
+2.1.0-alpha-3     2012-04-13
+    This is an alpha release based on Ext JS 4.1, tested against RC3. It will not work with any Ext 4.0.x version.
+
+    [KNOWN ISSUES]
+    - "stateful" is broken in Ext 4.1 RC3 (temp patch applied)
+    - Loading XML into a Scheduler tree view should be avoided since it's not supported by Ext JS.
+    - Buffered Scheduler/Gantt view is not yet supported
+
+    [API CHANGES]
+    - The scope used for the eventRenderer fn can now be configured via the eventRendererScope config option
+
+    [FEATURES / ENHANCEMENTS]
+
+    [BUG FIXES]
+    - Fixed bug with snapToIncrement, leading to a 0 column width in certain edge cases.
+
+2.1.0-alpha-2     2012-03-27
+
+    This is an alpha release based on Ext JS 4.1, tested against RC1. It will not work with any Ext 4.0.x version.
+    Generally the main difference from alpha-1 is fix for headers and various other small changes.
+
+    [KNOWN ISSUES]
+    - "stateful" is broken in Ext 4.1 RC1
+    - Loading XML into a Scheduler tree view should be avoided since it's not supported by Ext JS.
+    - Buffered Scheduler/Gantt view is not yet supported
+    - EventEditor is broken due to Ext 4.1 RC1 bug in TimeField
+
+    [API CHANGES]
+    - BREAKING: You must now use a Sch.data.ResourceStore / Sch.data.ResourceTreeStore for your resources
+    - eventBodyTemplate can now also be configured as a plain string (previously had to be an Ext.Template)
+    - The scope used for the eventRenderer fn can now be configured via the eventRendererScope config option
+
+    [FEATURES / ENHANCEMENTS]
+    - All models now use customizable field names
+
+    [BUG FIXES]
+    - Improved support for Grouping feature
+    - Fixed #145: Grouped headers are not hidden and are mis-aligned with timelines
+    - Fixed #184: JS error when printing grouping view.
+
+2.1.0-alpha-1     2012-03-09
+    This is an alpha release based on Ext JS 4.1, tested only against Beta 3. It will not work with any Ext 4.0.x version.
+    You can download Ext JS 4.1 B3 here: http://cdn.sencha.io/ext-4.1.0-beta-3.zip (extract it to the same folder containing Ext Scheduler 2.1):
+    This release is not bug-free, and we would very much appreciate help in testing it and reporting anything you find.
+
+    The main goal of this 2.0 release is to upgrade to Ext JS 4.1 which brings better performance. Our initial tests show a 2x speed increase for the initial rendering.
+    We have also done some refactoring, and there is one breaking change: you must now use a new Sch.data.EventStore for your events.
+    For guidance on using this very simple store, please see this forum thread: http://www.bryntum.com/forum/viewtopic.php?f=16&t=1737#p10365
+
+    For more details about known issues and things relating to our products and Ext JS please see our wiki: http://www.assembla.com/spaces/bryntum/wiki
+
+    [KNOWN ISSUES]
+    - "stateful" is broken in Ext 4.1 B3
+    - Loading XML into a Scheduler tree view should be avoided since it's not supported by Ext JS.
+    - Buffered Scheduler view is not yet working
+    - Switching orientation is broken
+
+    [FEATURES / ENHANCEMENTS]
+    - Improved handling for phantom resource records
+    - Improved test coverage, new tests.
+    - New radio schedule example using the BBC API.
+
+    [API CHANGES]
+    - BREAKING: You must now use a Sch.data.EventStore for your events
+    - New setStartEndDate method on Sch.model.Event
+
+    [BUG FIXES]
+
+2.0.9     2012-02-14
+    [FEATURES / ENHANCEMENTS]
+    - Improved localization for time unit names.
+    - Improved configurability for event editor plugins (buttons)
+
+    [API CHANGES]
+    - new isReadOnly method for timeline panels.
+    - Sch.plugin.SummaryColumn is no longer localized directly. Its time unit texts are now located in Sch.util.Date.unitNames
+
+    [BUG FIXES]
+    - Fixed #152 Zones not redrawn properly when deleting a root-level task
+    - Fixed Sch.util.Date bug when adding Quarters to a date
+    - Fixed #158 JS exception if keeping scheduler in a tab of a window
+    - Test #171 JS exception when null end/start date in resources for zones/lines store
+
+
+2.0.8     2012-01-18
+    [FEATURES / ENHANCEMENTS]
+    - Now possible to use any field names for the required fields - Start date, End date etc. See Sch.model.Event for documentation.
+    - Now possible to style event bars using the 'Cls' field in the Sch.model.Event (you can use any name for this field).
+    - New examples showing off how to use the dynamic field names
+    - Siesta test suite now included with the SDK.
+
+    [API CHANGES]
+    - Now possible configure a 'triggerEvent' for the event editor plugin, or disable editing by setting it to null.
+
+    [BUG FIXES]
+    - Fixed #64: Opera not working for scheduler/gantt
+    - Fixed bug preventing certain events bubbling from child grids to 'top' grid: 'columnresize' and others.
+    - Fixed #143: issues with Ext.data.TreeStore.load overridden in Gantt lib
+    - Fixed #141: advanced example + Ext 4.0.7 = view issue
+    - Fixed bug: deleting view presets was not possible.
+
+2.0.7     2011-12-15
+    [FEATURES / ENHANCEMENTS]
+
+    [API CHANGES]
+
+    [BUG FIXES]
+    - Fixed issue with row hover on locked part of schedule
+    - Fixed #133: SchedulerTree can't support enableAnimations : true
+    - Fixed missing requires leading to not being able to load Ext JS on demand.
+
+
+2.0.6     2011-11-28
+    [FEATURES / ENHANCEMENTS]
+    - fitColumns now supported in vertical view too
+
+    [API CHANGES]
+    - 'beforedragcreate' event handler now has a parameter indicating the date of the click position.
+
+    [BUG FIXES]
+    - Fixed issue with text-alignment not being reset to left for time cells
+    - Fixed dual 'viewchange' events when switching view preset
+    - Fixed #131: Scheduler - Slows switchViewPreset
+    - Fixed a DST-related bug in "getStartOfNextDay" method of "Sch.util.Date" - could
+      return a same-day date, when crossing DST in forward direction
+
+2.0.5     2011-11-11
+
+    [FEATURES / ENHANCEMENTS]
+    - added ExtJS 4.0.7 compatibility
+
+    [API CHANGES]
+    - none
+
+    [BUG FIXES]
+    - Fixed bug related to zones not being redrawn in TreeView when adding a new row
+    - Fixed #116: Baseline incorrectly rendered in Gantt 2.x in IE
+    - Fixed #117: Columns will not resize
+    - Fixed #120: partialtaskresize event is not fired
+
+2.0.4     2011-10-20
+
+    [FEATURES / ENHANCEMENTS]
+    - Adding listeners to the internal tooltip object through 'tipCfg' config is now possible.
+
+    [API CHANGES]
+    - none
+
+    [BUG FIXES]
+    - Fixing bug with allowOverlap : true and using event editor to save new event.
+    - Fixed #105: Printing failure in Chrome
+    - Fixed #110: css for dirty cell not displayed if striped rows enabled.
+    - Fixed #111: Drag creating new event does not show duration when using EventEditor
+    - Fixed #112: Timegap not resized when minimizing groups
+    - Fixed #113: dragCreator not hiding.
+
+2.0.3     2011-09-23
+
+    [FEATURES / ENHANCEMENTS]
+    - none
+
+    [API CHANGES]
+    - none
+
+    [BUG FIXES]
+    - Cleaned up global variable leak "vScroller"
+    - Fixed missing destroy of Tooltip on TimelineView.
+    - Fixed CSS z-index issue causing events to be unreachable in IE.
+    - Various documentation improvements and fixes
+    - Fixed vertical layout column width bug
+    - #93, Column header disappears and locked grid gets cut off
+    - #94, Sch.plugin.EventEditor durationUnit cannot be set.
+    - #95, auto scrolling via event drag causes js error
+    - additional 4.0.6 compatibility fixes
+
+2.0.2     2011-09-16
+
+    [FEATURES / ENHANCEMENTS]
+
+    - Ext 4.0.6 compatibility
+    - New cool demo showing how to interact with groups of events.
+
+    [API CHANGES]
+
+    - none
+
+    [BUG FIXES]
+
+    - #82: Scheduler: Pan plugin breaks resize of events
+    - Fixed a bug leading to 'beforetooltipshow' event not being relayed by scheduler panel
+    - Fixed bug with rowIndex argument of scheduleclick, scheduledblclick, schedulecontextmenu events
+    - #88: Header columns not displaying properly in scheduler
+    - #81: Gantt Panel broke when changing from Ext 4.0.2a to Ext 4.0.6
+
+2.0.1     2011-08-31
+
+    [FEATURES / ENHANCEMENTS]
+
+    - new SchedulerPanel config "lockedGridDependsOnSchedule" to allow locked grid to be refreshed when schedule is refreshed.
+
+    [API CHANGES]
+
+    - A filter applied to the timeaxis will now be kept across timespan changes.
+    - Now allowed to overwrite existing viewPresets with same key
+    - New "timeAxisColumnCfg" on SchedulerPanel for configuring the time axis column in vertical orientation
+
+    [BUG FIXES]
+
+    - setOrientation should read rowHeight from preset when switching to horizontal mode
+    - Cleaned up several global variable leaks
+    - #48 fixed: causing the eventPrefix to be shared by all scheduler instances.
+    - #51 fixed: ColumnSummary plugin not refreshed after changing time span
+    - Fixed bug where browser would freeze when changing from large preset to small without any new dates provided to switchViewPreset.
+    - Fixed #53 Scheduler timeCellRenderer resourceRecord parameter not called with correct data in Vertical orientation
+    - #52 fixed: Incorrect column width when using snapToIncrement
+    - Fixed an issue where zones/lines weren't updated if a zone/line record was updated.
+    - Added a workaround for #57: EventEditor loses header before 8am
+    - Fixed: #59 Event selection model bug
+    - Fixed #61: resourceColumnWidth affects the time column in vertical mode.
+    - #66, Chrome: Headers not 'unhighlighted' properly on mouseout
+    - fixed bug, when setting `resourceColumnWidth` in view preset did not work
+    - idProperty wasn't properly set in event-model
+    - fixed #70: Overrides.js breaks cell editing in property grid
+
+2.0.0     2011-08-08
+
+    [FEATURES / ENHANCEMENTS]
+
+    - Ext JS 4 support including support for dynamic class loading
+    - Vertical orientation mode
+    - Support for switching orientation programmatically
+    - Scheduler TreeView
+    - New event layout engine to avoid event overlaps
+    - EventEditor plugin now supports multiple forms allowing different fields for different types of events.
+    - Scheduler Buffering View for large datasets
+    - Basic HTML print support
+    - New state support, saving last start/end and viewPreset
+    - New simple-editor plugin for editing just the event title text
+    - New TreeView example
+    - New Buffered view example
+    - New simple editor example
+    - New config options for viewPresets: rowHeight and resourceColumnWidth
+
+    [API CHANGES]
+
+    - full review in progress
+    - isDateRangeAvailable (on scheduler view) now accepts Model instances rather than model id's
+
+    [BUG FIXES]
+
+    - Removed all CSS dependencies to external Ext JS images
+    - Removed all dependencies to third party plugins/components
+    - Normalized event names
+    - Fixed bug with header row alignment for days not starting on 00:00
+    - Fixed event editor bug causing it being closed after selection in menu/combobox

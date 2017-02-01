@@ -1,0 +1,88 @@
+
+
+stl.app.UndoItem =  function  (action, data) {
+	this.data = data;
+	this.action = action;
+}
+
+stl.app.ActionItem =  function (undo, redo){
+	this.undo = undo;
+	this.redo = redo;
+	
+}
+
+/**
+ * UndoStack:
+ * Easy undo-redo in JavaScript.
+ **/
+
+stl.app.undoStack = function (cfg) {
+	this.undostack = [];
+	this.redostack = [];
+	this.currentUndo = -1;
+	this.currentRedo = -1;
+}
+
+/**
+ * UndoStack#push (action, data);
+ * redo()  -> Function which performs redo based on previous state
+ * undo() -> Function which performs undo based on current state
+ * data -> Argument passed to undo/redo functions
+ **/
+
+ $.extend(stl.app.undoStack.prototype, (function () {
+ 		 return ({
+        push: function (action, data, text) {
+			// We need to invalidate all undo items after this new one
+			// or people are going to be very confused.
+			//this.stack.splice(this.current);
+			this.undostack.push(new stl.app.UndoItem(action, data));
+			this.currentUndo = this.undostack.length - 1;
+			var textDisplay;
+			if(text)
+				textDisplay = text;
+			else
+				textDisplay = "";
+			var undoText = UNDO_TOOLTIP1 + " " + textDisplay + UNDO_TOOLTIP2;
+			var redoText = REDO_TOOLTIP1 + " " + textDisplay + REDO_TOOLTIP2;
+			$(".undoicon-btn").prop("title",undoText);
+			$(".redoicon-btn").prop("title",redoText);
+			
+        },
+        undo: function () {
+			var item;
+			if (this.currentUndo >= 0) {
+				item = this.undostack[this.currentUndo];
+				item.action.undo(item.data);
+				this.undostack.splice(this.currentUndo, 1);
+				this.currentUndo = this.undostack.length - 1;
+				this.redostack.push(item);
+				this.currentRedo = this.redostack.length - 1;
+			} else {
+				PPI_Notifier.error("Already at earliest change");
+			}
+		},
+		redo: function () {
+			var item;
+			if (this.currentRedo >= 0) {
+				item = this.redostack[this.currentRedo];
+				if (item) {
+					item.action.redo(item.data);
+					this.redostack.splice(this.currentRedo, 1);
+					this.currentRedo = this.redostack.length - 1;
+					this.undostack.push(item);
+					this.currentUndo = this.undostack.length - 1;
+				} 
+			}
+			else {
+					PPI_Notifier.error("Already at latest change");
+			}
+		},
+		invalidateAll: function () {
+				this.undostack = [];
+				this.redostack = [];
+				this.currentUndo = -1;
+				this.currentRedo = -1;
+		}
+	});
+})());

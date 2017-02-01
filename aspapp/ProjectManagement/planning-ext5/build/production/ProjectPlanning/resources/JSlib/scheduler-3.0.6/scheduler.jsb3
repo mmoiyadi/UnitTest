@@ -1,0 +1,223 @@
+{
+    "name"   : "Ext Scheduler",
+    "licenseText"   : "",
+
+    "builds"          : [
+        {
+            "name"      : "Ext Scheduler",
+            "id"        : "ext-scheduler",
+
+            "target"    : "sch-all-debug.js",
+
+            "files"     : [
+                { "path"  : "js/Sch/locale/Locale.js" },
+                { "path"  : "js/Sch/locale/En.js" },
+
+                { "path"  : "js/Sch/util/Patch.js" },
+                { "path"  : "js/Sch/patches/BufferedRenderer.js" },
+                { "path"  : "js/Sch/patches/NodeStore.js" },
+                { "path"  : "js/Sch/patches/ColumnResizeTree.js" },
+                { "path"  : "js/Sch/patches/RowSynchronizer.js" },
+                { "path"  : "js/Sch/patches/NodeCache.js" },
+                { "path"  : "js/Sch/patches/TouchScroll.js" },
+                { "path"  : "js/Sch/patches/PartnerScroll.js" },
+                { "path"  : "js/Sch/patches/View.js" },
+                { "path"  : "js/Sch/patches/TableView.js" },
+                { "path"  : "js/Sch/patches/Collection.js" },
+                { "path"  : "js/Sch/patches/TreeStore.js" },
+                { "path"  : "js/Sch/patches/TreeStoreInternalIdMap.js" },
+                { "path"  : "js/Sch/patches/ToolTip.js" },
+                { "path"  : "js/Sch/patches/OperationDestroy.js" },
+                { "path"  : "js/Sch/patches/Chrome.js" },
+
+                { "path"  : "js/Sch/mixin/Localizable.js" },
+
+                { "path"  : "js/Sch/tooltip/ClockTemplate.js" },
+                { "path"  : "js/Sch/tooltip/Tooltip.js" },
+                { "path"  : "js/Sch/tooltip/HoverTip.js" },
+
+                { "path"  : "js/Sch/crud/AbstractManager.js" },
+                { "path"  : "js/Sch/crud/transport/Ajax.js" },
+                { "path"  : "js/Sch/crud/encoder/Json.js" },
+                { "path"  : "js/Sch/crud/encoder/Xml.js" },
+                { "path"  : "js/Sch/data/CrudManager.js" },
+
+                { "path"  : "js/Sch/util/Date.js" },
+                { "path"  : "js/Sch/util/Debug.js" },
+                { "path"  : "js/Sch/util/DragTracker.js" },
+                { "path"  : "js/Sch/util/ScrollManager.js" },
+                { "path"  : "js/Sch/util/Cache.js" },
+                { "path"  : "js/Sch/preset/ViewPreset.js" },
+                { "path"  : "js/Sch/preset/Manager.js" },
+
+                { "path"  : "js/Sch/feature/AbstractTimeSpan.js" },
+                { "path"  : "js/Sch/feature/DragCreator.js" },
+                { "path"  : "js/Sch/feature/SchedulerDragZone.js" },
+                { "path"  : "js/Sch/feature/DragDrop.js" },
+                { "path"  : "js/Sch/feature/ResizeZone.js" },
+                { "path"  : "js/Sch/feature/Grouping.js" },
+                { "path"  : "js/Sch/eventlayout/Horizontal.js" },
+                { "path"  : "js/Sch/eventlayout/Vertical.js" },
+                { "path"  : "js/Sch/eventlayout/Table.js" },
+
+                { "path"  : "js/Sch/column/Summary.js" },
+                { "path"  : "js/Sch/column/Resource.js" },
+                { "path"  : "js/Sch/column/Day.js" },
+                { "path"  : "js/Sch/view/model/TimeAxis.js" },
+                { "path"  : "js/Sch/view/HorizontalTimeAxis.js" },
+                { "path"  : "js/Sch/column/timeAxis/Horizontal.js" },
+                { "path"  : "js/Sch/column/timeAxis/Vertical.js" },
+
+                { "path"  : "js/Sch/model/Customizable.js" },
+
+                { "path"  : "js/Sch/model/Range.js" },
+                { "path"  : "js/Sch/model/TimeAxisTick.js" },
+                { "path"  : "js/Sch/model/Event.js" },
+                { "path"  : "js/Sch/model/Resource.js" },
+                { "path"  : "js/Sch/model/Assignment.js" },
+
+                { "path"  : "js/Sch/data/util/ResourceEventsCache.js" },
+                { "path"  : "js/Sch/data/util/EventAssignmentsCache.js" },
+                { "path"  : "js/Sch/data/util/ResourceAssignmentsCache.js" },
+                { "path"  : "js/Sch/data/util/AssignmentStoreEventResourcesCache.js" },
+                { "path"  : "js/Sch/data/util/AssignmentStoreResourceEventsCache.js" },
+                { "path"  : "js/Sch/data/util/ModelPersistencyManager.js" },
+                { "path"  : "js/Sch/data/util/IdConsistencyManager.js" },
+                { "path"  : "js/Sch/data/mixin/UniversalModelGetter.js" },
+                { "path"  : "js/Sch/data/mixin/CacheHintHelper.js" },
+                { "path"  : "js/Sch/data/mixin/EventStore.js" },
+                { "path"  : "js/Sch/data/EventStore.js" },
+                { "path"  : "js/Sch/data/mixin/ResourceStore.js" },
+                { "path"  : "js/Sch/data/mixin/FilterableTreeStore.js" },
+                { "path"  : "js/Sch/data/ResourceStore.js" },
+                { "path"  : "js/Sch/data/ResourceTreeStore.js" },
+                { "path"  : "js/Sch/data/AssignmentStore.js" },
+                { "path"  : "js/Sch/data/TimeAxis.js" },
+
+                { "path"  : "js/Sch/view/Horizontal.js" },
+                { "path"  : "js/Sch/view/Vertical.js" },
+                { "path"  : "js/Sch/view/Calendar.js" },
+
+                { "path"  : "js/Sch/selection/EventModel.js" },
+                { "path"  : "js/Sch/selection/AssignmentModel.js" },
+                { "path"  : "js/Sch/plugin/Printable.js" },
+
+
+                { "path"  : "js/Sch/plugin/exporter/AbstractExporter.js" },
+                { "path"  : "js/Sch/plugin/exporter/SinglePage.js" },
+                { "path"  : "js/Sch/plugin/exporter/MultiPage.js" },
+                { "path"  : "js/Sch/plugin/exporter/MultiPageVertical.js" },
+
+                { "path"  : "js/Sch/plugin/Export.js" },
+
+                { "path"  : "js/Sch/plugin/Lines.js" },
+                { "path"  : "js/Sch/plugin/CurrentTimeLine.js" },
+                { "path"  : "js/Sch/plugin/DragSelector.js" },
+                { "path"  : "js/Sch/plugin/EventEditor.js" },
+                { "path"  : "js/Sch/plugin/EventTools.js" },
+                { "path"  : "js/Sch/plugin/Pan.js" },
+                { "path"  : "js/Sch/plugin/SimpleEditor.js" },
+                { "path"  : "js/Sch/plugin/Zones.js" },
+                { "path"  : "js/Sch/plugin/TimeGap.js" },
+                { "path"  : "js/Sch/plugin/TreeCellEditing.js" },
+                { "path"  : "js/Sch/plugin/ResourceZones.js" },
+                { "path"  : "js/Sch/plugin/HeaderZoom.js" },
+                { "path"  : "js/Sch/plugin/CellPlugin.js" },
+
+                { "path"  : "js/Sch/field/CellEditor.js" },
+
+                { "path"  : "js/Sch/widget/ResizePicker.js" },
+                { "path"  : "js/Sch/widget/ExportDialogForm.js" },
+                { "path"  : "js/Sch/widget/ExportDialog.js" },
+
+                { "path"  : "js/Sch/feature/ColumnLines.js" },
+
+                { "path"  : "js/Sch/template/Event.js" },
+                { "path"  : "js/Sch/mixin/AbstractTimelineView.js" },
+                { "path"  : "js/Sch/mixin/TimelineView.js" },
+                { "path"  : "js/Sch/view/TimelineGridView.js" },
+                { "path"  : "js/Sch/mixin/AbstractSchedulerView.js" },
+                { "path"  : "js/Sch/mixin/SchedulerView.js" },
+                { "path"  : "js/Sch/view/SchedulerGridView.js" },
+                { "path"  : "js/Sch/mixin/Zoomable.js" },
+                { "path"  : "js/Sch/mixin/AbstractTimelinePanel.js" },
+                { "path"  : "js/Sch/mixin/TimelinePanel.js" },
+                { "path"  : "js/Sch/mixin/AbstractSchedulerPanel.js" },
+                { "path"  : "js/Sch/mixin/SchedulerPanel.js" },
+
+                { "path"  : "js/Sch/mixin/FilterableTreeView.js" },
+
+                { "path"  : "js/Sch/panel/TimelineGridPanel.js" },
+                { "path"  : "js/Sch/panel/TimelineTreePanel.js" },
+                { "path"  : "js/Sch/panel/SchedulerGrid.js" },
+                { "path"  : "js/Sch/panel/SchedulerTree.js" },
+
+                { "path"  : "js/Sch/widget/PagingToolbar.js" }
+            ]
+        },
+        {
+            "name"      : "Ext Scheduler No-theme",
+            "id"        : "ext-scheduler-no-theme",
+            "target"    : "resources/css/sch-all-no-theme-debug.css",
+            "files"     : [
+                { "path"  : "resources/css/sch.tooltip.clocktemplate.css" },
+                { "path"  : "resources/css/sch.column.timeaxis.horizontal.css" },
+                { "path"  : "resources/css/sch.event.css" },
+                { "path"  : "resources/css/sch.feature.dragcreator.css" },
+                { "path"  : "resources/css/sch.feature.dragdrop.css" },
+                { "path"  : "resources/css/sch.feature.resizezone.css" },
+                { "path"  : "resources/css/sch.plugin.eventtools.css" },
+                { "path"  : "resources/css/sch.plugin.dragselector.css" },
+                { "path"  : "resources/css/sch.plugin.eventeditor.css" },
+                { "path"  : "resources/css/sch.plugin.lines.css" },
+                { "path"  : "resources/css/sch.plugin.zones.css" },
+                { "path"  : "resources/css/sch.plugin.resourcezones.css" },
+                { "path"  : "resources/css/sch.plugin.export.css" },
+                { "path"  : "resources/css/sch.plugin.excel.css" },
+                { "path"  : "resources/css/sch.feature.columnlines.css" },
+                { "path"  : "resources/css/sch.print.printable.css" },
+                { "path"  : "resources/css/sch.tooltip.tooltip.css" },
+                { "path"  : "resources/css/sch.view.grouping.css" },
+                { "path"  : "resources/css/sch.view.horizontal.css" },
+                { "path"  : "resources/css/sch.view.tree.css" },
+                { "path"  : "resources/css/sch.view.timeline.css" },
+                { "path"  : "resources/css/sch.view.vertical.css" },
+                { "path"  : "resources/css/sch.view.calendar.css" }
+            ]
+        },
+        {
+            "name"      : "Ext Scheduler Default Theme",
+            "id"        : "ext-scheduler-default",
+            "target"    : "resources/css/sch-all-debug.css",
+            "files"     : [
+                { "path"  : "resources/css/sch-all-no-theme-debug.css" },
+
+                { "path"  : "resources/css/sch.column.timeaxis.horizontal-default.css" },
+                { "path"  : "resources/css/sch.event-default.css" }
+            ]
+        },
+        {
+            "name"      : "Ext Scheduler Neptune Styles",
+            "id"        : "ext-scheduler-neptune-styles",
+            "target"    : "resources/css/sch-all-neptune-debug.css",
+            "files"     : [
+                { "path"  : "resources/css/sch-all-no-theme-debug.css" },
+
+                { "path"  : "resources/css/sch.column.timeaxis.horizontal-neptune.css" },
+                { "path"  : "resources/css/sch.event-neptune.css" }
+            ]
+        },
+        {
+            "name"      : "Ext Scheduler Crisp Styles",
+            "id"        : "ext-scheduler-crisp-styles",
+            "target"    : "resources/css/sch-all-crisp-debug.css",
+            "files"     : [
+                { "path"  : "resources/css/sch-all-no-theme-debug.css" },
+
+                { "path"  : "resources/css/sch.column.timeaxis.horizontal-crisp.css" },
+                { "path"  : "resources/css/sch.event-crisp.css" }
+            ]
+        }
+    ]
+}
+

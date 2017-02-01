@@ -1,0 +1,40 @@
+/*
+
+Ext Scheduler 3.0.6
+Copyright(c) 2009-2015 Bryntum AB
+http://bryntum.com/contact
+http://bryntum.com/license
+
+*/
+.sch-column-line {
+    border-left    : 1px solid #e0e0e0;
+    height         : 100%;
+    position       : absolute;
+    overflow       : hidden;
+    margin-left    : -1px;
+    pointer-events : none;
+}
+
+.sch-column-line-solid {
+    border-color : #b3b3b3;
+}
+
+/* Mac Safari */
+.x-safari:not(.x-touch) .sch-column-line {
+    margin-left : 0;
+}
+
+/* Windows Safari */
+.x-safari.x-windows .sch-column-line {
+    margin-left : 1px;
+}
+
+/* Need to prevent the lines from blocking UI interactions in old IE lacking pointer-events support */
+.x-ie10m .sch-column-line {
+    z-index : -1;
+}
+
+/* For immediate hiding on orientation switch */
+.sch-vertical .sch-column-line {
+    visibility : hidden;
+}

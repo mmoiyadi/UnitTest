@@ -1,0 +1,1 @@
+Ext.override(Ext.grid.CellEditor,{checkDocumentClick:function(d){var c;if(this.editing){if(this.field.getEl()&&!this.field.getEl().contains(d.target)){var a=this.field.getBox();var b=d.getXY();if((a.x>b[0])||(a.y>b[1])||(a.x+a.width<b[0])||(a.y+a.height<b[1])){}}}},onRender:function(){this.callParent();this.mon(Ext.getDoc(),"mousedown",this.checkDocumentClick,this)}});

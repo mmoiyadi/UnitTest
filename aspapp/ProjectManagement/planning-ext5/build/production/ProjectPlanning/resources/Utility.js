@@ -1,0 +1,1 @@
+stl.app.isTaskHasSubtasks=function(a,c){var b=false;if(a.subtasks&&a.subtasks.length>0&ConfigData.moduleSettingsMap.IS_SUBTASK_ENABLED.Enabled&c.isSubtaskEnabled){b=true}return b};stl.app.isValueChanged=function(b,a){return b!==a};

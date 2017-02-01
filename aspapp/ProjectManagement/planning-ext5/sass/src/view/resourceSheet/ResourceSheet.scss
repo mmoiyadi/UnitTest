@@ -1,0 +1,48 @@
+/****
+resourceSheet.css
+***/
+.resource-sheet{
+    color: black;
+    transition: width 0.25s;
+    -webkit-transition: width 0.25s;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#394B66', endColorstr='#2A394F',GradientType=0 )!important;/* IE6-9 */
+    overflow:hidden
+}
+.resource-sheet .x-panel-header{
+	background-color: #e1ecfe;
+	border:1px solid #e1ecfe;
+}
+.resource-sheet .x-panel-header-text{
+	color:black;
+}
+.resource-sheet .x-column-header .x-grid-row .x-grid-cell{
+	font-size:14px;
+}
+.resource-sheet .x-tool-img{
+	background-color: black;
+}
+
+tr.resourceContentedRow .x-grid-cell
+{
+    background-color:lightcoral;
+}
+.x-panel-header-title-default {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: helvetica,arial,verdana,sans-serif;
+    line-height: 30px;
+}
+
+.resourceSheetToolBar {
+    top: 34px!important;
+    padding-top: 9px;
+    height: 43px;
+    border-color: #e1ecfe!important;
+}
+
+.resource-sheet-grid {
+    .x-tool.x-box-item {
+        top: 0px !important;
+    }
+}

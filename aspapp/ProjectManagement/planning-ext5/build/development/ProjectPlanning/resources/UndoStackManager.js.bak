@@ -1,0 +1,375 @@
+stl.app.undoStackManager = function(cfg) {
+    this.undoStack = new stl.app.undoStack(null);
+    this.undoTaskStack = new stl.app.undoStack(null);
+    this.activeStack = this.undoStack;
+    this.xtype = 'undoStackManager';
+    this.milestoneTasksByMilestoneUid = {};
+}
+
+$.extend(stl.app.undoStackManager.prototype, (function() {
+    var removeTask = function(undoStackMgr, project, task, scope, row, phase, prevTaskUid) {
+
+        if (project._tasksAndMilestonesByUid[task.uid]) {
+            if (task.isMS) {
+                if(undoStackMgr.milestoneTasksByMilestoneUid[task.uid]){
+                    var MSTaskInfo = undoStackMgr.milestoneTasksByMilestoneUid[task.uid].MSTask;
+                    var bufferTaskInfo = undoStackMgr.milestoneTasksByMilestoneUid[task.uid].bufferTask;
+                    $(document).trigger("milestoneremove", [undoStackMgr, MSTaskInfo.task]);//, scope, phase, row, IPMSTaskInfo.prevTaskUid]);
+                    delete project._tasksAndMilestonesByUid[MSTaskInfo.task.uid];
+                    $(document).trigger("taskremove", [undoStackMgr, bufferTaskInfo.task, scope.uid, phase.uid]);//, scope.uid, phase.uid]);
+                    delete project._tasksAndMilestonesByUid[bufferTaskInfo.task.uid];
+                }
+                $(document).trigger("milestoneremove", [undoStackMgr, task]);
+            } else {
+                $(document).trigger("taskremove", [undoStackMgr, task, scope.uid, phase.uid]);
+            }
+            delete project._tasksAndMilestonesByUid[task.uid];
+            return true;
+        } else
+            return false;
+
+    };
+
+    var addTask = function(undoStackMgr, project, task, scope, row, phase, prevTaskUid) {
+
+        if (!project._tasksAndMilestonesByUid[task.uid]) {
+            project._tasksAndMilestonesByUid[task.uid] = task;
+            if (task.isMS) {
+                if(undoStackMgr.milestoneTasksByMilestoneUid[task.uid]){
+                    var MSTaskInfo = undoStackMgr.milestoneTasksByMilestoneUid[task.uid].MSTask;
+                    var bufferTaskInfo = undoStackMgr.milestoneTasksByMilestoneUid[task.uid].bufferTask;
+                    project._tasksAndMilestonesByUid[MSTaskInfo.task.uid] = MSTaskInfo.task;
+                    $(document).trigger("milestoneadd", [undoStackMgr, MSTaskInfo.task, scope, phase, row, MSTaskInfo.prevTaskUid]);
+                    project._tasksAndMilestonesByUid[bufferTaskInfo.task.uid] = bufferTaskInfo.task;
+                    $(document).trigger("taskadd", [undoStackMgr, bufferTaskInfo.task, scope, phase, row, bufferTaskInfo.prevTaskUid]);
+                }
+                $(document).trigger("milestoneadd", [undoStackMgr, task, scope, phase, row, prevTaskUid]);
+            } else {
+                $(document).trigger("taskadd", [undoStackMgr, task, scope, phase, row, prevTaskUid]);
+            }
+            return true;
+        } else
+            return false;
+
+    };
+
+    var pushToUndoStackForTaskAdd = function(project, task, scope, row, phase, prevTaskUid) {
+        var undoStackMgr = this;
+        stl.app.setPredSuccIdsArray(task);
+        var action = new stl.app.ActionItem(
+            function(task) {
+                return removeTask(undoStackMgr, project, task, scope, row, phase, prevTaskUid);
+            },
+            function(task) {
+                return addTask(undoStackMgr, project, task, scope, row, phase, prevTaskUid);
+            }
+        );
+
+        this.activeStack.push(action, task);
+    };
+
+    var pushToUndoStackForTaskDelete = function(project, task, scope, row, phase, prevTaskUid) {
+        var undoStackMgr = this;
+        if (task.taskType === "PEMS" || task.taskType === "IPMS" || task.taskType === "buffer")
+            return;
+        stl.app.setPredSuccIdsArray(task);
+        var action = new stl.app.ActionItem(
+            function(task) {
+                return addTask(undoStackMgr, project, task, scope, row, phase, prevTaskUid);
+            },
+            function(task) {
+                return removeTask(undoStackMgr, project, task, scope, row, phase, prevTaskUid);
+            }
+        );
+        this.activeStack.push(action, task);
+
+    };
+
+    var pushToUndoStackForMultiTaskCut = function(project, cutTasksUndoParamsA ) {
+        var me = this;
+        _.each(cutTasksUndoParamsA.oldtasksUndoParamsA, function (taskUndoParams){
+                stl.app.setPredSuccIdsArray(taskUndoParams.task);
+        });
+        _.each(cutTasksUndoParamsA.newtasksUndoParamsA, function (taskUndoParams){
+                stl.app.setPredSuccIdsArray(taskUndoParams.task);
+        });
+
+
+        var action = new stl.app.ActionItem(
+
+            function(cutTasksUndoParamsA) {
+                _.each(cutTasksUndoParamsA.newtasksUndoParamsA, function (taskUndoParams){
+                    removeTask(me,project, taskUndoParams.task, taskUndoParams.scope,
+                        taskUndoParams.row, taskUndoParams.phase, 
+                        taskUndoParams.prevTaskUid);
+                }); 
+                _.each(cutTasksUndoParamsA.oldtasksUndoParamsA, function (taskUndoParams){
+                    addTask(me,project, taskUndoParams.task, taskUndoParams.scope,
+                        taskUndoParams.row, taskUndoParams.phase, 
+                        taskUndoParams.prevTaskUid);
+                });                        
+                return true;
+                },
+            function(cutTasksUndoParamsA) {
+                _.each(cutTasksUndoParamsA.newtasksUndoParamsA, function (taskUndoParams){
+                    addTask(me,project, taskUndoParams.task, taskUndoParams.scope,
+                        taskUndoParams.row, taskUndoParams.phase, 
+                        taskUndoParams.prevTaskUid);
+                }); 
+                _.each(cutTasksUndoParamsA.oldtasksUndoParamsA, function (taskUndoParams){
+                    removeTask(me,project, taskUndoParams.task, taskUndoParams.scope,
+                        taskUndoParams.row, taskUndoParams.phase, 
+                        taskUndoParams.prevTaskUid);
+                }); 
+                return true;
+            }
+                
+            
+        );
+        this.activeStack.push(action, cutTasksUndoParamsA);
+
+    };
+
+    var pushToUndoStackForMultiTaskAdd = function(project, taskUndoParamsA) {
+        var me = this;
+        _.each(taskUndoParamsA, function (taskUndoParams){
+                stl.app.setPredSuccIdsArray(taskUndoParams.task);
+        });
+
+        var action = new stl.app.ActionItem(
+
+            function(taskUndoParamsA) {
+                _.each(taskUndoParamsA, function (taskUndoParams){
+                    removeTask(me,project, taskUndoParams.task, taskUndoParams.scope,
+                        taskUndoParams.row, taskUndoParams.phase, 
+                        taskUndoParams.prevTaskUid);
+                });                    
+                return true;
+                },
+            function(taskUndoParamsA) {
+                _.each(taskUndoParamsA, function (taskUndoParams){
+                    addTask(me,project, taskUndoParams.task,taskUndoParams.scope,
+                        taskUndoParams.row, taskUndoParams.phase, 
+                        taskUndoParams.prevTaskUid);
+                });
+                return true;
+            }
+                
+            
+        );
+        this.activeStack.push(action, taskUndoParamsA);
+
+    };
+
+    var pushToUndoStackForMultiTaskDelete = function(project, taskUndoParamsA) {
+        var me = this;
+        _.each(taskUndoParamsA, function (taskDeleteUndoParams){
+                stl.app.setPredSuccIdsArray(taskDeleteUndoParams.task);
+        });
+
+        var action = new stl.app.ActionItem(
+
+            function(taskUndoParamsA) {
+                _.each(taskUndoParamsA, function (taskUndoParams){
+                    addTask(me,project, taskUndoParams.task, taskUndoParams.scope,
+                    taskUndoParams.row, taskUndoParams.phase, 
+                    taskUndoParams.prevTaskUid);
+                });                    
+                return true;
+                },
+            function(taskUndoParamsA) {
+                _.each(taskUndoParamsA, function (taskUndoParams){
+                    removeTask(me,project, taskUndoParams.task,taskUndoParams.scope,
+                        taskUndoParams.row, taskUndoParams.phase, 
+                        taskUndoParams.prevTaskUid);
+                });
+                return true;
+            }
+                
+            
+        );
+        this.activeStack.push(action, taskUndoParamsA);
+
+    };
+
+    var resolveLinkEndpointUID =  function (linkEndpointEl) {
+        var endpointId = Number.isInteger(parseInt(linkEndpointEl)) ? linkEndpointEl : 
+                            (linkEndpointEl.hasClass("ms-content-wrap") ?
+                                linkEndpointEl.closest(".milestone").data("model").uid : linkEndpointEl.data("model").uid);
+        return endpointId;
+    };
+    var removeLink = function(linksView, project, link) {
+        if (project.doesLinkExists(link.to, link.from)) {
+                project.removeLink(link.from, link.to);
+            return true;
+        } else
+            return false;
+    };
+
+    var addLink = function(linksView, project, link) {
+        if (!project.doesLinkExists(link.to, link.from)) {
+                project.addLink(link);
+            return true;
+        } else
+            return false;
+    };
+
+    var pushToUndoStackForLinkAdd = function(linksView, project, link) {
+        var linkWithId = {to : resolveLinkEndpointUID(link.to), from : resolveLinkEndpointUID(link.from)};
+        var action = new stl.app.ActionItem(
+            function(link) {
+                return removeLink(linksView, project, link);
+            },
+            function(link) {
+                return addLink(linksView, project, link);
+            }
+        );
+        this.activeStack.push(action, linkWithId);
+    };
+
+    var pushToUndoStackForLinkDelete = function(linksView, project, link) {
+        var linkWithId = {to : resolveLinkEndpointUID(link.to), from : resolveLinkEndpointUID(link.from)};
+        var action = new stl.app.ActionItem(
+            function(link) {
+                return addLink(linksView, project, link);
+            },
+            function(link) {
+                return removeLink(linksView, project, link);
+            }
+        );
+        this.activeStack.push(action, linkWithId);
+    };
+
+    var activateStack = function(stackType) {
+        switch (stackType) {
+            case UndoStackTypesEnum.TaskStack:
+                {
+                    this.undoTaskStack.invalidateAll();
+                    this.activeStack = this.undoTaskStack;
+                    break;
+                }
+            case UndoStackTypesEnum.ProjectStack:
+                {
+                    this.activeStack = this.undoStack;
+                    break;
+                }
+            default:
+                {
+                    this.activeStack = this.undoStack;
+                    break;
+                }
+        }
+    };
+
+    var undo = function() {
+        this.activeStack.undo();
+    };
+
+    var redo = function() {
+        this.activeStack.redo();
+    };
+    var invalidateAll = function() {
+        this.undoStack.invalidateAll();
+        this.undoTaskStack.invalidateAll();
+    };
+
+    var deleteSubtask = function(taskView, task, subtask) {
+        var index = task.subtasks.indexOf(subtask);
+        if (index >= 0) {
+            task.subtasks.splice(index, 1);
+            taskView.load(task);
+            return true;
+        } else
+            return false;
+    };
+
+    var addSubtask = function(taskView, task, subtask) {
+        var index = task.subtasks.indexOf(subtask);
+        if (index < 0) {
+            task.subtasks.push(subtask);
+            taskView.load(task);
+            return true;
+        } else
+            return false;
+    };
+    var addSubtaskAtIndex = function(taskView, task, subtask, deletedIndex) {
+        var index = task.subtasks.indexOf(subtask);
+        if (index < 0) {
+            if (deletedIndex >= 0) {
+                task.subtasks.splice(deletedIndex, 0, subtask);
+                taskView.load(task);
+                return true;
+            }
+        } else
+            return false;
+    };
+
+    var setMilestoneTasksInfo = function(bufferTask, IPMSOrPEMSTask, msUid, project){
+        if (bufferTask && IPMSOrPEMSTask) {
+                //var prevTaskUid = this.getPrevTaskUid($bufferTask);
+                //var bufferTask = $bufferTask.data("model");
+            var prevTask = project.getPrevTask(bufferTask);
+            var prevTaskUid = prevTask ? prevTask.Uid : null;
+            
+            this.milestoneTasksByMilestoneUid[msUid] = {
+                "bufferTask": {
+                    "task" : bufferTask,
+                    "prevTaskUid" : prevTaskUid
+                },
+                "MSTask": {
+                    "task" : IPMSOrPEMSTask,
+                    "prevTaskUid" : null
+                }
+            };
+            stl.app.setPredSuccIdsArray(bufferTask);
+            stl.app.setPredSuccIdsArray(IPMSOrPEMSTask);
+        }
+    };
+
+
+    //------ Subtask related ------//
+    var pushToUndoStackForSubtaskAdd = function(taskView, task, subtask) {
+            var action = new stl.app.ActionItem(
+                function(task) {
+                    return deleteSubtask(taskView, task, subtask);
+                },
+                function() {
+                    return addSubtask(taskView, task, subtask);
+                }
+            );
+            this.activeStack.push(action, task);
+        };
+    var pushToUndoStackForSubtaskDelete = function(taskView, task, subtask, indexDeleted) {
+            var action = new stl.app.ActionItem(
+                function(task) {
+                    return addSubtaskAtIndex(taskView, task, subtask, indexDeleted);
+                },
+                function() {
+                    return deleteSubtask(taskView, task, subtask);
+                }
+            );
+            this.activeStack.push(action, task);
+        };
+
+    return {
+        //------ task related ------//
+        pushToUndoStackForTaskAdd: pushToUndoStackForTaskAdd,
+        pushToUndoStackForTaskDelete: pushToUndoStackForTaskDelete,
+        pushToUndoStackForMultiTaskAdd: pushToUndoStackForMultiTaskAdd,
+        pushToUndoStackForMultiTaskCut:pushToUndoStackForMultiTaskCut,
+        pushToUndoStackForMultiTaskDelete: pushToUndoStackForMultiTaskDelete,
+        setMilestoneTasksInfo: setMilestoneTasksInfo,
+        //------ link related ------//
+        pushToUndoStackForLinkAdd: pushToUndoStackForLinkAdd,
+        pushToUndoStackForLinkDelete: pushToUndoStackForLinkDelete,
+        //------ Stack related ------//
+        activateStack: activateStack,
+        undo: undo,
+        redo: redo,
+        invalidateAll: invalidateAll,
+        //------ Subtask related ------//
+        pushToUndoStackForSubtaskAdd: pushToUndoStackForSubtaskAdd,
+        pushToUndoStackForSubtaskDelete: pushToUndoStackForSubtaskDelete
+
+    };
+}()));

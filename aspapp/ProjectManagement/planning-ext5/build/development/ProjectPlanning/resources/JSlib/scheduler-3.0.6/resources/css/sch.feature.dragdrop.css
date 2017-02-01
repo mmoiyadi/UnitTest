@@ -1,0 +1,59 @@
+/*
+
+Ext Scheduler 3.0.6
+Copyright(c) 2009-2015 Bryntum AB
+http://bryntum.com/contact
+http://bryntum.com/license
+
+*/
+.sch-dd-newtime {
+    font-weight : bold;
+    color       : #274490;
+    display     : block;
+    margin      : 0 0 5px 4px;
+}
+
+.x-dd-drag-proxy.sch-dragproxy,
+.sch-dragproxy {
+    background     : none !important;
+    overflow       : visible !important;
+    height         : 1px; /*Required for the Ext drag drop to work */
+    width          : 1px; /*Required for the Ext drag drop to work */
+    pointer-events : auto; /* Ext sets this to none */
+}
+
+.sch-dragproxy .sch-event {
+    opacity : 0.6;
+    filter  : alpha(opacity=60);
+    cursor  : pointer;
+}
+
+.sch-dragproxy .x-resizable-handle,
+.sch-dragproxy .x-dd-drop-icon {
+    display : none !important;
+}
+
+.sch-dragproxy .x-dd-drag-ghost {
+    background-color : transparent;
+    border           : 0 none;
+    padding          : 0;
+    white-space      : nowrap;
+
+    /* Gantt tasks elements are sized based on row height */
+    height           : inherit;
+}
+
+.sch-rtl .sch-event {
+    text-align : right;
+}
+
+.sch-rtl .x-dd-drag-ghost .sch-event {
+    right : auto !important;
+}
+
+/*
+    In case Ext JS sets a very high Z-index, lower it temporarily so it doesn't interfere with popups etc
+*/
+.sch-dragproxy.sch-before-drag-finalized {
+    z-index : 10 !important;
+}

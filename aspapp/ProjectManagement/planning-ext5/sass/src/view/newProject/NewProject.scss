@@ -1,0 +1,93 @@
+.new-project{
+	color:black;
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    border:2px solid gray;
+}
+.new-project .x-panel-body-default{
+	/*border-color:#aaa;*/
+}
+.new-project .x-panel-header{
+	color:black;
+	background-color: #497DBA;
+	border:none;
+}
+.new-project .x-panel-header-default .x-tool-img{
+	/*background-color: #aaa;*/
+}
+.new-project .x-toolbar-footer{
+	background-color: white;
+	border:none;
+}
+.x-resizable-handle{
+	background-color: #e1ecfe;
+}
+.x-btn-default-small,
+.x-btn-over.x-btn-default-small,
+.x-btn-focus.x-btn-default-small,
+.x-btn.x-btn-pressed.x-btn-default-small {
+	background-color: #aaa;
+	background-image:-webkit-linear-gradient(top,#efefef 0%, #bbbbbb 100%);
+	background-image:-ms-linear-gradient(top,#efefef 0%, #bbbbbb 100%);
+	background-image:-moz-linear-gradient(top,#efefef 0%, #bbbbbb 100%) !important;
+	border-color:#aaa;
+}
+.x-btn-default-small .x-btn-inner{
+	color:black;
+}
+.new-project .x-panel-header-text-container{
+	color:white;
+}
+
+.Template-Desciption
+{
+    font-size: small;
+    font-style:italic;
+    color:Gray
+}
+
+.x-boundlist-item div.chkCombo {
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	width: 16px;
+	height: 16px;
+    background: transparent url(images/unchecked.png);
+}
+.x-boundlist-selected div.chkCombo{
+    background: transparent url(images/checked.png);
+}
+/*---------------------Participant filter related css---------------------*/
+.select2-drop.select2-drop-active {
+    z-index: 19000;
+}
+
+#participantsFilterSelectBox {
+    max-width: 220px;
+    min-width: 220px;
+}
+
+.newProjectSelect2.select2-container-multi .select2-choices {
+    max-width: 212px;
+    width: 212px;
+    min-width: 200px;
+    max-height: 200px;
+    height: 90px!important;
+    overflow-y: auto!important;
+    cursor:pointer;
+}
+
+#select2-drop-mask.select2-drop-mask {
+    z-index: 18999;
+}
+
+#participantsFilterComboBox {
+    left: 125px!important;
+    width: 212px!important;
+}
+
+#participantsFilterLbl {
+    width: 125px!important;
+}
+/*---------------------Participant filter related css---------------------*/

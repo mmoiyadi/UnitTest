@@ -1,0 +1,16 @@
+{
+    "undef"     : true,
+    "browser"   : true,
+    "predef"    : ["Ext", "Sch", "console", "alert"],
+    "onecase"   : true,
+    "debug"     : false,
+    "asi"       : false,
+    "supernew"  : false,
+    "expr"      : true,         // allow fn && fn()
+    "latedef"   : "nofunc",     // allow functions to be defined before they are called
+    "loopfunc"  : true,
+    "eqnull"    : true,
+    "boss"      : true,
+    "maxerr"    : 5000,
+    "es3"       : true
+}

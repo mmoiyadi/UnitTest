@@ -1,0 +1,68 @@
+#scopeItemTree .x-tree-node-text{
+	    font-size: 11px;
+	    top: 11px;
+    	position: absolute;
+}
+
+div#scopeItemTree .x-grid-row,
+.scopeItemTreeCls .x-grid-cell-treecolumn,
+.scopeItemTreeCls .x-grid-cell-inner-treecolumn
+{
+   height:48px !important;
+}
+
+/* TBD - scopeItemTreeCls class to be added */
+.scopeItemTreeCls .x-grid-item:nth-of-type(odd) .x-grid-cell {
+	background-color: #f8f8f8;
+}
+
+.scopeItemTreeCls .x-grid-item:nth-of-type(even) .x-grid-cell {
+	background-color: #fdfdfd;
+}
+.scopeItemTreeCls .x-grid-item-selected td.x-grid-cell-treecolumn{
+    background-color: #BBDEFB !important;
+}
+
+div.TimelineSummaryBar {
+	background-color: #545454;
+	height: 9px;
+}
+
+.scopeItemTreeCls .x-grid-item-focused .x-grid-cell-inner:before{
+	border: none;
+}
+
+.scopeItemTreeCls .x-tree-icon,
+.scopeItemTreeCls .x-tree-elbow-img,
+.scopeItemTreeCls .x-tree-checkbox
+{ 	
+ 	margin-top: 0px !important; 
+}
+
+.scopeItemTreeCls .summaryNode .x-grid-tree-node-expanded .x-tree-icon-parent,
+.scopeItemTreeCls .summaryNode .x-tree-icon-parent,
+.scopeItemTreeCls .summaryNode .x-tree-icon-leaf 
+
+{
+	background-image: url(images/SummaryNode.png) !important;
+}
+
+.scopeItemTreeCls .simpleProject .x-grid-tree-node-expanded .x-tree-icon-parent,
+.scopeItemTreeCls .simpleProject .x-tree-icon-parent,
+.scopeItemTreeCls .simpleProject .x-tree-icon-leaf,
+.scopeItemTreeCls .simpleProject .x-tree-elbow,
+.scopeItemTreeCls .simpleProject .x-tree-elbow-end 
+
+{
+	display:none !important;
+}
+
+ .x-tip{
+	max-width: 250px;
+}
+.scopeItemTreeCls .x-tree-cell-editor .x-form-text{
+	padding-left: 1px;
+    width:92%;
+}
+
+

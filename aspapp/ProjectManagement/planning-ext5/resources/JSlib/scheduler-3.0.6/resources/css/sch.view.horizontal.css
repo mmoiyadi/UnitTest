@@ -1,0 +1,22 @@
+/*
+
+Ext Scheduler 3.0.6
+Copyright(c) 2009-2015 Bryntum AB
+http://bryntum.com/contact
+http://bryntum.com/license
+
+*/
+.x-ie .sch-horizontal .sch-timelineview td.sch-timetd{
+    z-index          : 0;
+    background-image : url(../images/1px.png); /* z-index hack for IE, keeping columnlines below row cells */
+}
+
+/* Make sure column lines are always out of reach in Chrome */
+.x-webkit .sch-horizontal td.sch-timetd {
+    position : relative;
+}
+
+/* Remove Ext JS default 1px border top of the table */
+.sch-timelinepanel .x-grid-with-row-lines .x-grid-item[data-recordindex="0"] {
+    border-top-color : transparent;
+}

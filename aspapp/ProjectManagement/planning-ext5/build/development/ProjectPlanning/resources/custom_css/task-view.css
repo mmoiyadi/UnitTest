@@ -1,0 +1,456 @@
+.subtasks {
+    background: white;
+    padding: 8px 0px 8px 10px;
+    clear: both;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+.subtasks ul {
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+    overflow-y:auto;
+    max-height: 200px;
+}
+.subtasks li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    background: none;
+    background-color: inherit;
+    overflow-y:hidden;
+    overflow-x: hidden;
+    /*height:20px;*/
+}
+.subtasks li.selected{
+    background-color:#c1ddff;
+}
+.subtasks-header > div {
+    white-space: normal;
+    vertical-align: bottom;
+}
+
+.subtasks-header > div,
+.subtasks li > div {
+    display: inline-block;
+    width: 75px;
+    text-align: center;
+    vertical-align: top;
+    line-height: 20px;
+}
+
+.subtasks-header > div {
+    vertical-align: center;
+}
+.subtasks-header .subtask-header-status{
+    visibility: hidden;
+}
+.subtasks-header .subtask-header-cut{
+    width: 24px;
+    height: 24px;
+    background: transparent url(../images/cut_subtask_selected.png) 0 0 no-repeat;
+    background-position: 0px 0px;
+    background-size: 21px;
+    cursor: pointer;
+}
+.subtasks-header .subtask-header-copy{
+    width: 24px;
+    height: 24px;
+    background: transparent url(../images/copy_subtask_selected.png) 0 0 no-repeat;
+    background-position: 0px 0px;
+    background-size: 21px;
+    cursor: pointer;
+}
+.subtasks-header .subtask-header-paste{
+    width: 24px;
+    height: 24px;
+    background: transparent url(../images/paste_selected.png) 0 0 no-repeat;
+    background-position: 0px 0px;
+    background-size: 21px;
+    cursor: pointer;
+}
+.subtasks-header .subtask-header-delete{
+    width: 24px;
+    height: 24px;
+    background: transparent url(../images/delete_selected.png) 0 0 no-repeat;
+    background-position: 0px 0px;
+    background-size: 21px;
+    cursor: pointer;
+}
+.subtasks-header > div.hidden,
+.subtasks li > div.hidden {
+    display: none;
+}
+
+.subtasks-header > div input,
+.subtasks li > div input {
+    border: 0;
+    padding: 0px 0px 3px 0px;
+
+    margin: 0;
+    background: none;
+    font-size: 100%;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    font-family: Helvetica, sans-serif;
+    outline: none;
+}
+
+.subtasks li > div.subtask-status,
+.subtasks-header .subtask-header-status{
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    background: transparent url(../images/task-NS.png) 0 0 no-repeat;
+    background-position: -2px -2px;
+    background-size: 21px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.subtasks li.subtask-status-NS > div.subtask-status,
+.subtasks-header .subtask-header-status {
+    background-position: 0 0;
+    background-size: 16px;
+}
+
+.subtasks li.subtask-status-IP > div.subtask-status {
+    background-image: url(../images/in-progress.png);
+}
+
+.subtasks li.subtask-status-CO > div.subtask-status {
+    background-image: url(../images/task-CO.png);
+}
+
+.task.subtask-type-rate .subtasks li.subtask-status-NS > div.subtask-status {
+    background-image: url(../images/rate-subtask-not-started.png);
+    background-position: -2px -2px;
+    background-size: 21px;
+}
+
+.subtasks li:hover > div.subtask-status {
+    opacity: 0.5;
+}
+
+.subtasks li:hover > div.subtask-status:hover {
+    opacity: 1;
+}
+
+.subtasks-header > div {
+    color: #aaa;
+}
+.subtasks li > div.subtask-name textarea{
+    resize:none;
+    border:0px;
+    white-space: pre-wrap !important;
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: inherit;
+    font-size:13px;
+}
+.subtasks-header > div.subtask-header-name{
+    width:88px;
+}
+.subtasks li > div.subtask-name,
+.subtasks li > div.subtask-name textarea {
+    text-align: left;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: none;
+}
+
+.subtasks-header > div.subtask-header-checklist-icon {
+    width: 34px;
+    height: 20px;
+    background-image: url(../images/checklist.GIF);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+}
+
+.subtasks .subtask-checklist-icon {
+    width: 34px;
+    height:20px;
+    font-family: Georgia;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    opacity: 0;
+    transition: opacity 200ms;
+
+}
+
+.subtasks .subtask-checklist-icon {
+    cursor: pointer;
+    /*border: 1px solid transparent;*/
+}
+
+.subtasks  .subtask-checklist-icon {
+    opacity: 1;
+    /*background-image: url(../images/checklistnone.GIF);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;*/
+}
+
+.subtasks  .subtask-checklist-icon.none:hover {
+   
+    background-image: url(../images/checklistnone.GIF);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.subtasks  .subtask-checklist-icon.incomplete {
+   
+    background-image: url(../images/checklist.GIF);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.subtasks  .subtask-checklist-icon.complete {
+   
+    background-image: url(../images/chklistcomplete.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.subtasks li:hover > subtask-checklist-icon {
+    opacity: 0.4;
+}
+.task.task-zoom-full .subtasks-header > div.subtask-header-name,
+.task.task-zoom-full .subtasks li > div.subtask-name,
+.task.task-zoom-full .subtasks li > div.subtask-name textarea,
+.matrix-view.fullzoom .task .subtasks-header > div.subtask-header-name,
+.matrix-view.fullzoom .task .subtasks li > div.subtask-name,
+.matrix-view.fullzoom .task .subtasks li > div.subtask-name textarea {
+    width: 540px;
+}
+
+.subtasks-header > div.subtask-header-step,
+.subtasks li > div.subtask-step {
+    width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.subtasks li > div.subtask-step input {
+    width: 0;
+    opacity: 0;
+}
+
+.subtasks-header .subtask-header-status,
+.subtasks li > div.subtask-status {
+    width: 16px;
+}
+
+.subtasks-header .subtask-header-delete-subtask {
+    width: 15px;
+}
+
+.subtasks li > div.delete-subtask {
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    opacity: 0;
+    cursor: pointer;
+    background: #e74c3c;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    line-height: 15px;
+    font-size: 11px;
+}
+
+.subtasks li:hover > div.delete-subtask {
+    opacity: 1;
+}
+
+li.new-subtask .subtask-name textarea {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-family: Helvetica, sans-serif;
+}
+.subtasks-header > div input:focus,
+.subtasks li > div input:focus,
+.subtasks li > div textarea:focus {
+    background: #f0f0f0;
+}
+
+.subtask-step.focused .step-completion {
+    box-shadow: 0 0 5px rgba(50, 50, 255, 1);
+}
+
+li.proto-subtask > div {
+    display: none;
+}
+li.proto-subtask > div.drag-handle,
+li.proto-subtask > div.delete-subtask,
+li.proto-subtask > div.subtask-name {
+    display: inline-block;
+}
+li.proto-subtask > div.drag-handle,
+.subtasks-header div.drag-handle {
+    visibility: hidden;
+}
+li.proto-subtask > div.subtask-name {
+    margin-left: 22px;
+}
+.subtasks li > div.drag-handle,
+.subtasks-header > div.drag-handle {
+    border-left: 2px dotted #aaa;
+    width: 6px;
+    height: 14px;
+    border-right: 2px dotted #aaa;
+    position: relative;
+    top: 2px;
+    opacity: 0;
+    cursor: move;
+}
+.subtasks li:hover > div.drag-handle,
+.subtasks li:hover > div.delete-subtask {
+    opacity: 1;
+}
+
+.subtasks li.proto-subtask:hover > div.drag-handle,
+.subtasks li.proto-subtask:hover > div.delete-subtask {
+    opacity: 0;
+}
+.subtasks-header > div.add-step-button {
+    background: #aaa;
+    width: 14px;
+    height: 14px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    right: -10px;
+    opacity: 0;
+    transition: opacity 250ms;
+    font-size: 14px;
+    line-height: 13px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.task:hover .subtasks-header > div.add-step-button {
+    opacity: 1;
+}
+
+.sortable-placeholder {
+    border: 1px dashed #ccc;
+    height: 20px;
+}
+
+.subtask-header-step input {
+    text-align: center;
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+}
+
+.subtasks .subtask-owner {
+    width: 120px;
+    white-space: nowrap !important;
+}
+.subtasks-header > div.subtask-header-owner {
+    margin-left: 8px;
+    width: 112px;
+}
+
+.subtask-owner.select2-container:not(.select2-container-active) .select2-choice {
+    border: none;
+    background: none;
+}
+
+.subtask-owner.select2-container:not(.select2-container-active):hover {
+    background: #eee;
+}
+
+.subtask-owner.select2-container:not(.select2-container-active) .select2-choice .select2-arrow {
+    display: none;
+}
+li.subtask .subtask-resources:hover, 
+li.subtask .subtask-duration:hover {
+    visibility: visible;
+    background-color: #eee;
+    cursor: pointer;
+}
+li.subtask .subtask-resources {
+    overflow: hidden;
+    white-space: normal !important;
+    text-align: center;
+}
+
+.task .subtasks-header .subtask-header-resources,
+.task li.subtask .subtask-resources {
+    width: 150px;
+    text-align: center;
+}
+
+.task-zoom-normal .conweb-icon.warning-help-icon {
+  background-image: url('../images/yellow-help-icon_16_16.png');
+
+}
+
+.task-zoom-normal .conweb-icon.info-help-icon {
+  background-image: url('../images/blue-help-icon_16_16.png');
+}
+
+.conweb-icon{
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    
+}
+
+.task .roll-up-task-button{
+	padding-left: 3px;
+  width: 65px;
+  margin-left: 10px;
+}
+
+.conweb-pop-over-base-cls.warning .arrow {
+    border-right: 16px solid #f0f0f0 !important;
+}
+.rollUp-Btn-group {
+  margin-left: -71px !important;
+}
+
+.task.CO .task-name
+{
+   background:  #96b2c9;
+}
+.task.CO .task-header-arrow{
+    border-left: 10px solid #96b2c9;
+    
+}
+
+.task:hover .remaining-subtasks-indicator,
+.task.task-zoom-normal .remaining-subtasks-indicator{
+    display: none !important;
+}
+
+#timelineview .task.task-zoom-normal .task-name-overflow-edit,
+#chainview .task.task-zoom-normal .task-name-overflow-edit{
+    min-width:630px;
+}

@@ -1,0 +1,3084 @@
+.tool-bar{
+    color: white;
+    z-index: 1;
+    transition: width 0.25s;
+    -webkit-transition: width 0.25s;
+    background:#aebdcc!important;
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#394B66', endColorstr='#2A394F',GradientType=0 )!important;/* IE6-9 */
+    overflow:hidden
+}
+
+.x-btn-default-toolbar-small .x-btn-inner{
+    font-size:12px;
+    font-weight:normal;
+    font-family:Arial;
+    color:#40566f;
+    background-color: inherit;
+}
+.toolbar-button-disabled{
+    background-color: #e6e6e6 !important;
+    opacity: 0.65;
+    color: #333333 !important;
+    cursor:default;
+}
+.toolbar-button-hover{
+    color:#e1e6eb !important;
+    background-color: #aebdcc !important;
+}
+.collapse-all 
+{
+    background-image: url(images/collapse.png) !important;
+}
+.expand-all 
+{
+    background-image: url(images/expand.png) !important;
+}
+.help{
+    display: inline-block;
+    float: right;
+    margin-top: 8px;
+}
+.settings
+{
+    display: inline-block;
+    float: left;
+    margin-top: 6px;
+}
+.settings-btn{
+    margin-top:6px ;
+}
+#settings-button
+{
+    cursor: pointer;
+    display: inline-block;
+}
+#calendar-button
+{
+    cursor: pointer;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+#help-button{
+    cursor: pointer;
+}
+#settings-button.disabled,
+#calendar-button.disabled,
+#help-button.disabled{
+    cursor:default;
+}
+#checkindropdown{
+    margin-right: 6px;
+}
+#savedropdown{
+    margin-right: 6px;
+}
+#downloaddropdown{
+    margin-right: 6px;
+}
+/*.checkin-btn,
+.save-btn,
+.matrix-view-btn,
+.timeline-view-btn{
+    margin-right:0px!important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}*/
+.checkin-btn{
+    border-right-width: 0px !important;
+}
+#checkout{
+    margin-right:6px !important;
+    margin-left:0px !important;
+    border-radius:4px;
+}
+#download{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right-width:0px;
+}
+#save{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right-width:0px;
+}
+.btn-group{
+    /*margin-left: 0px!important;
+    margin-right: 6px;*/
+}
+.plan-buttons.btn-group .btn,
+.replan-buttons.btn-group .btn{
+    margin-right: 6px;
+    border-radius: 4px;
+}
+.plan-buttons.btn-group,
+.replan-buttons.btn-group{
+    margin-right:0px!important;
+}
+.remove-buffers{
+    margin-left:0px;
+    margin-right: 6px;
+}
+.btn{
+    font-family:Arial;
+    font-size: 12px !important;
+    color:#40566f;
+    padding: 0px 6px;
+    height:24px;
+    border-radius: 4px;
+    margin: 6px 0px 6px 0px;
+    background: #aebdcc;
+    border:1px solid #6c829d;
+    text-shadow:none;
+}
+.btn:hover:enabled,
+.btn:focus{
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+    background-position: center;
+    color:#e1e6eb;
+    background-color: #aebdcc;
+}
+#checkin:hover,
+#save:hover,
+.highlight .btn.button-text:hover,
+.save-btn .btn.button-text:hover:disabled{
+    border-right: 0px;
+}
+ .btn.dropdown-caret:hover{
+    border-left:0px;
+}
+.selected-btn,
+.btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled]{
+    color:#e1e6eb;
+    background-color:#7995b2 !important;
+}
+.btn.dropdown-caret{
+    height:24px;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+.view-selector{
+    height:24px;
+}
+.btn.dropdown-caret>img{
+    padding:0px 3px 5px 3px;
+}
+.matrix-view-btn,
+.timeline-view-btn,
+.table-view-btn,
+.remove-buffers-btn{
+    width:32px;
+    padding: 6px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border:1px solid #6c829d;
+}
+
+.remove-buffers-btn {
+    width:24px !important;
+}
+.matrix-view-btn.selected-btn,
+.timeline-view-btn.selected-btn,
+.table-view-btn.selected-btn{
+    background-color: #7995b2 !important;
+}
+.matrix-view-btn{
+    background-image: url("images/project.png") !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.timeline-view-btn{
+    background-image: url("images/timeline.png") !important;
+    border-radius: 0px !important;
+}
+.table-view-btn{
+    background-image: url("images/table.png") !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+.remove-buffers-btn{
+    background-image: url("images/remove-buffers.png")!important;
+    background-position: center !important;
+}
+
+.remove-buffers-btn:not(.disabled):hover{
+    background-image: url("images/remove-buffer-focus.png")!important;
+    background-position: center !important;
+}
+.filter-options-btn{
+    background-image:url("images/filter-1.png")!important;
+    background-position:center !important;
+    background-repeat:no-repeat;
+    margin-top:6px;
+    padding:0px 15px 0px 5px;
+}
+.matrix-view-btn.selected-btn{
+    background-image: url("images/project-selected.png")!important;
+}
+.timeline-view-btn.selected-btn{
+    background-image: url("images/timeline-selected.png")!important;
+}
+.table-view-btn.selected-btn{
+    background-image: url("images/table-selected.png")!important;
+}
+.tool-popup.save-popup {
+    position: absolute;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    max-height: 210px;
+    z-index: 1200;
+}
+.tool-popup .save-popup{
+    overflow: auto;
+}
+
+.tool-popup.download-popup {
+    position: absolute;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    max-height: 210px;
+    z-index: 1200;
+}
+.tool-popup .download-popup{
+    overflow: auto;
+}
+
+.tool-popup.setting-popup {
+    position: absolute;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    max-height: 210px;
+    z-index: 1200;
+    overflow:auto;
+    cursor:pointer;
+}
+
+.tool-popup .tool-item {
+    cursor: pointer;
+}
+.tool-popup .tool-item .select{
+    background-image: url("images/menu_check.gif");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 20px;
+    margin-right: 3px;
+    background-color: rgb(231, 231, 231);
+}
+/*toolbar-2nd-row  css starts here*/
+.page-header-toolbar-center,
+.page-header-toolbar-undo-redo {
+     margin-left: 6px;
+    width: 260px;
+    height: 36px;
+    float:left;
+}
+.page-header-toolbar-undo-redo {
+  
+    width: 80px;
+    
+}
+/*.page-header-toolbar-separator {
+ height: 30px;
+    width: 2px;
+    background-color: #5a7593;
+    vrtical-align: middle;
+    margin-top: 2px;
+    float: left;
+}*/
+.page-header-toolbar-center .create-task-buttons{
+    margin-left: 6px;
+    width: 350px;
+    height: 36px;
+    float:left;
+
+}
+
+
+.page-header-toolbar-center .create-task-buttons .toolbar-img.disabled {
+   opacity:0.5;
+}
+
+.page-header-toolbar-undo-redo .undo-redo-buttons{
+    margin-left: 6px;
+    width: 70px;
+    height: 36px;
+    float:left;
+
+}
+
+
+.page-header-toolbar-undo-redo .undo-redo-buttons .toolbar-img.disabled {
+   opacity:0.5;
+}
+.page-header-toolbar-center  .DeleteIcon-btn{
+    background-image: url("images/Delete.png");
+}
+
+.page-header-toolbar-center  .CutIcon-btn{
+    background-image: url("images/cut.png");
+}
+
+.page-header-toolbar-center  .CopyIcon-btn{
+    background-image: url("images/copy.png");
+}
+
+
+.page-header-toolbar-center  .CutIcon-btn.selected{
+    background-image: url("images/cut_selected.png");
+}
+
+.page-header-toolbar-center  .CopyIcon-btn.selected{
+    background-image: url("images/copy_selected.png");
+}
+
+.page-header-toolbar-center  .PEIcon-btn{
+    background-image: url("images/PE.png");
+}
+.page-header-toolbar-center  .CMSIcon-btn{
+    background-image: url("images/CMS.png");
+}
+.page-header-toolbar-center  .IMSIcon-btn{
+    background-image: url("images/IMS.png");
+}
+.page-header-toolbar-center  .FKIcon-btn{
+    background-image: url("images/FK.png");
+}
+
+.page-header-toolbar-center  .PEIcon-btn.selected {
+    background-image: url("images/pe-selected.png");
+}
+.page-header-toolbar-center  .CMSIcon-btn.selected {
+    background-image: url("images/cms-selected.png");
+}
+.page-header-toolbar-center  .IMSIcon-btn.selected {
+    background-image: url("images/ims-selected.png");
+}
+.page-header-toolbar-center  .FKIcon-btn.selected {
+    background-image: url("images/full-kit-selected.png");
+}
+.page-header-toolbar-center  .PPIcon-btn{
+    background-image: url("images/PP.png");
+}
+.page-header-toolbar-center  .normalTaskIcon-btn{
+    background-image: url("images/Task.png");
+}
+
+.page-header-toolbar-undo-redo .undoicon-btn{
+    background-image: url("images/Undo-icon.png");
+}
+
+.page-header-toolbar-undo-redo .redoicon-btn{
+    background-image: url("images/Redo-icon.png");
+}
+/*toolbar-2nd-row  css Ends here*/
+
+
+.replan-buttons.btn-group #bufferSummary {
+    display:none;
+}
+
+.plan-buttons.btn-group #ccSummary {
+    display:none;
+}
+
+/*Buufer Task Highlighting*/
+/*for ccfb buffer task normalCondensed*/
+.matrix-view.tasks-collapsed .task.ccfb-task.buffer-task.normalCondensed .task-header-arrow:after,
+.timeline-view .sch-event.ccfb-task.buffer-task .task-header-arrow:after  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: dashed;
+    border-width: 11px;
+    border-color: transparent transparent transparent #ccff9b;
+    position: absolute;
+    display: block;
+    right: -11px;
+    top: -12px;
+}
+
+/*for ccfb buffer task fullyCondensed*/
+.matrix-view.tasks-collapsed .task.ccfb-task.buffer-task.fullyCondensed .task-header-arrow:after {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: dashed;
+    border-color: transparent transparent transparent #ccff9b;
+    border-width: 11px;
+    position: absolute;
+    display: block;
+    right: -16px;
+    top: -11px;
+}
+
+/*for cccb buffer task normalCondensed*/
+.matrix-view.tasks-collapsed .task.cccb-task.buffer-task.normalCondensed .task-header-arrow:after,
+.timeline-view .sch-event.cccb-task.buffer-task .task-header-arrow:after  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: dashed;
+    border-width: 11px;
+    border-color: transparent transparent transparent #fcb0fb;
+    position: absolute;
+    display: block;
+    right: -11px;
+    top: -12px;
+}
+
+/*for cccb buffer task fullyCondensed*/
+.matrix-view.tasks-collapsed .task.cccb-task.buffer-task.fullyCondensed .task-header-arrow:after {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: dashed;
+    border-color: transparent transparent transparent #fcb0fb;
+    border-width: 11px;
+    position: absolute;
+    display: block;
+    right: -16px;
+    top: -11px;
+}
+
+/*for cmsb buffer task normalCondensed*/
+.matrix-view.tasks-collapsed .task.cmsb-task.buffer-task.normalCondensed .task-header-arrow:after,
+.timeline-view .sch-event.cmsb-task.buffer-task .task-header-arrow:after  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: dashed;
+    border-width: 11px;
+    border-color: transparent transparent transparent #e0efff;
+    position: absolute;
+    display: block;
+    right: -11px;
+    top: -12px;
+}
+
+/*for cmsb buffer task fullyCondensed*/
+.matrix-view.tasks-collapsed .task.cmsb-task.buffer-task.fullyCondensed .task-header-arrow:after {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: dashed;
+    border-color: transparent transparent transparent #e0efff;
+    border-width: 11px;
+    position: absolute;
+    display: block;
+    right: -16px;
+    top: -11px;
+}
+
+/*border color assigned to triangle shaped of task based on highlight option*/
+.task.highlight-phase-1.buffer-task.fullyCondensed .task-header-arrow:before, 
+.task.highlight-chain-1.buffer-task.fullyCondensed .task-header-arrow:before, 
+.task.highlight-resource-1.buffer-task.fullyCondensed .task-header-arrow:before {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    right: -20px;
+    top: -13px;
+    border-color: transparent transparent transparent #1abc9c;
+}
+.task.highlight-phase-1.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-1.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-1.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-1.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-1 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-1.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #1abc9c;
+}
+
+.task.highlight-phase-2.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-2.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-2.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #E67E22;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-2.buffer-task.normalCondensed .task-header-arrow:before ,
+.task.highlight-chain-2.buffer-task.normalCondensed .task-header-arrow:before ,
+.task.highlight-resource-2.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-2.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-2 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-2.buffer-task .task-header-arrow:before  {
+
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #E67E22;
+}
+
+.task.highlight-phase-3.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-3.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-3.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #9b59b6;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-3.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-3.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-3.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-3.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-3 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-3.buffer-task .task-header-arrow:before {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #9b59b6;
+}
+
+.task.highlight-phase-4.buffer-task.fullyCondensed .task-header-arrow:before, 
+.task.highlight-chain-4.buffer-task.fullyCondensed .task-header-arrow:before, 
+.task.highlight-resource-4.buffer-task.fullyCondensed .task-header-arrow:before { 
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #3498db;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-4.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-4.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-4.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-4.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-4 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-4.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #3498db;
+}
+
+.task.highlight-phase-5.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-5.buffer-task.fullyCondensed .task-header-arrow:before, 
+.task.highlight-resource-5.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #34495e;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-5.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-5.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-5.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-5.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-5 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-5.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #34495e;
+}
+
+.task.highlight-phase-6.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-6.buffer-task.fullyCondensed .task-header-arrow:before, 
+.task.highlight-resource-6.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #95a5a6;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-6.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-6.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-6.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-6.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-6 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-6.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #95a5a6;
+}
+
+.task.highlight-phase-7.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-7.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-7.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #ecf0f1;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-7.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-7.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-7.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-7.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-7 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-7.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #ecf0f1;
+}
+
+.task.highlight-phase-8.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-8.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-8.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #2EFE9A;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-8.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-8.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-8.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-8.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-8 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-8.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #2EFE9A;
+}
+
+.task.highlight-phase-9.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-9.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-9.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #FF0080;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-9.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-9.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-9.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-9.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-9 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-9.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #FF0080;
+}
+
+.task.highlight-phase-10.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-10.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-10.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #01A9DB;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-10.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-10.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-10.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-10.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-10 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-10.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #01A9DB;
+}
+
+.task.highlight-phase-11.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-11.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-11.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #00FFFF;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-11.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-11.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-11.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-11.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-11 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-11.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #00FFFF;
+}
+
+.task.highlight-phase-12.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-12.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-12.buffer-task.fullyCondensed .task-header-arrow:before  { 
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #F5DA81;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-12.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-12.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-12.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-12.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-12 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-12.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #F5DA81;
+}
+
+.task.highlight-phase-13.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-13.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-13.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #C517A5;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-13.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-13.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-13.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-13.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-13 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-13.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #C517A5;
+}
+
+.task.highlight-phase-14.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-14.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-14.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #5644AE;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-14.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-14.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-14.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-14.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-14 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-14.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #5644AE;
+}
+
+.task.highlight-phase-15.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-15.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-15.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #254297;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-15.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-15.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-15.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-15.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-15 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-15.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #254297;
+}
+
+.task.highlight-phase-16.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-16.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-16.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #90A8B9;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-16.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-16.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-16.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-16.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-16 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-16.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #90A8B9;
+}
+
+.task.highlight-phase-17.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-17.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-17.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #1BD1DE;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-17.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-17.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-17.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-17.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-17 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-17.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #1BD1DE;
+}
+
+.task.highlight-phase-18.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-18.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-18.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    border-color: transparent transparent transparent #1BE65E;
+    right: -20px;
+    top: -13px;
+}
+.task.highlight-phase-18.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-18.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-18.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-18.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-18 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-18.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px; 
+    border-color: transparent transparent transparent #1BE65E;
+}
+
+.task.highlight-phase-19.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-19.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-19.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    right: -20px;
+    border-color: transparent transparent transparent #9FB51D;
+    top: -13px;
+}
+.task.highlight-phase-19.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-19.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-19.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-19.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-19 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-19.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #9FB51D;
+}
+
+.task.highlight-phase-20.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-chain-20.buffer-task.fullyCondensed .task-header-arrow:before,
+.task.highlight-resource-20.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    right: -20px;
+    border-color: transparent transparent transparent #E2EED2;
+    top: -13px;
+}
+.task.highlight-phase-20.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-chain-20.buffer-task.normalCondensed .task-header-arrow:before,
+.task.highlight-resource-20.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.highlight-phase-20.buffer-task .task-header-arrow:before ,
+.timeline-view .buffer-task.highlight-chain-20 .task-header-arrow:before ,
+.timeline-view .sch-event.highlight-resource-20.buffer-task .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent #E2EED2;
+}
+
+/*Successor, predecessors highlight*/
+
+.task.constrainingSuccessorTask.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    right: -20px;
+    border-color: transparent transparent transparent darksalmon;
+    top: -13px;
+}
+.task.constrainingSuccessorTask.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view .sch-event.buffer-task .task.constrainingSuccessorTask .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent darksalmon;
+}
+
+/*CC buffer-task highlight*/
+
+.task.highlightedCCTask.buffer-task.fullyCondensed .task-header-arrow:before  {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 13px;
+    position: absolute;
+    display: block;
+    right: -20px;
+    border-color: transparent transparent transparent red;
+    top: -13px;
+}
+.task.highlightedCCTask.buffer-task.normalCondensed .task-header-arrow:before,
+.timeline-view.highlighting-cc .buffer-task.cc-task .task-header-arrow:before {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: double;
+    border-width: 15px;
+    position: absolute;
+    display: block;
+    right: -19px;
+    top: -16px;
+    border-color: transparent transparent transparent red;
+}
+
+/*bordering for rectangle shaped box of task*/
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-1 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-1 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-1 .task-name,
+.timeline-view .buffer-task.highlight-chain-1 .task-name,
+.timeline-view .sch-event.highlight-phase-1.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-1.buffer-task .task-name {
+    border-color: #1abc9c;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-2 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-2 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-2 .task-name,
+.timeline-view .buffer-task.highlight-chain-2 .task-name,
+.timeline-view .sch-event.highlight-phase-2.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-2.buffer-task .task-name {
+    border-color: #e67e22;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-3 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-3 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-3 .task-name,
+.timeline-view .buffer-task.highlight-chain-3 .task-name,
+.timeline-view .sch-event.highlight-phase-3.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-3.buffer-task .task-name {
+    border-color: #9b59b6;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-4 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-4 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-4 .task-name,
+.timeline-view .buffer-task.highlight-chain-4 .task-name,
+.timeline-view .sch-event.highlight-phase-4.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-4.buffer-task .task-name {
+    border-color: #3498db;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-5 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-5 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-5 .task-name,
+.timeline-view .buffer-task.highlight-chain-5 .task-name,
+.timeline-view .sch-event.highlight-phase-5.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-5.buffer-task .task-name {
+    border-color: #34495e;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-6 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-6 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-6 .task-name,
+.timeline-view .buffer-task.highlight-chain-6 .task-name,
+.timeline-view .sch-event.highlight-phase-6.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-6.buffer-task .task-name {
+    border-color: #95a5a6;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-7 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-7 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-7 .task-name,
+.timeline-view .buffer-task.highlight-chain-7 .task-name,
+.timeline-view .sch-event.highlight-phase-7.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-7.buffer-task .task-name {
+    border-color: #ecf0f1;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-8 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-8 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-8 .task-name,
+.timeline-view .buffer-task.highlight-chain-8 .task-name,
+.timeline-view .sch-event.highlight-phase-8.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-8.buffer-task .task-name{
+    border-color: #2EFE9A;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-9 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-9 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-9 .task-name,
+.timeline-view .buffer-task.highlight-chain-9 .task-name,
+.timeline-view .sch-event.highlight-phase-9.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-9.buffer-task .task-name {
+    border-color: #FF0080;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-10 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-10 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-10 .task-name,
+.timeline-view .buffer-task.highlight-chain-10 .task-name,
+.timeline-view .sch-event.highlight-phase-10.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-10.buffer-task .task-name {
+    border-color: #01A9DB;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-11 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-11 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-11 .task-name,
+.timeline-view .buffer-task.highlight-chain-11 .task-name,
+.timeline-view .sch-event.highlight-phase-11.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-11.buffer-task .task-name {
+    border-color: #00FFFF;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-12 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-12 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-12 .task-name,
+.timeline-view .buffer-task.highlight-chain-12 .task-name,
+.timeline-view .sch-event.highlight-phase-12.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-12.buffer-task .task-name {
+    border-color: #F5DA81;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-13 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-13 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-13 .task-name,
+.timeline-view .buffer-task.highlight-chain-13 .task-name,
+.timeline-view .sch-event.highlight-phase-13.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-13.buffer-task .task-name {
+    border-color: #C517A5;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-114 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-14 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-14 .task-name,
+.timeline-view .buffer-task.highlight-chain-14 .task-name,
+.timeline-view .sch-event.highlight-phase-14.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-14.buffer-task .task-name {
+    border-color: #5644AE;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-15 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-15 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-15 .task-name,
+.timeline-view .buffer-task.highlight-chain-15 .task-name,
+.timeline-view .sch-event.highlight-phase-15.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-15.buffer-task .task-name {
+    border-color: #254297;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-16 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-16 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-16 .task-name,
+.timeline-view .buffer-task.highlight-chain-16 .task-name,
+.timeline-view .sch-event.highlight-phase-16.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-16.buffer-task .task-name {
+    border-color: #90A8B9;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-17 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-17 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-17 .task-name,
+.timeline-view .buffer-task.highlight-chain-17 .task-name,
+.timeline-view .sch-event.highlight-phase-17.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-17.buffer-task .task-name {
+    border-color: #1BD1DE;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-18 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-18 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-18 .task-name,
+.timeline-view .buffer-task.highlight-chain-18 .task-name,
+.timeline-view .sch-event.highlight-phase-18.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-18.buffer-task .task-name {
+    border-color: #1BE65E;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-19 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-19 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-19 .task-name,
+.timeline-view .buffer-task.highlight-chain-19 .task-name,
+.timeline-view .sch-event.highlight-phase-19.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-19.buffer-task .task-name {
+    border-color: #9FB51D;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-phase-20 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-resource-20 .task-name,
+.matrix-view.tasks-collapsed .task.buffer-task.highlight-chain-20 .task-name,
+.timeline-view .buffer-task.highlight-chain-20 .task-name,
+.timeline-view .sch-event.highlight-phase-20.buffer-task .task-name,
+.timeline-view .sch-event.highlight-resource-20.buffer-task .task-name {
+    border-color: #E2EED2;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.constrainingSuccessorTask .task-name,
+.timeline-view .sch-event.buffer-task .task.constrainingSuccessorTask .task-name {
+    border-color: darksalmon;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+.matrix-view.tasks-collapsed .task.buffer-task.highlightedCCTask .task-name,
+.timeline-view.highlighting-cc .buffer-task.cc-task .task-name {
+    border-color: red;
+    border-style: dashed;
+    border-width: 2px 0px 2px 2px;
+}
+
+/*resource highlighting*/ 
+/*-----------------Start Of Classes used for highlighting assigned resources----------------------- */
+
+.resource-swatch.resource-highlight-background-1,
+.timeline-view .sch-event.highlight-resource-1:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-1 .task-controls,
+.matrix-view .task.highlight-resource-1:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-1 .task-controls,
+.phase-swatch.phase-highlight-background-1,
+.matrix-view .task.highlight-phase-1:not(.fullkit):not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-1 .task-controls,
+.timeline-view .sch-event.highlight-phase-1:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-1 .task-controls,
+/*this selectors are to keep tasks highlighted in quick edit mode. Similar changes are done for all other color options*/
+.timeline-view .task.highlight-phase-1:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-1 .task-controls,
+.timeline-view .task.highlight-resource-1:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-1 .task-controls,
+.timeline-view .task.highlight-task-manager-1:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-1 .task-controls,
+.timeline-view .task.highlight-chain-1:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-1 .task-controls,
+/**/
+.task-manager-swatch.task-manager-highlight-background-1,
+.matrix-view .task.highlight-task-manager-1:not(.buffer-task) .task-name,
+.matrix-view .milestone.highlight-task-manager-1 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-1:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-1:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-1:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-1 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-1:before,
+.timeline-view .milestone-event.highlight-task-manager-1 .marker,
+.matrix-view .milestone.highlight-phase-1 .task-name,
+.matrix-view .milestone.highlight-chain-1 .task-name,
+.matrix-view .task.highlight-task-manager-1 .task-controls,
+.timeline-view .sch-event.highlight-task-manager-1 .task-name,
+.timeline-view .sch-event.highlight-task-manager-1 .task-controls,
+.chain-swatch.chain-highlight-background-1,
+.matrix-view .task.highlight-chain-1:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-1 .task-controls,
+.timeline-view .sch-event.highlight-chain-1:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-1 .task-controls,
+.matrix-view .milestone.highlight-phase-1 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-1:before,
+.timeline-view .milestone-event.highlight-phase-1 .marker,
+.matrix-view .milestone.highlight-chain-1 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-1:before,
+.timeline-view .milestone-event.highlight-chain-1 .marker {
+    background: #1abc9c !important;
+}
+
+.matrix-view .task.fullkit.highlight-phase-1 .task-name {
+    background: #1abc9c;
+}
+
+.timeline-view .sch-event.highlight-resource-1:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-1:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-1:not(.buffer-task) .task-header-arrow,
+/*this selectors are to keep tasks highlighted in quick edit mode. Similar changes are done for all other color options*/
+.timeline-view .task.highlight-phase-1:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-1:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-1:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-1:not(.buffer-task) .task-header-arrow,
+/**/
+.matrix-view .task.highlight-phase-1:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-1:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-1:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-1:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-1 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-1 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-1 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-1 .task-header-arrow,
+.matrix-view .fk.highlight-phase-1 .task-header-arrow,
+.matrix-view .fk.highlight-chain-1 .task-header-arrow,
+.matrix-view .task.highlight-chain-1:not(.buffer-task) .task-header-arrow {
+    border-left-color: #1abc9c ;
+}
+
+
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-1 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-1 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-1 .task-content-wrapper  .task-name{
+    background-color: #1abc9c !important;
+}
+/*SS:Below CSS is added only for highlight-chain-1 for Zero duration tasks
+ need to add these CSS for all highlight options for Zero duration tasks  */
+.matrix-view.zoom-level-0 .task.zero-duration-task.highlight-chain-1 .task-content-wrapper .task-name ,
+.matrix-view.zoom-level-1 .task.zero-duration-task.highlight-chain-1 .task-content-wrapper .task-name {
+    background: transparent !important;
+}
+.matrix-view.zoom-level-0 .task.zero-duration-task.highlight-chain-1 .task-content-wrapper .task-name:before ,
+.matrix-view.zoom-level-1 .task.zero-duration-task.highlight-chain-1 .task-content-wrapper .task-name:before {
+    background: #1abc9c !important;;
+}
+
+
+.resource-swatch.resource-highlight-background-2,
+.timeline-view .sch-event.highlight-resource-2:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-2 .task-controls,
+.matrix-view .task.highlight-resource-2:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-2 .task-controls,
+.phase-swatch.phase-highlight-background-2,
+.matrix-view .task.highlight-phase-2:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-2 .task-controls,
+.timeline-view .sch-event.highlight-phase-2:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-2 .task-controls,
+.timeline-view .task.highlight-phase-2:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-2 .task-controls,
+.timeline-view .task.highlight-resource-2:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-2 .task-controls,
+.timeline-view .task.highlight-task-manager-2:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-2 .task-controls,
+.timeline-view .task.highlight-chain-2:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-2 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-2,
+.matrix-view .task.highlight-task-manager-2:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-2 .task-controls,
+.matrix-view .milestone.highlight-task-manager-2 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-2:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-2:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-2:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-2 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-2:before,
+.timeline-view .milestone-event.highlight-task-manager-2 .marker,
+.matrix-view .milestone.highlight-phase-2 .task-name,
+.matrix-view .milestone.highlight-chain-2 .task-name,
+.timeline-view .sch-event.highlight-task-manager-2:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-2 .task-controls,
+.chain-swatch.chain-highlight-background-2,
+.matrix-view .task.highlight-chain-2:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-2 .task-controls,
+.timeline-view .sch-event.highlight-chain-2:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-2 .task-controls,
+.matrix-view .milestone.highlight-phase-2 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-2:before,
+.timeline-view .milestone-event.highlight-phase-2 .marker,
+.matrix-view .milestone.highlight-chain-2 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-2:before,
+.timeline-view .milestone-event.highlight-chain-2 .marker {
+    background: #e67e22 !important;
+}
+.timeline-view .sch-event.highlight-resource-2:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-2:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-2:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-2:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-2:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-2:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-2:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-2:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-2:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-2:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-2:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-2 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-2 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-2 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-2 .task-header-arrow,
+.matrix-view .fk.highlight-phase-2 .task-header-arrow,
+.matrix-view .fk.highlight-chain-2 .task-header-arrow,
+.matrix-view .task.highlight-chain-2:not(.buffer-task) .task-header-arrow {
+    border-left-color: #e67e22;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-2 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-2 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-2 .task-content-wrapper  .task-name{
+    background-color: #e67e22;
+}
+
+.resource-swatch.resource-highlight-background-3,
+.timeline-view .sch-event.highlight-resource-3:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-3 .task-controls,
+.matrix-view .task.highlight-resource-3:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-3 .task-controls,
+.phase-swatch.phase-highlight-background-3,
+.matrix-view .task.highlight-phase-3:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-3 .task-controls,
+.timeline-view .sch-event.highlight-phase-3:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-3 .task-controls,
+.timeline-view .task.highlight-phase-3:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-3 .task-controls,
+.timeline-view .task.highlight-resource-3:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-3 .task-controls,
+.timeline-view .task.highlight-task-manager-3:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-3 .task-controls,
+.timeline-view .task.highlight-chain-3:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-3 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-3,
+.matrix-view .task.highlight-task-manager-3:not(.buffer-task) .task-name,
+.matrix-view .milestone.highlight-task-manager-3 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-3:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-3:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-3:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-3 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-3:before,
+.timeline-view .milestone-event.highlight-task-manager-3 .marker,
+.matrix-view .milestone.highlight-phase-3 .task-name,
+.matrix-view .milestone.highlight-chain-3 .task-name,
+.matrix-view .task.highlight-task-manager-3 .task-controls,
+.timeline-view .sch-event.highlight-task-manager-3:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-3 .task-controls,
+.chain-swatch.chain-highlight-background-3,
+.matrix-view .task.highlight-chain-3:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-3 .task-controls,
+.timeline-view .sch-event.highlight-chain-3:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-3 .task-controls,
+.matrix-view .milestone.highlight-phase-3 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-3:before,
+.timeline-view .milestone-event.highlight-phase-3 .marker,
+.matrix-view .milestone.highlight-chain-3 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-3:before,
+.timeline-view .milestone-event.highlight-chain-13 .marker {
+    background: #9b59b6 !important;
+}
+.timeline-view .sch-event.highlight-resource-3:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-3:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-3:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-3:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-3:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-3:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-3:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-3:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-3:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-3:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-3:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-3 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-3 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-3 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-3 .task-header-arrow,
+.matrix-view .fk.highlight-phase-3 .task-header-arrow,
+.matrix-view .fk.highlight-chain-3 .task-header-arrow,
+.matrix-view .task.highlight-chain-3:not(.buffer-task) .task-header-arrow {
+    border-left-color: #9b59b6;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-3 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-3 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-3 .task-content-wrapper  .task-name{
+    background-color: #9b59b6;
+}
+
+.resource-swatch.resource-highlight-background-4,
+.timeline-view .sch-event.highlight-resource-4:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-4 .task-controls,
+.matrix-view .task.highlight-resource-4:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-4 .task-controls,
+.phase-swatch.phase-highlight-background-4,
+.matrix-view .task.highlight-phase-4:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-4 .task-controls,
+.timeline-view .sch-event.highlight-phase-4:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-4 .task-controls,
+.timeline-view .task.highlight-phase-4:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-4 .task-controls,
+.timeline-view .task.highlight-resource-4:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-4 .task-controls,
+.timeline-view .task.highlight-task-manager-4:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-4 .task-controls,
+.timeline-view .task.highlight-chain-4:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-4 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-4,
+.matrix-view .task.highlight-task-manager-4:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-4 .task-controls,
+.matrix-view .milestone.highlight-task-manager-4 .task-name,
+.matrix-view .milestone.highlight-task-manager-4 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-4:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-4:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-4:not(.buffer-task) .task-name:before,
+.timeline-view .sch-event-milestone.highlight-task-manager-4:before,
+.timeline-view .milestone-event.highlight-task-manager-4 .marker,
+.matrix-view .milestone.highlight-phase-4 .task-name,
+.matrix-view .milestone.highlight-chain-4 .task-name,
+.timeline-view .sch-event.highlight-task-manager-4:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-4 .task-controls,
+.chain-swatch.chain-highlight-background-4,
+.matrix-view .task.highlight-chain-4:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-4 .task-controls,
+.timeline-view .sch-event.highlight-chain-4:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-4 .task-controls,
+.matrix-view .milestone.highlight-phase-4 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-4:before,
+.timeline-view .milestone-event.highlight-phase-4 .marker,
+.matrix-view .milestone.highlight-chain-4 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-4:before,
+.timeline-view .milestone-event.highlight-chain-4 .marker {
+    background: #3498db !important;
+}
+.timeline-view .sch-event.highlight-resource-4:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-4:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-4:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-4:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-4:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-4:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-4:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-4:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-4:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-4:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-4:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-4 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-4 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-4 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-4 .task-header-arrow,
+.matrix-view .fk.highlight-phase-4 .task-header-arrow,
+.matrix-view .fk.highlight-chain-4 .task-header-arrow,
+.matrix-view .task.highlight-chain-4:not(.buffer-task) .task-header-arrow {
+    border-left-color: #3498db;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-4 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-4 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-4 .task-content-wrapper  .task-name{
+    background-color: #3498db;
+}
+
+.resource-swatch.resource-highlight-background-5,
+.timeline-view .sch-event.highlight-resource-5:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-5 .task-controls,
+.matrix-view .task.highlight-resource-5:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-5 .task-controls,
+.phase-swatch.phase-highlight-background-5,
+.matrix-view .task.highlight-phase-5:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-5 .task-controls,
+.timeline-view .sch-event.highlight-phase-5:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-5 .task-controls,
+.timeline-view .task.highlight-phase-5:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-5 .task-controls,
+.timeline-view .task.highlight-resource-5:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-5 .task-controls,
+.timeline-view .task.highlight-task-manager-5:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-5 .task-controls,
+.timeline-view .task.highlight-chain-5:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-5 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-5,
+.matrix-view .task.highlight-task-manager-5:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-5 .task-controls,
+.matrix-view .milestone.highlight-task-manager-5 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-5:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-5:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-5:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-5 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-5:before,
+.timeline-view .milestone-event.highlight-task-manager-5 .marker,
+.matrix-view .milestone.highlight-phase-5 .task-name,
+.matrix-view .milestone.highlight-chain-5 .task-name,
+.timeline-view .sch-event.highlight-task-manager-5:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-5 .task-controls,
+.chain-swatch.chain-highlight-background-5,
+.matrix-view .task.highlight-chain-5:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-5 .task-controls,
+.timeline-view .sch-event.highlight-chain-5:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-5 .task-controls,
+.matrix-view .milestone.highlight-phase-5 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-5:before,
+.timeline-view .milestone-event.highlight-phase-5 .marker,
+.matrix-view .milestone.highlight-chain-5 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-5:before,
+.timeline-view .milestone-event.highlight-chain-5 .marker {
+    background: #34495e !important;
+}
+.timeline-view .sch-event.highlight-resource-5:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-5:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-5:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-5:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-5:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-5:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-5:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-5:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-5:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-5:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-5:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-5 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-5 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-5 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-5 .task-header-arrow,
+.matrix-view .fk.highlight-phase-5 .task-header-arrow,
+.matrix-view .fk.highlight-chain-5 .task-header-arrow,
+.matrix-view .task.highlight-chain-5:not(.buffer-task) .task-header-arrow {
+    border-left-color: #34495e;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-5 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-5 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-5 .task-content-wrapper  .task-name{
+    background-color: #34495e;
+}
+
+.resource-swatch.resource-highlight-background-6,
+.timeline-view .sch-event.highlight-resource-6:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-6 .task-controls,
+.matrix-view .task.highlight-resource-6:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-6 .task-controls,
+.phase-swatch.phase-highlight-background-6,
+.matrix-view .task.highlight-phase-6:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-6 .task-controls,
+.timeline-view .sch-event.highlight-phase-6:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-6 .task-controls,
+.timeline-view .task.highlight-phase-6:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-6 .task-controls,
+.timeline-view .task.highlight-resource-6:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-6 .task-controls,
+.timeline-view .task.highlight-task-manager-6:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-6 .task-controls,
+.timeline-view .task.highlight-chain-6:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-6 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-6,
+.matrix-view .task.highlight-task-manager-6:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-6 .task-controls,
+.matrix-view .milestone.highlight-task-manager-6 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-6:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-6:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-6:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-6 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-6:before,
+.timeline-view .milestone-event.highlight-task-manager-6 .marker,
+.matrix-view .milestone.highlight-phase-6 .task-name,
+.matrix-view .milestone.highlight-chain-6 .task-name,
+.timeline-view .sch-event.highlight-task-manager-6:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-6 .task-controls,
+.chain-swatch.chain-highlight-background-6,
+.matrix-view .task.highlight-chain-6:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-6 .task-controls,
+.timeline-view .sch-event.highlight-chain-6:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-6 .task-controls,
+.matrix-view .milestone.highlight-phase-6 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-6:before,
+.timeline-view .milestone-event.highlight-phase-6 .marker,
+.matrix-view .milestone.highlight-chain-6 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-6:before,
+.timeline-view .milestone-event.highlight-chain-6 .marker {
+    background: #95a5a6 !important;
+}
+.timeline-view .sch-event.highlight-resource-6:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-6:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-6:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-6:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-6:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-6:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-6:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-6:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-6:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-6:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-6:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-6 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-6 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-6 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-6 .task-header-arrow,
+.matrix-view .fk.highlight-phase-6 .task-header-arrow,
+.matrix-view .fk.highlight-chain-6 .task-header-arrow,
+.matrix-view .task.highlight-chain-6:not(.buffer-task) .task-header-arrow {
+    border-left-color: #95a5a6;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-6 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-6 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-6 .task-content-wrapper  .task-name{
+    background-color: #95a5a6;
+}
+.resource-swatch.resource-highlight-background-7,
+.timeline-view .sch-event.highlight-resource-7:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-7 .task-controls,
+.matrix-view .task.highlight-resource-7:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-7 .task-controls,
+.phase-swatch.phase-highlight-background-7,
+.matrix-view .task.highlight-phase-7:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-7 .task-controls,
+.timeline-view .sch-event.highlight-phase-7:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-7 .task-controls,
+.timeline-view .task.highlight-phase-7:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-7 .task-controls,
+.timeline-view .task.highlight-resource-7:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-7 .task-controls,
+.timeline-view .task.highlight-task-manager-7:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-7 .task-controls,
+.timeline-view .task.highlight-chain-7:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-7 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-7,
+.matrix-view .task.highlight-task-manager-7:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-7 .task-controls,
+.matrix-view .milestone.highlight-task-manager-7 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-7:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-7:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-7:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-7 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-7:before,
+.timeline-view .milestone-event.highlight-task-manager-7 .marker,
+.matrix-view .milestone.highlight-phase-7 .task-name,
+.matrix-view .milestone.highlight-chain-7 .task-name,
+.timeline-view .sch-event.highlight-task-manager-7:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-7 .task-controls,
+.chain-swatch.chain-highlight-background-7,
+.matrix-view .task.highlight-chain-7:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-7 .task-controls,
+.timeline-view .sch-event.highlight-chain-7:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-7 .task-controls,
+.matrix-view .milestone.highlight-phase-7 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-7:before,
+.timeline-view .milestone-event.highlight-phase-7 .marker,
+.matrix-view .milestone.highlight-chain-7 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-7:before,
+.timeline-view .milestone-event.highlight-chain-7 .marker {
+    background: #ecf0f1 !important;
+}
+.timeline-view .sch-event.highlight-resource-7:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-7:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-7:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-7:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-7:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-7:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-7:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-7:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-7:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-7:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-7:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-7 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-7 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-7 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-6 .task-header-arrow,
+.matrix-view .fk.highlight-phase-6 .task-header-arrow,
+.matrix-view .fk.highlight-chain-6 .task-header-arrow,
+.matrix-view .task.highlight-chain-7:not(.buffer-task) .task-header-arrow {
+    border-left-color: #ecf0f1;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-7 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-7 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-7 .task-content-wrapper  .task-name{
+    background-color: #ecf0f1;
+}
+.resource-swatch.resource-highlight-background-8,
+.timeline-view .sch-event.highlight-resource-8:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-8 .task-controls,
+.matrix-view .task.highlight-resource-8:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-8 .task-controls,
+.phase-swatch.phase-highlight-background-8,
+.matrix-view .task.highlight-phase-8:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-8 .task-controls,
+.timeline-view .sch-event.highlight-phase-8:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-8 .task-controls,
+.timeline-view .task.highlight-phase-8:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-8 .task-controls,
+.timeline-view .task.highlight-resource-8:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-8 .task-controls,
+.timeline-view .task.highlight-task-manager-8:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-8 .task-controls,
+.timeline-view .task.highlight-chain-8:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-8 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-8,
+.matrix-view .task.highlight-task-manager-8:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-8 .task-controls,
+.matrix-view .milestone.highlight-task-manager-8 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-8:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-8:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-8:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-8 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-8:before,
+.timeline-view .milestone-event.highlight-task-manager-8 .marker,
+.matrix-view .milestone.highlight-phase-8 .task-name,
+.matrix-view .milestone.highlight-chain-8 .task-name,
+.timeline-view .sch-event.highlight-task-manager-8:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-8 .task-controls,
+.chain-swatch.chain-highlight-background-8,
+.matrix-view .task.highlight-chain-8:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-8 .task-controls,
+.timeline-view .sch-event.highlight-chain-8:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-8 .task-controls,
+.matrix-view .milestone.highlight-phase-8 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-8:before,
+.timeline-view .milestone-event.highlight-phase-8 .marker,
+.matrix-view .milestone.highlight-chain-8 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-8:before,
+.timeline-view .milestone-event.highlight-chain-8 .marker {
+    background: #2EFE9A !important;
+}
+.timeline-view .sch-event.highlight-resource-8:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-8:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-8:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-8:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-8:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-8:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-8:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-8:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-8:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-8:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-8:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-8 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-8 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-8 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-8 .task-header-arrow,
+.matrix-view .fk.highlight-phase-8 .task-header-arrow,
+.matrix-view .fk.highlight-chain-8 .task-header-arrow,
+.matrix-view .task.highlight-chain-8:not(.buffer-task) .task-header-arrow {
+    border-left-color: #2EFE9A;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-8 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-8 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-8 .task-content-wrapper  .task-name{
+    background-color: #2EFE9A;
+}
+.resource-swatch.resource-highlight-background-9,
+.timeline-view .sch-event.highlight-resource-9:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-9 .task-controls,
+.matrix-view .task.highlight-resource-9:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-9 .task-controls,
+.phase-swatch.phase-highlight-background-9,
+.matrix-view .task.highlight-phase-9:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-9 .task-controls,
+.timeline-view .sch-event.highlight-phase-9:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-9 .task-controls,
+.timeline-view .task.highlight-phase-9:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-9 .task-controls,
+.timeline-view .task.highlight-resource-9:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-9 .task-controls,
+.timeline-view .task.highlight-task-manager-9:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-9 .task-controls,
+.timeline-view .task.highlight-chain-9:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-9 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-9,
+.matrix-view .task.highlight-task-manager-9:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-9 .task-controls,
+.matrix-view .milestone.highlight-task-manager-9 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-9:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-9:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-9:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-9 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-9:before,
+.timeline-view .milestone-event.highlight-task-manager-9 .marker,
+.matrix-view .milestone.highlight-phase-9 .task-name,
+.matrix-view .milestone.highlight-chain-9 .task-name,
+.timeline-view .sch-event.highlight-task-manager-9:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-9 .task-controls,
+.chain-swatch.chain-highlight-background-9,
+.matrix-view .task.highlight-chain-9:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-9 .task-controls,
+.timeline-view .sch-event.highlight-chain-9:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-9 .task-controls,
+.matrix-view .milestone.highlight-phase-9 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-9:before,
+.timeline-view .milestone-event.highlight-phase-9 .marker,
+.matrix-view .milestone.highlight-chain-9 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-9:before,
+.timeline-view .milestone-event.highlight-chain-9 .marker {
+    background: #FF0080 !important;
+}
+.timeline-view .sch-event.highlight-resource-9:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-9:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-9:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-9:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-9:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-9:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-9:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-9:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-9:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-9:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-9:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-9 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-9 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-9 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-9 .task-header-arrow,
+.matrix-view .fk.highlight-phase-9 .task-header-arrow,
+.matrix-view .fk.highlight-chain-9 .task-header-arrow,
+.matrix-view .task.highlight-chain-9:not(.buffer-task) .task-header-arrow {
+    border-left-color: #FF0080;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-9 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-9 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-9 .task-content-wrapper  .task-name{
+    background-color: #FF0080;
+}
+.resource-swatch.resource-highlight-background-10,
+.timeline-view .sch-event.highlight-resource-10:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-10 .task-controls,
+.matrix-view .task.highlight-resource-10:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-10 .task-controls,
+.phase-swatch.phase-highlight-background-10,
+.matrix-view .task.highlight-phase-10:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-10 .task-controls,
+.timeline-view .sch-event.highlight-phase-10:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-10 .task-controls,
+.timeline-view .task.highlight-phase-10:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-10 .task-controls,
+.timeline-view .task.highlight-resource-10:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-10 .task-controls,
+.timeline-view .task.highlight-task-manager-10:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-10 .task-controls,
+.timeline-view .task.highlight-chain-10:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-10 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-10,
+.matrix-view .task.highlight-task-manager-10:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-10 .task-controls,
+.matrix-view .milestone.highlight-task-manager-10 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-10:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-10:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-10:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-10 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-10:before,
+.timeline-view .milestone-event.highlight-task-manager-10 .marker,
+.matrix-view .milestone.highlight-phase-10 .task-name,
+.matrix-view .milestone.highlight-chain-10 .task-name,
+.timeline-view .sch-event.highlight-task-manager-10:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-10 .task-controls,
+.chain-swatch.chain-highlight-background-10,
+.matrix-view .task.highlight-chain-10:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-10 .task-controls,
+.timeline-view .sch-event.highlight-chain-10:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-10 .task-controls,
+.matrix-view .milestone.highlight-phase-10 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-10:before,
+.timeline-view .milestone-event.highlight-phase-10 .marker,
+.matrix-view .milestone.highlight-chain-10 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-10:before,
+.timeline-view .milestone-event.highlight-chain-10 .marker {
+    background: #01A9DB !important;
+}
+.timeline-view .sch-event.highlight-resource-10:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-10:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-10:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-10:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-10:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-10:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-10:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-10:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-10:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-10:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-10:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-10 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-10 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-10 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-10 .task-header-arrow,
+.matrix-view .fk.highlight-phase-10 .task-header-arrow,
+.matrix-view .fk.highlight-chain-10 .task-header-arrow,
+.matrix-view .task.highlight-chain-10:not(.buffer-task) .task-header-arrow {
+    border-left-color: #01A9DB;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-10 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-10 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-10 .task-content-wrapper  .task-name{
+    background-color: #01A9DB;
+}
+
+.resource-swatch.resource-highlight-background-11,
+.timeline-view .sch-event.highlight-resource-11:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-11 .task-controls,
+.matrix-view .task.highlight-resource-11:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-11 .task-controls,
+.phase-swatch.phase-highlight-background-11,
+.matrix-view .task.highlight-phase-11:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-11 .task-controls,
+.timeline-view .sch-event.highlight-phase-11:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-11 .task-controls,
+.timeline-view .task.highlight-phase-11:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-11 .task-controls,
+.timeline-view .task.highlight-resource-11:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-11 .task-controls,
+.timeline-view .task.highlight-task-manager-11:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-11 .task-controls,
+.timeline-view .task.highlight-chain-11:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-11 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-11,
+.matrix-view .task.highlight-task-manager-11:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-11 .task-controls,
+.matrix-view .milestone.highlight-task-manager-11 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-11:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-11:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-11:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-11 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-11:before,
+.timeline-view .milestone-event.highlight-task-manager-11 .marker,
+.matrix-view .milestone.highlight-phase-11 .task-name,
+.matrix-view .milestone.highlight-chain-11 .task-name,
+.timeline-view .sch-event.highlight-task-manager-11:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-11 .task-controls,
+.chain-swatch.chain-highlight-background-11,
+.matrix-view .task.highlight-chain-11:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-11 .task-controls,
+.timeline-view .sch-event.highlight-chain-11:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-11 .task-controls,
+.matrix-view .milestone.highlight-phase-11 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-11:before,
+.timeline-view .milestone-event.highlight-phase-11 .marker,
+.matrix-view .milestone.highlight-chain-11 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-11:before,
+.timeline-view .milestone-event.highlight-chain-11 .marker {
+    background: #00FFFF !important;
+}
+.timeline-view .sch-event.highlight-resource-11:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-11:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-11:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-11:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-11:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-11:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-11:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-11:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-11:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-11:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-11:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-11 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-11 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-11 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-11 .task-header-arrow,
+.matrix-view .fk.highlight-phase-11 .task-header-arrow,
+.matrix-view .fk.highlight-chain-11 .task-header-arrow,
+.matrix-view .task.highlight-chain-11:not(.buffer-task) .task-header-arrow {
+    border-left-color: #00FFFF;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-11 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-11 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-11 .task-content-wrapper  .task-name{
+    background-color: #00FFFF;
+}
+
+.resource-swatch.resource-highlight-background-12,
+.timeline-view .sch-event.highlight-resource-12:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-12 .task-controls,
+.matrix-view .task.highlight-resource-12:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-12 .task-controls,
+.phase-swatch.phase-highlight-background-12,
+.matrix-view .task.highlight-phase-12:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-12 .task-controls,
+.timeline-view .sch-event.highlight-phase-12:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-12 .task-controls,
+.timeline-view .task.highlight-phase-12:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-12 .task-controls,
+.timeline-view .task.highlight-resource-12:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-12 .task-controls,
+.timeline-view .task.highlight-task-manager-12:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-12 .task-controls,
+.timeline-view .task.highlight-chain-12:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-12 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-12,
+.matrix-view .task.highlight-task-manager-12:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-12 .task-controls,
+.matrix-view .milestone.highlight-task-manager-12 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-12:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-12:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-12:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-12 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-12:before,
+.timeline-view .milestone-event.highlight-task-manager-12 .marker,
+.matrix-view .milestone.highlight-phase-12 .task-name,
+.matrix-view .milestone.highlight-chain-12 .task-name,
+.timeline-view .sch-event.highlight-task-manager-12:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-12 .task-controls,
+.chain-swatch.chain-highlight-background-12,
+.matrix-view .task.highlight-chain-12:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-12 .task-controls,
+.timeline-view .sch-event.highlight-chain-12:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-12 .task-controls,
+.matrix-view .milestone.highlight-phase-12 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-12:before,
+.timeline-view .milestone-event.highlight-phase-12 .marker,
+.matrix-view .milestone.highlight-chain-12 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-12:before,
+.timeline-view .milestone-event.highlight-chain-12 .marker {
+    background: #F5DA81 !important;
+}
+.timeline-view .sch-event.highlight-resource-12:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-12:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-12:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-12:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-12:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-12:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-12:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-12:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-12:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-12:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-12:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-12 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-12 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-12 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-12 .task-header-arrow,
+.matrix-view .fk.highlight-phase-12 .task-header-arrow,
+.matrix-view .fk.highlight-chain-12 .task-header-arrow,
+.matrix-view .task.highlight-chain-12:not(.buffer-task) .task-header-arrow {
+    border-left-color: #F5DA81;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-12 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-12 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-12 .task-content-wrapper  .task-name{
+    background-color: #F5DA81;
+}
+
+.resource-swatch.resource-highlight-background-13,
+.timeline-view .sch-event.highlight-resource-13:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-13 .task-controls,
+.matrix-view .task.highlight-resource-13:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-13 .task-controls,
+.phase-swatch.phase-highlight-background-13,
+.matrix-view .task.highlight-phase-13:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-13 .task-controls,
+.timeline-view .sch-event.highlight-phase-13:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-13 .task-controls,
+.timeline-view .task.highlight-phase-13:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-13 .task-controls,
+.timeline-view .task.highlight-resource-13:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-13 .task-controls,
+.timeline-view .task.highlight-task-manager-13:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-13 .task-controls,
+.timeline-view .task.highlight-chain-13:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-13 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-13,
+.matrix-view .task.highlight-task-manager-13:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-13 .task-controls,
+.matrix-view .milestone.highlight-task-manager-13 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-13:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-13:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-13:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-13 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-13:before,
+.timeline-view .milestone-event.highlight-task-manager-13 .marker,
+.matrix-view .milestone.highlight-phase-13 .task-name,
+.matrix-view .milestone.highlight-chain-13 .task-name,
+.timeline-view .sch-event.highlight-task-manager-13:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-13 .task-controls,
+.chain-swatch.chain-highlight-background-13,
+.matrix-view .task.highlight-chain-13:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-13 .task-controls,
+.timeline-view .sch-event.highlight-chain-13:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-13 .task-controls,
+.matrix-view .milestone.highlight-phase-13 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-13:before,
+.timeline-view .milestone-event.highlight-phase-13 .marker,
+.matrix-view .milestone.highlight-chain-13 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-13:before,
+.timeline-view .milestone-event.highlight-chain-13 .marker {
+    background: #C517A5 !important;
+}
+.timeline-view .sch-event.highlight-resource-13:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-13:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-13:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-13:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-13:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-13:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-13:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-13:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-13:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-13:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-13:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-13 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-13 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-13 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-13 .task-header-arrow,
+.matrix-view .fk.highlight-phase-13 .task-header-arrow,
+.matrix-view .fk.highlight-chain-13 .task-header-arrow,
+.matrix-view .task.highlight-chain-13:not(.buffer-task) .task-header-arrow {
+    border-left-color: #C517A5;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-13 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-13 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-13 .task-content-wrapper  .task-name{
+    background-color: #C517A5;
+}
+
+.resource-swatch.resource-highlight-background-14,
+.timeline-view .sch-event.highlight-resource-14:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-14 .task-controls,
+.matrix-view .task.highlight-resource-14:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-14 .task-controls,
+.phase-swatch.phase-highlight-background-14,
+.matrix-view .task.highlight-phase-14:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-14 .task-controls,
+.timeline-view .sch-event.highlight-phase-14:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-14 .task-controls,
+.timeline-view .task.highlight-phase-14:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-14 .task-controls,
+.timeline-view .task.highlight-resource-14:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-14 .task-controls,
+.timeline-view .task.highlight-task-manager-14:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-14 .task-controls,
+.timeline-view .task.highlight-chain-14:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-14 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-14,
+.matrix-view .task.highlight-task-manager-14:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-14 .task-controls,
+.matrix-view .milestone.highlight-task-manager-14 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-14:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-14:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-14:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-14 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-14:before,
+.timeline-view .milestone-event.highlight-task-manager-14 .marker,
+.matrix-view .milestone.highlight-phase-14 .task-name,
+.matrix-view .milestone.highlight-chain-14 .task-name,
+.timeline-view .sch-event.highlight-task-manager-14:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-14 .task-controls,
+.chain-swatch.chain-highlight-background-14,
+.matrix-view .task.highlight-chain-14:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-14 .task-controls,
+.timeline-view .sch-event.highlight-chain-14:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-14 .task-controls,
+.matrix-view .milestone.highlight-phase-14 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-14:before,
+.timeline-view .milestone-event.highlight-phase-14 .marker,
+.matrix-view .milestone.highlight-chain-14 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-14:before,
+.timeline-view .milestone-event.highlight-chain-14 .marker {
+    background: #5644AE !important;
+}
+.timeline-view .sch-event.highlight-resource-14:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-14:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-14:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-14:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-14:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-14:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-14:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-14:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-14:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-14:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-14:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-14 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-14 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-14 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-14 .task-header-arrow,
+.matrix-view .fk.highlight-phase-14 .task-header-arrow,
+.matrix-view .fk.highlight-chain-14 .task-header-arrow,
+.matrix-view .task.highlight-chain-14:not(.buffer-task) .task-header-arrow {
+    border-left-color: #5644AE;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-14 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-14 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-14 .task-content-wrapper  .task-name{
+    background-color: #5644AE;
+}
+
+.resource-swatch.resource-highlight-background-15,
+.timeline-view .sch-event.highlight-resource-15:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-15 .task-controls,
+.matrix-view .task.highlight-resource-15:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-15 .task-controls,
+.phase-swatch.phase-highlight-background-15,
+.matrix-view .task.highlight-phase-15:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-15 .task-controls,
+.timeline-view .sch-event.highlight-phase-15:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-15 .task-controls,
+.timeline-view .task.highlight-phase-15:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-15 .task-controls,
+.timeline-view .task.highlight-resource-15:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-15 .task-controls,
+.timeline-view .task.highlight-task-manager-15:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-15 .task-controls,
+.timeline-view .task.highlight-chain-15:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-15 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-15,
+.matrix-view .task.highlight-task-manager-15:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-15 .task-controls,
+.matrix-view .milestone.highlight-task-manager-15 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-15:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-15:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-15:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-15 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-15:before,
+.timeline-view .milestone-event.highlight-task-manager-15 .marker,
+.matrix-view .milestone.highlight-phase-15 .task-name,
+.matrix-view .milestone.highlight-chain-15 .task-name,
+.timeline-view .sch-event.highlight-task-manager-15:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-15 .task-controls,
+.chain-swatch.chain-highlight-background-15,
+.matrix-view .task.highlight-chain-15:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-15 .task-controls,
+.timeline-view .sch-event.highlight-chain-15:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-15 .task-controls,
+.matrix-view .milestone.highlight-phase-15 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-15:before,
+.timeline-view .milestone-event.highlight-phase-15 .marker,
+.matrix-view .milestone.highlight-chain-15 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-15:before,
+.timeline-view .milestone-event.highlight-chain-15 .marker {
+    background: #254297 !important;
+}
+.timeline-view .sch-event.highlight-resource-15:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-15:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-15:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-15:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-15:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-15:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-15:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-15:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-15:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-15:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-15:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-15 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-15 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-15 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-15 .task-header-arrow,
+.matrix-view .fk.highlight-phase-15 .task-header-arrow,
+.matrix-view .fk.highlight-chain-15 .task-header-arrow,
+.matrix-view .task.highlight-chain-15:not(.buffer-task) .task-header-arrow {
+    border-left-color: #254297;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-15 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-15 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-15 .task-content-wrapper  .task-name{
+    background-color: #254297;
+}
+
+.resource-swatch.resource-highlight-background-16,
+.timeline-view .sch-event.highlight-resource-16:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-16 .task-controls,
+.matrix-view .task.highlight-resource-16:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-16 .task-controls,
+.phase-swatch.phase-highlight-background-16,
+.matrix-view .task.highlight-phase-16:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-16 .task-controls,
+.timeline-view .sch-event.highlight-phase-16:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-16 .task-controls,
+.timeline-view .task.highlight-phase-16:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-16 .task-controls,
+.timeline-view .task.highlight-resource-16:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-16 .task-controls,
+.timeline-view .task.highlight-task-manager-16:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-16 .task-controls,
+.timeline-view .task.highlight-chain-16:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-16 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-16,
+.matrix-view .task.highlight-task-manager-16:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-16 .task-controls,
+.matrix-view .milestone.highlight-task-manager-16 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-16:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-16:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-16:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-16 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-16:before,
+.timeline-view .milestone-event.highlight-task-manager-16 .marker,
+.matrix-view .milestone.highlight-phase-16 .task-name,
+.matrix-view .milestone.highlight-chain-16 .task-name,
+.timeline-view .sch-event.highlight-task-manager-16:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-16 .task-controls,
+.chain-swatch.chain-highlight-background-16,
+.matrix-view .task.highlight-chain-16:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-16 .task-controls,
+.timeline-view .sch-event.highlight-chain-16:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-16 .task-controls,
+.matrix-view .milestone.highlight-phase-16 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-16:before,
+.timeline-view .milestone-event.highlight-phase-16 .marker,
+.matrix-view .milestone.highlight-chain-16 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-16:before,
+.timeline-view .milestone-event.highlight-chain-16 .marker {
+    background: #90A8B9 !important;
+}
+.timeline-view .sch-event.highlight-resource-16:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-16:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-16:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-16:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-16:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-16:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-16:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-16:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-16:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-16:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-16:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-16 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-16 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-16 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-16 .task-header-arrow,
+.matrix-view .fk.highlight-phase-16 .task-header-arrow,
+.matrix-view .fk.highlight-chain-16 .task-header-arrow,
+.matrix-view .task.highlight-chain-16:not(.buffer-task) .task-header-arrow {
+    border-left-color: #90A8B9;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-16 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-16 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-16 .task-content-wrapper  .task-name{
+    background-color: #90A8B9;
+}
+
+.resource-swatch.resource-highlight-background-17,
+.timeline-view .sch-event.highlight-resource-17:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-17 .task-controls,
+.matrix-view .task.highlight-resource-17:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-17 .task-controls,
+.phase-swatch.phase-highlight-background-17,
+.matrix-view .task.highlight-phase-17:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-17 .task-controls,
+.timeline-view .sch-event.highlight-phase-17:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-17 .task-controls,
+.timeline-view .task.highlight-phase-17:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-17 .task-controls,
+.timeline-view .task.highlight-resource-17:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-17 .task-controls,
+.timeline-view .task.highlight-task-manager-17:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-17 .task-controls,
+.timeline-view .task.highlight-chain-17:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-17 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-17,
+.matrix-view .task.highlight-task-manager-17:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-17 .task-controls,
+.matrix-view .milestone.highlight-task-manager-17 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-17:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-17:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-17:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-17 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-17:before,
+.timeline-view .milestone-event.highlight-task-manager-17 .marker,
+.matrix-view .milestone.highlight-phase-17 .task-name,
+.matrix-view .milestone.highlight-chain-17 .task-name,
+.timeline-view .sch-event.highlight-task-manager-17:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-17 .task-controls,
+.chain-swatch.chain-highlight-background-17,
+.matrix-view .task.highlight-chain-17:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-17 .task-controls,
+.timeline-view .sch-event.highlight-chain-17:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-17 .task-controls,
+.timeline-view .sch-event-milestone.highlight-phase-17:before,
+.matrix-view .milestone.highlight-phase-17 .milestone-icon-wrap:before,
+.timeline-view .milestone-event.highlight-phase-17 .marker,
+.matrix-view .milestone.highlight-chain-17 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-17:before,
+.matrix-view .milestone.highlight-task-manager-17 .task-header-arrow,
+.timeline-view .milestone-event.highlight-chain-17 .marker {
+    background: #1BD1DE !important;
+}
+.timeline-view .sch-event.highlight-resource-17:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-17:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-17:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-17:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-17:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-17:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-17:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-17:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-17:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-17:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-17:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-17 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-17 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-17 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-17 .task-header-arrow,
+.matrix-view .fk.highlight-phase-17 .task-header-arrow,
+.matrix-view .fk.highlight-chain-17 .task-header-arrow,
+.matrix-view .task.highlight-chain-17:not(.buffer-task) .task-header-arrow {
+    border-left-color: #1BD1DE;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-17 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-17 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-17 .task-content-wrapper  .task-name{
+    background-color: #1BD1DE;
+}
+
+.resource-swatch.resource-highlight-background-18,
+.timeline-view .sch-event.highlight-resource-18:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-18 .task-controls,
+.matrix-view .task.highlight-resource-18:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-18 .task-controls,
+.phase-swatch.phase-highlight-background-18,
+.matrix-view .task.highlight-phase-18:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-18 .task-controls,
+.timeline-view .sch-event.highlight-phase-18:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-18 .task-controls,
+.timeline-view .task.highlight-phase-18:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-18 .task-controls,
+.timeline-view .task.highlight-resource-18:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-18 .task-controls,
+.timeline-view .task.highlight-task-manager-18:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-18 .task-controls,
+.timeline-view .task.highlight-chain-18:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-18 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-18,
+.matrix-view .task.highlight-task-manager-18:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-18 .task-controls,
+.matrix-view .milestone.highlight-task-manager-18 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-18:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-18:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-18:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-18 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-18:before,
+.timeline-view .milestone-event.highlight-task-manager-18 .marker,
+.matrix-view .milestone.highlight-phase-18 .task-name,
+.matrix-view .milestone.highlight-chain-18 .task-name,
+.timeline-view .sch-event.highlight-task-manager-18:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-18 .task-controls,
+.chain-swatch.chain-highlight-background-18,
+.matrix-view .task.highlight-chain-18:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-18 .task-controls,
+.timeline-view .sch-event.highlight-chain-18:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-18 .task-controls,
+.matrix-view .milestone.highlight-phase-18 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-18:before,
+.timeline-view .milestone-event.highlight-phase-18 .marker,
+.matrix-view .milestone.highlight-chain-18 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-18:before,
+.timeline-view .milestone-event.highlight-chain-18 .marker {
+    background: #1BE65E !important;
+}
+.timeline-view .sch-event.highlight-resource-18:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-18:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-18:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-18:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-18:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-18:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-18:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-18:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-18:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-18:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-18:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-18 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-18 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-18 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-18 .task-header-arrow,
+.matrix-view .fk.highlight-phase-18 .task-header-arrow,
+.matrix-view .fk.highlight-chain-18 .task-header-arrow,
+.matrix-view .task.highlight-chain-18:not(.buffer-task) .task-header-arrow {
+    border-left-color: #1BE65E;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-18 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-18 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-18 .task-content-wrapper  .task-name{
+    background-color: #1BE65E;
+}
+
+.resource-swatch.resource-highlight-background-19,
+.timeline-view .sch-event.highlight-resource-19:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-19 .task-controls,
+.matrix-view .task.highlight-resource-19:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-19 .task-controls,
+.phase-swatch.phase-highlight-background-19,
+.matrix-view .task.highlight-phase-19:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-19 .task-controls,
+.timeline-view .sch-event.highlight-phase-19:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-19 .task-controls,
+.timeline-view .task.highlight-phase-19:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-19 .task-controls,
+.timeline-view .task.highlight-resource-19:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-19 .task-controls,
+.timeline-view .task.highlight-task-manager-19:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-19 .task-controls,
+.timeline-view .task.highlight-chain-19:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-19 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-19,
+.matrix-view .task.highlight-task-manager-19:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-19 .task-controls,
+.matrix-view .milestone.highlight-task-manager-19 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-19:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-19:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-19:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-19 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-19:before,
+.timeline-view .milestone-event.highlight-task-manager-19 .marker,
+.matrix-view .milestone.highlight-phase-19 .task-name,
+.matrix-view .milestone.highlight-chain-19 .task-name,
+.timeline-view .sch-event.highlight-task-manager-19:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-19 .task-controls,
+.chain-swatch.chain-highlight-background-19,
+.matrix-view .task.highlight-chain-19:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-19 .task-controls,
+.timeline-view .sch-event.highlight-chain-19:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-19 .task-controls,
+.matrix-view .milestone.highlight-phase-19 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-19:before,
+.timeline-view .milestone-event.highlight-phase-19 .marker,
+.matrix-view .milestone.highlight-chain-19 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-19:before,
+.timeline-view .milestone-event.highlight-chain-19 .marker {
+    background: #9FB51D !important;
+}
+.timeline-view .sch-event.highlight-resource-19:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-19:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-19:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-19:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-19:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-19:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-19:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-19:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-19:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-19:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-19:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-19 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-19 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-19 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-19 .task-header-arrow,
+.matrix-view .fk.highlight-phase-19 .task-header-arrow,
+.matrix-view .fk.highlight-chain-19 .task-header-arrow,
+.matrix-view .task.highlight-chain-19:not(.buffer-task) .task-header-arrow {
+    border-left-color: #9FB51D;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-19 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-19 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-19 .task-content-wrapper  .task-name{
+    background-color: #9FB51D;
+}
+
+.resource-swatch.resource-highlight-background-20,
+.timeline-view .sch-event.highlight-resource-20:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-resource-20 .task-controls,
+.matrix-view .task.highlight-resource-20:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-resource-20 .task-controls,
+.phase-swatch.phase-highlight-background-20,
+.matrix-view .task.highlight-phase-20:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-phase-20 .task-controls,
+.timeline-view .sch-event.highlight-phase-20:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-phase-20 .task-controls,
+.timeline-view .task.highlight-phase-20:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-phase-20 .task-controls,
+.timeline-view .task.highlight-resource-20:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-resource-20 .task-controls,
+.timeline-view .task.highlight-task-manager-20:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-task-manager-20 .task-controls,
+.timeline-view .task.highlight-chain-20:not(.buffer-task) .task-name,
+.timeline-view .task.highlight-chain-20 .task-controls,
+.task-manager-swatch.task-manager-highlight-background-20,
+.matrix-view .task.highlight-task-manager-20:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-task-manager-20 .task-controls,
+.matrix-view .milestone.highlight-task-manager-20 .milestone-icon-wrap:before,
+.matrix-view .task.highlight-task-manager-20:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-phase-20:not(.buffer-task) .task-name:before,
+.matrix-view .task.highlight-chain-20:not(.buffer-task) .task-name:before,
+.matrix-view .milestone.highlight-task-manager-20 .task-name,
+.timeline-view .sch-event-milestone.highlight-task-manager-20:before,
+.timeline-view .milestone-event.highlight-task-manager-20 .marker,
+.matrix-view .milestone.highlight-phase-20 .task-name,
+.matrix-view .milestone.highlight-chain-20 .task-name,
+.timeline-view .sch-event.highlight-task-manager-20:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-task-manager-20 .task-controls,
+.chain-swatch.chain-highlight-background-20,
+.matrix-view .task.highlight-chain-20:not(.buffer-task) .task-name,
+.matrix-view .task.highlight-chain-20 .task-controls,
+.timeline-view .sch-event.highlight-chain-20:not(.buffer-task) .task-name,
+.timeline-view .sch-event.highlight-chain-20 .task-controls,
+.matrix-view .milestone.highlight-phase-20 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-phase-20:before,
+.timeline-view .milestone-event.highlight-phase-20 .marker,
+.matrix-view .milestone.highlight-chain-20 .milestone-icon-wrap:before,
+.timeline-view .sch-event-milestone.highlight-chain-20:before,
+.timeline-view .milestone-event.highlight-chain-20 .marker {
+    background: #E2EED2 !important;
+}
+.timeline-view .sch-event.highlight-resource-20:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-resource-20:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-phase-20:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-phase-20:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-resource-20:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-task-manager-20:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.highlight-chain-20:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-phase-20:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-task-manager-20:not(.buffer-task) .task-header-arrow,
+.matrix-view .task.highlight-task-manager-20:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event.highlight-chain-20:not(.buffer-task) .task-header-arrow,
+.matrix-view .milestone.highlight-task-manager-20 .task-header-arrow,
+.matrix-view .milestone.highlight-phase-20 .task-header-arrow,
+.matrix-view .milestone.highlight-chain-20 .task-header-arrow,
+.matrix-view .fk.highlight-task-manager-20 .task-header-arrow,
+.matrix-view .fk.highlight-phase-20 .task-header-arrow,
+.matrix-view .fk.highlight-chain-20 .task-header-arrow,
+.matrix-view .task.highlight-chain-20:not(.buffer-task) .task-header-arrow {
+    border-left-color: #E2EED2;
+}
+.matrix-view .phase-type-fullkit .fk.highlight-task-manager-20 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-phase-20 .task-content-wrapper  .task-name,
+.matrix-view .phase-type-fullkit .fk.highlight-chain-20 .task-content-wrapper  .task-name{
+    background-color: #E2EED2;
+}
+
+
+
+/*-----------------End Of Classes used for highlighting assigned resources----------------------- */
+
+
+/*this classes are being used for Highlighting tasks with resource */
+.resourceContentionTask .task-name,
+.timeline-view.resourceContentionTask .task-name
+{
+    background: red;
+}
+
+.resourceContentionTask .task-header-arrow,
+.timeline-view.resourceContentionTask .task-header-arrow
+{
+   border-left-color: red !important; 
+}
+
+/*this classes are being used for Highlighting slack */
+.slack .task-name,
+.timeline-view.slack .task-name
+{
+   background: red;
+   background:repeating-linear-gradient(45deg,#F70A0A, #F70A0A 5px,#F86161 5px, #F86161 10px) !important;
+   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF0000', EndColorStr='#FF0000')";/*handled case for IE-9 for fullkit highlighting*/
+}
+
+.slack .task-header-arrow,
+.timeline-view.slack .task-header-arrow
+{
+   border-left-color: red !important; 
+}
+.slack.milestone,
+.slack.milestone-event {
+   background:repeating-linear-gradient(45deg,#F70A0A, #F70A0A 5px,#F86161 5px, #F86161 10px);    
+}
+
+/*task highlighting*/
+/*this classes are being used for Highlighting constraining successor chain Or Longest Predecessor Chain */
+.phase-column:not(.phase-type-fullkit) .constrainingSuccessorTask:not(.buffer-task) .task-name,
+{
+    background: darksalmon;
+}
+
+.phase-column:not(.phase-type-fullkit) .constrainingSuccessorTask:not(.fullkit):not(.buffer-task) .task-name,
+.timeline-view .sch-event:not(.buffer-task) .constrainingSuccessorTask .task-name,
+.timeline-view .task.quick-task-edit.constrainingSuccessorTask:not(.buffer-task) .task-name,
+.matrix-view .fullkit.constrainingSuccessorTask .task-content-wrapper .task-name:before
+{
+    background: darksalmon !important;
+}
+
+.phase-column .constrainingSuccessorTask:not(.buffer-task) .task-header-arrow,
+.timeline-view .task.quick-task-edit.constrainingSuccessorTask:not(.buffer-task) .task-header-arrow,
+.timeline-view .sch-event:not(.buffer-task) .constrainingSuccessorTask .task-header-arrow
+{
+   border-left-color: darksalmon !important; 
+}
+
+.matrix-view .milestone.constrainingSuccessorTask .milestone-icon-wrap:before,
+.timeline-view .timeline-milestone-header .milestone-event.constrainingSuccessorTask .marker
+{
+    background: darksalmon;
+}
+
+.phase-column:not(.phase-type-fullkit) .highlightSelectedTask .task-name,
+.timeline-view .highlightSelectedTask.task-name,
+
+{
+    border-color: #6171CB;
+    border-style: solid;
+    border-width: 2px 0px 2px 2px;
+}
+
+.highlightSelectedTask .task-header-arrow,
+.timeline-view .highlightSelectedTask .task-header-arrow,
+.highlightedCCTask:not(.buffer-task).highlightSelectedTask .task-header-arrow,
+.highlightedErrorTask.highlightSelectedTask .task-header-arrow,
+{
+   border-left-color: #6171CB !important; 
+}
+
+.matrix-view .task.highlightSelectedTask.zero-duration-task .task-content-wrapper .task-name:before {
+    border-color: #6171CB;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+}
+
+.matrix-view .milestone.highlightSelectedTask .milestone-icon-wrap:before,
+.timeline-view .timeline-milestone-header .milestone-event.highlightSelectedTask .marker,
+.matrix-view .fullkit.highlightSelectedTask .task-content-wrapper .task-name:before
+{
+    border-color: #040404;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+}
+
+
+.matrix-view .milestone.highlightSelectedTask .milestone-icon,
+.matrix-view .fullkit.highlightSelectedTask .task-content-wrapper .task-name ,
+.timeline-view .timeline-milestone-header .milestone-event.highlightSelectedTask .label,
+.timeline-view .fullkit-task.highlightSelectedTask .task-name
+{
+    /*color: #606060;*/
+}
+
+
+.phase-column:not(.phase-type-fullkit) .highlightCutTask .task-name,
+.timeline-view .highlightCutTask  .task-name,
+.matrix-view .fullkit.highlightCutTask .task-content-wrapper .task-name:before
+{
+    background: #DEDEDB;
+}
+
+.highlightCutTask .task-header-arrow,
+.timeline-view .highlightCutTask .task-header-arrow
+{
+   border-left-color: #DEDEDB !important;
+}
+
+.matrix-view .milestone.highlightCutTask .milestone-icon-wrap:before,
+.timeline-view .timeline-milestone-header .milestone-event.highlightCutTask .marker
+{
+    background: #DEDEDB;
+}
+
+
+.matrix-view .milestone.highlightCutTask .milestone-icon,
+.matrix-view .fullkit.highlightCutTask .task-content-wrapper .task-name ,
+.timeline-view .timeline-milestone-header .milestone-event.highlightCutTask .label,
+.timeline-view .fullkit-task.highlightCutTask .task-name
+{
+    
+}
+
+/*this classes are being used for Highlighting errors */
+
+.phase-column:not(.phase-type-fullkit) .highlightedErrorTask .task-name,
+.timeline-view .highlightedErrorTask  .task-name,
+.matrix-view .fullkit.highlightedErrorTask .task-content-wrapper .task-name:before
+{
+    background: #FFFF19 !important;
+}
+
+
+
+.highlightedErrorTask .task-header-arrow,
+.timeline-view .highlightedErrorTask .task-header-arrow
+{
+   border-left-color: #FFFF19 !important; 
+}
+
+
+.matrix-view .milestone.highlightedErrorTask .milestone-icon-wrap:before,
+.timeline-view .timeline-milestone-header .milestone-event.highlightedErrorTask .marker
+{
+    background: #FFFF19;
+}
+
+ .timeline-view .sch-event-milestone.milestone.highlightedErrorTask{
+    color:black;
+ }
+ .timeline-view .sch-event-milestone.milestone.highlightedErrorTask:before {
+    background:#FFFF19;
+ }  
+
+
+.matrix-view:not(.read-only) tr.x-grid-row td.notIE9:hover {
+    background-image: url('images/caretIcon.png');
+    background-repeat: no-repeat;
+    background-position: 92% 48%;
+    background-size: 21px;
+    cursor: pointer;
+    z-Index:1000;
+    position:absolute;
+}
+
+.matrix-view .milestone.highlightedErrorTask .milestone-icon,
+.matrix-view .fullkit.highlightedErrorTask .task-content-wrapper .task-name ,
+.timeline-view .timeline-milestone-header .milestone-event.highlightedErrorTask .label,
+.timeline-view .fullkit-task.highlightedErrorTask .task-name
+{
+    color: #606060;
+}
+
+.matrix-view .milestone.highlightedMilestoneTask,
+.matrix-view .fullkit.highlightedMilestoneTask .task-content-wrapper .task-name,
+.timeline-view .milestone-event.highlightedMilestoneTask
+{
+    border: 2px dotted black;
+}
+/*this classes are being used for milestone task Highlighting*/
+/*this classes are being used for CC task Highlighting*/
+.highlightedCCTask:not(.buffer-task) .task-name,
+.timeline-view.highlighting-cc .cc-task:not(.buffer-task) .task-name,
+.timeline-view.highlighting-cc .isCCTask.quick-task-edit:not(.buffer-task) .task-name
+{
+    background: red !important;
+}
+
+.highlightedCCTask:not(.buffer-task) .task-header-arrow,
+.timeline-view.highlighting-cc .cc-task:not(.buffer-task) .task-header-arrow
+{
+   border-left-color: red !important; 
+}
+
+.matrix-view .milestone.highlightedCCTask .milestone-icon-wrap:before
+{
+    background: red;
+}
+.matrix-view .fullkit.isCCTask.highlightedCCTask .task-content-wrapper .task-name {
+    background: transparent !important;
+}
+.matrix-view .fullkit.isCCTask.highlightedCCTask .task-content-wrapper .task-name:before {
+    background: red;
+}
+
+/*SS:Below CSS is added only for highlight-chain-1 for Zero duration tasks
+ need to add these CSS for all highlight options for Zero duration tasks  */
+.matrix-view.zoom-level-0 .task.zero-duration-task.isCCTask.highlightedCCTask .task-content-wrapper .task-name ,
+.matrix-view.zoom-level-1 .task.zero-duration-task.isCCTask.highlightedCCTask .task-content-wrapper .task-name {
+    background: transparent !important;
+}
+.matrix-view.zoom-level-0 .task.zero-duration-task.isCCTask.highlightedCCTask .task-content-wrapper .task-name:before ,
+.matrix-view.zoom-level-1 .task.zero-duration-task.isCCTask.highlightedCCTask .task-content-wrapper .task-name:before {
+    background: red;
+}
+.x-autocontbainer-outerCt{
+    display: block;
+}.x-autocontbainer-outerCt{
+    display: block;
+}

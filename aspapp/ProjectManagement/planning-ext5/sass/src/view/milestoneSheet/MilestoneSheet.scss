@@ -1,0 +1,48 @@
+/****
+milestoneSheet.css
+***/
+.milestone-sheet{
+    color: black;
+    transition: width 0.25s;
+    -webkit-transition: width 0.25s;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#394B66', endColorstr='#2A394F',GradientType=0 )!important;/* IE6-9 */
+    overflow:hidden
+}
+.milestone-sheet .x-panel-header{
+	background-color: #e1ecfe;
+	border:1px solid #e1ecfe;
+}
+.milestone-sheet .x-panel-header-text{
+	color:black;
+}
+.milestone-sheet .x-column-header .x-grid-row .x-grid-cell{
+	font-size:14px;
+}
+.milestone-sheet .x-tool-img{
+	background-color: black;
+}
+.stl-ms-nexticon 
+{ 
+    float: right; 
+    cursor: pointer;
+}
+.ccSummary{
+	white-space: normal;
+	background-color: #e1ecfe!important;
+}
+.CC-textfields input{
+    border-color:#e1ecfe;
+    background:#e1ecfe;
+
+}
+
+.resourceContentionField
+{
+    color: blue; 
+    text-decoration:underline; 
+    cursor:pointer
+}
+
+.hide-longest-chain-icon {
+	display:none !important; /*class used but not defined in ext-theme-neptune-all_01.css file*/
+}

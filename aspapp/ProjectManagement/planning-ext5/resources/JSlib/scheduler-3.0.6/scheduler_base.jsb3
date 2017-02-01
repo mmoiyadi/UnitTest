@@ -1,0 +1,167 @@
+{
+    "name"   : "Ext Scheduler Base",
+    "licenseText"   : "",
+
+    "builds"          : [
+        {
+            "name"      : "Ext Scheduler Base JS",
+            "id"        : "ext-scheduler",
+
+            "target"    : "sch-base-debug.js",
+
+            "files"     : [
+                { "path"  : "js/Sch/locale/Locale.js" },
+                { "path"  : "js/Sch/locale/En.js" },
+
+                { "path"  : "js/Sch/util/Patch.js" },
+                { "path"  : "js/Sch/patches/BufferedRenderer.js" },
+                { "path"  : "js/Sch/patches/NodeStore.js" },
+                { "path"  : "js/Sch/patches/NodeCache.js" },
+                { "path"  : "js/Sch/patches/ColumnResizeTree.js" },
+                { "path"  : "js/Sch/patches/RowSynchronizer.js" },
+                { "path"  : "js/Sch/patches/TouchScroll.js" },
+                { "path"  : "js/Sch/patches/PartnerScroll.js" },
+                { "path"  : "js/Sch/patches/View.js" },
+                { "path"  : "js/Sch/patches/TableView.js" },
+                { "path"  : "js/Sch/patches/Collection.js" },
+                { "path"  : "js/Sch/patches/TreeStore.js" },
+                { "path"  : "js/Sch/patches/TreeStoreInternalIdMap.js" },
+                { "path"  : "js/Sch/patches/ToolTip.js" },
+                { "path"  : "js/Sch/patches/OperationDestroy.js" },
+                { "path"  : "js/Sch/patches/Chrome.js" },
+
+                { "path"  : "js/Sch/mixin/Localizable.js" },
+
+                { "path"  : "js/Sch/crud/AbstractManager.js" },
+                { "path"  : "js/Sch/crud/transport/Ajax.js" },
+                { "path"  : "js/Sch/crud/encoder/Json.js" },
+                { "path"  : "js/Sch/crud/encoder/Xml.js" },
+
+                { "path"  : "js/Sch/util/Date.js" },
+                { "path"  : "js/Sch/util/DragTracker.js" },
+                { "path"  : "js/Sch/util/ScrollManager.js" },
+                { "path"  : "js/Sch/util/Cache.js" },
+
+                { "path"  : "js/Sch/model/Customizable.js" },
+
+                { "path"  : "js/Sch/data/util/ResourceEventsCache.js" },
+                { "path"  : "js/Sch/data/util/EventAssignmentsCache.js" },
+                { "path"  : "js/Sch/data/util/ResourceAssignmentsCache.js" },
+                { "path"  : "js/Sch/data/util/AssignmentStoreEventResourcesCache.js" },
+                { "path"  : "js/Sch/data/util/AssignmentStoreResourceEventsCache.js" },
+                { "path"  : "js/Sch/data/util/ModelPersistencyManager.js" },
+                { "path"  : "js/Sch/data/util/IdConsistencyManager.js" },
+                { "path"  : "js/Sch/data/mixin/UniversalModelGetter.js" },
+                { "path"  : "js/Sch/data/mixin/CacheHintHelper.js" },
+                { "path"  : "js/Sch/data/mixin/EventStore.js" },
+                { "path"  : "js/Sch/model/Range.js" },
+                { "path"  : "js/Sch/model/TimeAxisTick.js" },
+                { "path"  : "js/Sch/model/Assignment.js" },
+                { "path"  : "js/Sch/model/Resource.js" },
+                { "path"  : "js/Sch/data/mixin/ResourceStore.js" },
+                { "path"  : "js/Sch/data/mixin/FilterableTreeStore.js" },
+                { "path"  : "js/Sch/data/ResourceStore.js" },
+                { "path"  : "js/Sch/data/AssignmentStore.js" },
+                { "path"  : "js/Sch/data/TimeAxis.js" },
+
+                { "path"  : "js/Sch/preset/ViewPreset.js" },
+                { "path"  : "js/Sch/preset/Manager.js" },
+
+                { "path"  : "js/Sch/feature/AbstractTimeSpan.js" },
+                { "path"  : "js/Sch/plugin/Lines.js" },
+                { "path"  : "js/Sch/plugin/Zones.js" },
+                { "path"  : "js/Sch/plugin/Pan.js" },
+                { "path"  : "js/Sch/tooltip/ClockTemplate.js" },
+                { "path"  : "js/Sch/tooltip/Tooltip.js" },
+                { "path"  : "js/Sch/tooltip/HoverTip.js" },
+
+                { "path"  : "js/Sch/view/model/TimeAxis.js" },
+                { "path"  : "js/Sch/view/HorizontalTimeAxis.js" },
+                { "path"  : "js/Sch/column/timeAxis/Horizontal.js" },
+
+                { "path"  : "js/Sch/plugin/TreeCellEditing.js" },
+
+                { "path"  : "js/Sch/feature/ResizeZone.js" },
+                { "path"  : "js/Sch/feature/ColumnLines.js" },
+                { "path"  : "js/Sch/plugin/CurrentTimeLine.js" },
+
+                { "path"  : "js/Sch/view/Horizontal.js" },
+                { "path"  : "js/Sch/mixin/AbstractTimelineView.js" },
+                { "path"  : "js/Sch/mixin/TimelineView.js" },
+
+                { "path"  : "js/Sch/view/TimelineGridView.js" },
+                { "path"  : "js/Sch/mixin/FilterableTreeView.js" },
+                { "path"  : "js/Sch/mixin/Zoomable.js" },
+                { "path"  : "js/Sch/mixin/AbstractTimelinePanel.js" },
+                { "path"  : "js/Sch/mixin/TimelinePanel.js" },
+                { "path"  : "js/Sch/panel/TimelineGridPanel.js" },
+                { "path"  : "js/Sch/panel/TimelineTreePanel.js" },
+                { "path"  : "js/Sch/plugin/Printable.js" },
+
+                { "path"  : "js/Sch/plugin/exporter/AbstractExporter.js" },
+                { "path"  : "js/Sch/plugin/exporter/SinglePage.js" },
+                { "path"  : "js/Sch/plugin/exporter/MultiPage.js" },
+                { "path"  : "js/Sch/plugin/exporter/MultiPageVertical.js" },
+
+                { "path"  : "js/Sch/plugin/Export.js" },
+
+                { "path"  : "js/Sch/plugin/HeaderZoom.js" },
+
+                { "path"  : "js/Sch/widget/ResizePicker.js" },
+                { "path"  : "js/Sch/widget/ExportDialogForm.js" },
+                { "path"  : "js/Sch/widget/ExportDialog.js" }
+            ]
+        },
+
+        {
+            "name"      : "Ext Scheduler Base Notheme",
+            "id"        : "ext-scheduler-base-notheme",
+            "target"    : "resources/css/sch-base-notheme-debug.css",
+            "files"     : [
+                { "path"  : "resources/css/sch.column.timeaxis.horizontal.css" },
+                { "path"  : "resources/css/sch.feature.dragcreator.css" },
+                { "path"  : "resources/css/sch.feature.dragdrop.css" },
+                { "path"  : "resources/css/sch.plugin.dragselector.css" },
+                { "path"  : "resources/css/sch.plugin.lines.css" },
+                { "path"  : "resources/css/sch.plugin.zones.css" },
+                { "path"  : "resources/css/sch.plugin.export.css" },
+                { "path"  : "resources/css/sch.print.printable.css" },
+                { "path"  : "resources/css/sch.tooltip.clocktemplate.css" },
+                { "path"  : "resources/css/sch.tooltip.tooltip.css" },
+                { "path"  : "resources/css/sch.view.horizontal.css" },
+                { "path"  : "resources/css/sch.view.timeline.css" },
+                { "path"  : "resources/css/sch.view.tree.css" },
+                { "path"  : "resources/css/sch.feature.columnlines.css" }
+            ]
+        },
+
+        {
+            "name"      : "Ext Scheduler Base Styles",
+            "id"        : "ext-scheduler-base-styles",
+            "target"    : "resources/css/sch-base-debug.css",
+            "files"     : [
+                { "path"  : "resources/css/sch-base-notheme-debug.css" },
+                { "path"  : "resources/css/sch.column.timeaxis.horizontal-default.css" }
+            ]
+        },
+        {
+            "name"      : "Ext Scheduler Base Neptune Styles",
+            "id"        : "ext-scheduler-base-neptune-styles",
+            "target"    : "resources/css/sch-base-neptune-debug.css",
+            "files"     : [
+                { "path"  : "resources/css/sch-base-notheme-debug.css" },
+                { "path"  : "resources/css/sch.column.timeaxis.horizontal-neptune.css" }
+            ]
+        },
+        {
+            "name"      : "Ext Scheduler Base Crisp Styles",
+            "id"        : "ext-scheduler-base-crisp-styles",
+            "target"    : "resources/css/sch-base-crisp-debug.css",
+            "files"     : [
+                { "path"  : "resources/css/sch-base-notheme-debug.css" },
+                { "path"  : "resources/css/sch.column.timeaxis.horizontal-crisp.css" }
+            ]
+        }
+    ]
+}
+

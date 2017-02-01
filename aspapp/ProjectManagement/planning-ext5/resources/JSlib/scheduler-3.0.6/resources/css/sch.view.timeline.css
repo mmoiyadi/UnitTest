@@ -1,0 +1,83 @@
+/*
+
+Ext Scheduler 3.0.6
+Copyright(c) 2009-2015 Bryntum AB
+http://bryntum.com/contact
+http://bryntum.com/license
+
+*/
+/* Use 3 specifiers to make sure we don't "lose" to .x-reset .x-grid-row .x-grid-cell which sets it to #fff */
+.sch-timelineview .x-grid-item td.sch-timetd {
+    overflow         : visible;
+    background-color : transparent;
+    border-top-color : transparent;
+}
+
+.sch-timelineview .x-grid-item {
+    background-color : rgba(255, 255, 255, 0.25);
+}
+
+.x-ie8m .sch-timelineview .x-grid-item {
+    background-color : transparent;
+}
+
+.sch-timelineview .x-grid-item-alt {
+    background-color : rgba(245, 245, 245, 0.35);
+}
+
+.x-ie8m .sch-timelineview .x-grid-item-alt {
+    background : transparent;
+    filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr=#50F5F5F5, endColorstr=#50F5F5F5);
+    zoom       : 1;
+}
+
+/* Makes sure column lines are not 'reachable' in IE */
+.x-ie .sch-timelineview td.sch-timetd {
+    position : relative;
+}
+
+.sch-timelineview td.sch-timetd {
+    overflow : hidden;
+}
+
+td.sch-timetd .x-grid-cell-inner {
+    position      : relative;
+    padding-left  : 0; /*For IE in quirks mode */
+    padding-right : 0; /* No need for horizontal padding */
+    cursor        : default; /* For trees, Ext sets it to pointer for some reason */
+    overflow      : visible;
+}
+
+/* Make sure zones are always below the TRs/TDs */
+.sch-timelineview .x-grid-item-container {
+    position : relative;
+}
+
+.sch-animations-enabled .sch-resourcezone,
+.sch-animations-enabled .sch-timeline,
+.sch-animations-enabled .sch-zone {
+    -moz-transition-property    : width, left, top, height;
+    -moz-transition-duration    : 0.4s;
+    -webkit-transition-property : width, left, top, height;
+    -webkit-transition-duration : 0.4s;
+    -ms-transition-property     : width, left, top, height;
+    -ms-transition-duration     : 0.4s;
+    transition-property         : width, left, top, height;
+    transition-duration         : 0.4s;
+}
+
+.sch-secondary-canvas {
+    position : absolute;
+    left     : 0;
+    top      : 0;
+}
+
+.x-rtl .sch-secondary-canvas {
+    right : 0;
+    left  : auto;
+}
+
+/* Ext adds a dotted outline of focused cells, remove it */
+.sch-timelinepanel .x-grid-item-focused .x-grid-cell-inner:before {
+    border : none;
+}

@@ -1,0 +1,37 @@
+/*
+
+Ext Scheduler 3.0.6
+Copyright(c) 2009-2015 Bryntum AB
+http://bryntum.com/contact
+http://bryntum.com/license
+
+*/
+.sch-schedulerview .x-grid-group-hd {
+    padding-left  : 0;
+    padding-right : 0;
+    overflow      : hidden;
+}
+
+.sch-schedulerview .x-grid-group-title {
+    visibility       : visible !important;
+    background-image : none;
+    text-indent      : -1000em;
+    font-weight      : normal;
+    padding-left     : 0;
+    padding-right    : 0;
+}
+
+.sch-grid-group-hd-cell {
+    text-indent : 0;
+    float       : left;
+    text-align  : center;
+}
+
+.sch-grid-group-custom-header div.x-grid-group-hd {
+    padding    : 0 !important;
+    background : none;
+    /* http://www.mikepadgett.com/technology/technical/alternative-to-the-pie-clearfix-hack/ */
+    height     : 1%;
+    overflow   : hidden;
+}
+

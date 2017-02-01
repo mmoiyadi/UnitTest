@@ -1,0 +1,137 @@
+/*
+
+Ext Scheduler 3.0.6
+Copyright(c) 2009-2015 Bryntum AB
+http://bryntum.com/contact
+http://bryntum.com/license
+
+*/
+.sch-clockwrap {
+    position : relative;
+}
+
+.sch-clock {
+    position         : absolute;
+    height           : 21px;
+    width            : 21px;
+    white-space      : nowrap;
+    display          : inline-block;
+    text-indent      : -100px;
+}
+
+.sch-hour-resolution .sch-supports-border-radius .sch-clock
+{
+    border           : 2px solid #aaa;
+    background-color : #fff;
+    box-shadow       : 1px 0px 3px #ccc;
+    border-radius    : 100%;
+}
+
+.x-ie8m .sch-clock {
+    background : url(../images/clock-bare.png) no-repeat left top !important;
+}
+
+.sch-day-resolution .sch-clock {
+    background : #fff none !important;
+    border     : 1px solid #ccc;
+}
+
+.sch-clock-text {
+    margin-left    : 25px;
+    padding-bottom : 5px;
+    padding-top    : 2px;
+    display        : inline-block;
+    white-space    : nowrap;
+}
+
+.x-rtl .sch-clock-text {
+    margin-left  : auto;
+    margin-right : 25px;
+}
+
+.sch-day-resolution .sch-clock .sch-hourIndicator {
+    width             : 100%;
+    position          : static !important;
+    background-color  : rgb(89, 102, 176);
+    border-bottom     : 1px solid navy;
+    font-size         : 7px;
+    line-height       : 7px;
+    text-align        : center;
+    color             : #fff;
+    height            : 8px;
+    text-indent       : 0px;
+    margin-top        : -1px;
+    text-shadow       : rgba(200, 200, 200, .2) 0 -1px 0;
+    border            : 0 none;
+    transform         : none !important;
+    -moz-transform    : none !important;
+    -webkit-transform : none !important;
+    -o-transform      : none !important;
+    -ms-transform     : none !important;
+    filter            : none !important;
+    -ms-filter        : none !important;
+}
+
+.sch-day-resolution .sch-clock .sch-minuteIndicator {
+    color             : #555;
+    width             : 100%;
+    position          : static !important;
+    height            : 16px;
+    background-color  : transparent;
+    font-size         : 10px;
+    text-align        : center;
+    text-indent       : 0;
+    text-shadow       : rgba(0, 0, 0, .2) 0 -1px 0;
+    line-height       : 14px;
+    border            : 0 none;
+    transform         : none !important;
+    -moz-transform    : none !important;
+    -webkit-transform : none !important;
+    -o-transform      : none !important;
+    -ms-transform     : none !important;
+    filter            : none !important;
+    -ms-filter        : none !important;
+}
+
+.sch-clock .sch-minuteIndicator,
+.sch-clock .sch-hourIndicator {
+    position                 : absolute;
+    left                     : 50%;
+    top                      : 1px;
+    width                    : 2px;
+    height                   : 8px;
+    overflow                 : hidden;
+    margin-left              : -1px;
+    transform-origin         : 50% 100%;
+    -o-transform-origin      : 50% 100%;
+    -moz-transform-origin    : 50% 100%;
+    -webkit-transform-origin : 50% 100%;
+    -ms-transform-origin     : 50% 100%;
+}
+
+.sch-clock .sch-hourIndicator {
+    border-top               : 2px solid transparent;
+    border-bottom            : 6px solid #777;
+}
+
+.sch-clock .sch-minuteIndicator {
+    border-top               : 8px solid #777;
+}
+
+.sch-hour-resolution .sch-supports-border-radius .sch-clock-dot {
+    position      : absolute;
+    left          : 50%;
+    top           : 50%;
+    width         : 4px;
+    height        : 4px;
+    margin-left   : -2px;
+    margin-top    : -2px;
+    background    : #777;
+    border-radius : 3px;
+    z-index       : 2;
+}
+
+.sch-day-resolution .sch-clock-dot
+{
+    display:none;
+}

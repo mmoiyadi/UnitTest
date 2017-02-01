@@ -1,0 +1,73 @@
+/*
+
+Ext Scheduler 3.0.6
+Copyright(c) 2009-2015 Bryntum AB
+http://bryntum.com/contact
+http://bryntum.com/license
+
+*/
+.sch-calendar .x-grid-inner-locked .x-grid-cell {
+    background : #fff;
+    overflow   : visible;
+}
+
+.sch-calendar .x-grid-cell{
+    border-bottom-color : #e0e0e0;
+}
+
+.sch-calendar .sch-schedulerview td.sch-col-alt {
+    background-image: none;
+}
+
+.sch-calendar .x-grid-inner-locked .x-grid-item:first-child .sch-calendarcolumn-ct {
+    display: none;
+}
+
+.sch-calendar .x-grid-inner-locked .x-grid-cell-inner {
+    overflow     : visible;
+    padding-left : 0;
+}
+
+.sch-calendarcolumn-ct {
+    color      : #999;
+    background : #fff;
+    margin-top : -8px;
+    position   : absolute;
+    padding    : 0 3px 0 5px;
+}
+
+.sch-calendarcolumn-minutes,
+.sch-calendarcolumn-hours {
+    display : block;
+    float   : left;
+}
+
+.sch-calendarcolumn-hours {
+    font-size : 1.5em;
+}
+
+.sch-calendarcolumn-minutes {
+    font-size   : 0.8em;
+    margin-top  : -0.2em;
+    margin-left : 2px;
+}
+
+.sch-calendar .sch-schedulerview td.sch-daycolumn-weekend
+{
+    background-color:rgba(242, 242, 242, 0.4);
+}
+
+.sch-daycolumn-header-weekend .x-column-header-text
+{
+    color:#888;
+}
+
+.sch-calendar .sch-schedulerview td.sch-daycolumn-today
+{
+    background-color: rgba(255, 236, 236, 0.5);
+}
+
+.sch-daycolumn-header-today .x-column-header-text
+{
+    color: rgb(178, 108, 62);
+}
