@@ -1,0 +1,34 @@
+{
+  "name": "Concerto",
+  "version": "1.0.0",
+  "description": "Concerto javascript test framework",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-karma": "^0.12.1",
+    "jasmine": "^2.4.1",
+    "jasmine-ajax": "^3.2.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-htmlfile-reporter": "^0.2.2",
+    "karma-ie-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-jasmine-ajax": "^0.1.13",
+    "karma-ng-html2js-preprocessor": "^0.2.1",
+    "karma-safari-launcher": "^1.0.0",
+    "karma-teamcity-reporter": "^1.0.0"
+  },
+  "author": "darshakh",
+  "license": "ISC"
+}
